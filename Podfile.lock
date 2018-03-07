@@ -1,0 +1,15 @@
+PODS:
+  - Bluetonium (2.1.0)
+  - SwiftyBluetooth (1.0.0)
+
+DEPENDENCIES:
+  - Bluetonium
+  - SwiftyBluetooth
+
+SPEC CHECKSUMS:
+  Bluetonium: 45d465084e1a663b579e2c8d937aebf5551c2d67
+  SwiftyBluetooth: 9e26b1367f56aa60f35713f6d968382144bccfd5
+
+PODFILE CHECKSUM: 09a30497f7dc37016f005910bf686f7a0b655c64
+
+COCOAPODS: 1.4.0

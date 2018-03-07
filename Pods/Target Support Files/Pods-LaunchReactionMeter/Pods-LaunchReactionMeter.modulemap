@@ -1,0 +1,6 @@
+framework module Pods_LaunchReactionMeter {
+  umbrella header "Pods-LaunchReactionMeter-umbrella.h"
+
+  export *
+  module * { export * }
+}
