@@ -38,7 +38,7 @@ class SingleLineTableViewCell: UITableViewCell, ConfigurationProtocol {
         config = configuration as! ConfigurationSingeLineTableViewCell
         
         if nameLbl == nil {
-            nameLbl = UILabel(frame: CGRect(x:0, y: 0, width: self.frame.width, height: self.frame.height/2))
+            nameLbl = UILabel(frame: CGRect(x:0, y: 0, width: self.frame.width, height: self.frame.height))
             nameLbl.backgroundColor = UIColor.lightGray
             nameLbl.textColor = UIColor.red
             self.contentView.addSubview(nameLbl)

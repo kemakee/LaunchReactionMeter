@@ -12,6 +12,8 @@ import MultipeerConnectivity
 
 protocol MultiPeerCommunicationManagerDelegate : NSObjectProtocol{
     func peersChanged(peers: [MCPeerID])
+    func invitationReceived(fromPeer: String)
+    func connectedWithPeer(_ peerID: MCPeerID)
 }
 
 class MultiPeerCommunicationManager: NSObject {
@@ -20,18 +22,23 @@ class MultiPeerCommunicationManager: NSObject {
     private let serviceType = "launch-meter"
     private let myPeerdID = MCPeerID(displayName: UIDevice.current.name)
     
-    private let advertiser : MCNearbyServiceAdvertiser
-    private let browser : MCNearbyServiceBrowser
-    private var session : MCSession!
+    let advertiser : MCNearbyServiceAdvertiser
+    let browser : MCNearbyServiceBrowser
+    lazy var session : MCSession = {
+        let session = MCSession(peer: self.myPeerdID, securityIdentity: nil, encryptionPreference: .none)
+        session.delegate = self
+        return session
+    }()
     
     private var foundPeers = [MCPeerID]()
     weak var delegate : MultiPeerCommunicationManagerDelegate?
+    
+    var invitationHandler: ((Bool, MCSession?)->Void)!
     
     override init() {
         self.advertiser = MCNearbyServiceAdvertiser(peer: myPeerdID, discoveryInfo: nil, serviceType: serviceType)
         self.browser = MCNearbyServiceBrowser(peer: myPeerdID, serviceType: serviceType)
         super.init()
-        session = MCSession(peer: myPeerdID, securityIdentity: nil, encryptionPreference: .required)
         self.advertiser.delegate = self
         self.advertiser.startAdvertisingPeer()
         self.browser.delegate = self
@@ -39,17 +46,9 @@ class MultiPeerCommunicationManager: NSObject {
         
     }
     
-    func getBrowser() -> MCNearbyServiceBrowser
-    {
-        return browser
-    }
     
     
-    
-
 }
-
-
 
 extension MultiPeerCommunicationManager : MCNearbyServiceAdvertiserDelegate
 {
@@ -57,6 +56,8 @@ extension MultiPeerCommunicationManager : MCNearbyServiceAdvertiserDelegate
         print("Unable to start advertising, error: \(error)" )
     }
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
+        self.invitationHandler = invitationHandler
+        delegate?.invitationReceived(fromPeer: peerID.displayName)
         print("Recieved invitation from peer: \(peerID)")
     }
 }
@@ -92,6 +93,19 @@ extension MultiPeerCommunicationManager : MCNearbyServiceBrowserDelegate
 extension MultiPeerCommunicationManager : MCSessionDelegate
 {
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
+        
+        switch state{
+        case MCSessionState.connected:
+            print("Connected to session: \(session)")
+            delegate?.connectedWithPeer(peerID)
+            
+        case MCSessionState.connecting:
+            print("Connecting to session: \(session)")
+            
+        default:
+            print("Did not connect to session: \(session)")
+        }
+        
         print("peer \(peerID) didChangeState to : \(state)")
     }
     
