@@ -9,6 +9,8 @@
 import UIKit
 import Foundation
 import MultipeerConnectivity
+import AudioToolbox
+
 
 protocol MultiPeerCommunicationManagerDelegate : NSObjectProtocol{
     func peersChanged(peers: [MCPeerID])
@@ -110,7 +112,20 @@ extension MultiPeerCommunicationManager : MCSessionDelegate
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        print("recieved from \(peerID), data: \(data)")
+//        print("recieved from \(peerID), data: \(data)")
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "y-MM-dd H:m:ss.SSSS"
+        let str = String(data: data, encoding: .utf8)!
+//        print(str)
+//        print(dateFormatter.string(from: date))
+        let startdate = dateFormatter.date(from: str)!
+        
+        DispatchQueue.main.async {
+            let offset = TimeMnanager.shared.calculateOffsetFromNetActualTime(date: startdate)
+            Timer.scheduledTimer(timeInterval: offset, target: self, selector: #selector(self.timerFired), userInfo: self, repeats: false)
+        }
+        
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
@@ -124,6 +139,21 @@ extension MultiPeerCommunicationManager : MCSessionDelegate
     func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
         NSLog("%@", "didFinishReceivingResourceWithName")
     }
+    
+    @objc func timerFired() {
+        //        print("------------------------------------------")
+        //        print(Date().dateWithMillisecInString())
+        //        print(TimeMnanager.shared.now().dateWithMillisecInString())
+        //
+        //        if let date = Clock.now {
+        //            print(date.dateWithMillisecInString())
+        //        }
+        
+        print(TimeMnanager.shared.now().dateWithMillisecInString())
+        AudioServicesPlaySystemSound(1322)
+        
+    }
+    
 }
 
 

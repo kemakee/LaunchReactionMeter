@@ -8,7 +8,28 @@
 
 import Foundation
 import CoreBluetooth
+import UIKit
 
-let BEAN_NAME = "Robu"
-let BEAN_SCRATCH_UUID = CBUUID(string: "a495ff21-c5b1-4b44-b512-1370f02d74de")
-let BEAN_SERVICE_UUID = CBUUID(string: "a495ff20-c5b1-4b44-b512-1370f02d74de")
+class Constants {
+    
+    static let testMode = false
+    static var isPreloadSync = false
+    static let DB_Query_Writer = false
+    
+    static let coreAnimationDuration: TimeInterval = 0.6
+    static let navigationVelocityTrigger: CGFloat = 1500
+    static let navigationThresholdTrigger: CGFloat = 0.5
+    static let openMenuThresholdTrigger: CGFloat = 0.3
+    static let closeMenuThresholdTrigger: CGFloat = 0.5
+    
+    static let shadeLayerMaxAlpha: CGFloat = 0.5
+    
+    static let FILE_LOG = "log.txt"
+    
+    static let headerText = "AppCore"
+    
+    static let dateFormat = "yyyy-MM-dd"
+    static let dateAndTimeFormat = "yyyy-MM-dd hh:ss"
+    static let dateAndTimeFormatForXaxis = "MM.dd. hh:ss"
+}
+

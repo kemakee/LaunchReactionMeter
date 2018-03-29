@@ -8,6 +8,8 @@ target 'LaunchReactionMeter' do
   # Pods for LaunchReactionMeter
 	pod 'Bluetonium'
 	pod 'SwiftyBluetooth'
+	pod 'MHSNTP'
+	pod 'Kronos'
   target 'LaunchReactionMeterTests' do
     inherit! :search_paths
     # Pods for testing

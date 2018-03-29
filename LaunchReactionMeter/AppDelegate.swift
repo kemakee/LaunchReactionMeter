@@ -12,10 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var mainViewController: MainViewController!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        _ = TimeMnanager.shared
+        initScreenManagement()
+        initApplication()
+        
         return true
     }
 
@@ -39,6 +45,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+    // MARK: start application
+    private func initScreenManagement() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        mainViewController = MainViewController.shared
+        if let window = self.window {
+            window.rootViewController = mainViewController
+            window.makeKeyAndVisible()
+        }
+    }
+    
+    private func initApplication() {
+
+        self.mainViewController.setWaitingVisibility(toHidden: true)
+        
+        let headerVC = HeaderViewController()
+        self.mainViewController.load(header: headerVC)
+        self.mainViewController.updateContentLayerFrame()
+//        self.mainViewController.load(menu: MenuViewController())
+        
+
+        MainViewController.shared.loadFirstScreen()
+ 
     }
 
 

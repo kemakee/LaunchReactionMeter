@@ -7,136 +7,257 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0000630F9988BE0046B7C1EBDB2B37A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		02B3F2D18A65A40AFF6D1E65B5174FDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		049D2FB61476C3DBB41C00CEE5F57D5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		067FF5680E253F787FCD64614ADDD415 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9D059BB9E40D73E3AC3BD41751893 /* Result.swift */; };
-		0708A68FD57ED127700B1EB8301A9C05 /* Bluetonium-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC90EBD9508CABBC19A5D4CA9DF00DB /* Bluetonium-dummy.m */; };
-		09308DB9C1DB0062E360C4AE63E8FBEB /* SBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE93DCFB67B5D0CE4B85CA084154EB8 /* SBError.swift */; };
-		102E4CEF4D96F318A240BAD4E4D17AF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		1A455B226A4F938FBD6DE18D8D3E29BC /* DataTransformers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B6F313D7881711351AB1BFC4B499F7 /* DataTransformers.swift */; };
-		1C544894CEBC999F80F59EE978158689 /* CBUUIDPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55D00FD9F3F77D3071D900F7E05819 /* CBUUIDPath.swift */; };
-		1E5F2093B0143C374C3F0D7C20B2576F /* CentralProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09AFE2C3F3B05315F6A8F4E93C6A5E /* CentralProxy.swift */; };
-		2179A580497A741B9310FA5AE7DF6FC9 /* DescriptorValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6604FF9E3C0963A4802D998F1C8282C /* DescriptorValue.swift */; };
+		0000630F9988BE0046B7C1EBDB2B37A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */; };
+		01BF3429F294258D3F03E847E8282439 /* MHSNTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 62950BF9C66BBAF8E73B6C403545D45C /* MHSNTPClient.m */; };
+		049D2FB61476C3DBB41C00CEE5F57D5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */; };
+		058129505C7B534FDCABB34DFF6AEEFA /* MHSNTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F62BF00F9EA0AA118490430DBE6AFF2 /* MHSNTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0708A68FD57ED127700B1EB8301A9C05 /* Bluetonium-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5255AA63D154F903ECF8134CB1D03E4 /* Bluetonium-dummy.m */; };
+		092A8DF870522623D85B8DCE70AB2431 /* Kronos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC24A8C987C4538A13147E2BB6B5245C /* Kronos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FD639E0448B12ADD0CC08B50FC5F26D /* NTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA666AEB193E1EC58582D6B01997180 /* NTPClient.swift */; };
+		102E4CEF4D96F318A240BAD4E4D17AF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */; };
+		10F194E06B33A9C65D3791C15B1ECA8F /* MHSNTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A54ED4B56B86D4F0DE989FE61D5123A /* MHSNTPManager.m */; };
+		1A455B226A4F938FBD6DE18D8D3E29BC /* DataTransformers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD1537FBEE7EA2768C51E2A35EA92C /* DataTransformers.swift */; };
+		21AE22397BFD1A2FD0FC4782A223846B /* SwiftyBluetooth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F13F85F6736F6BA03F47B7781BBD1F /* SwiftyBluetooth-dummy.m */; };
+		249E657C0D6B87E23B5B005D3E2BAF67 /* MHSNTPManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4817179B989D7CF302ED494DF43587B /* MHSNTPManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		250DA6EA137363D9EAF8657944AE8514 /* Pods-LaunchReactionMeterUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17A65B1D10155B421906888A6C8A11F3 /* Pods-LaunchReactionMeterUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27189AD334F29CEDFDDAE4EF2A69DE7B /* NSDate+MHSNTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF9489EED31D5B46C3F2EF1EBD38B69 /* NSDate+MHSNTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DAA98C8614A6DED26CE8712531AE1FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */; };
+		3923E6224349ECAD6F7DFF339211D3D3 /* MHSNTPQueryOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 762B329C8CCBFE367CC7D9F91812C90B /* MHSNTPQueryOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A167F90002F53C82290C5D9C5A9EA3F /* SwiftyBluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA54A9C00DD144A0FDB84EE60FB162 /* SwiftyBluetooth.swift */; };
 		3B55F836F359ACACAE31C00341B23F1F /* Pods-LaunchReactionMeterTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 854018F5472249BC6D746767CDEB5065 /* Pods-LaunchReactionMeterTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54A41B5E2E142B3D6DECC3A4FBEFA3C1 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B414734910ED24E530FFDD2F0451E969 /* Map.swift */; };
-		5ABDBDA048E247A0B76D692BA0BB1578 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		3F57B6A8B5549CF9ABB3BB4C21D12F2D /* MHSNTP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D93D6803B98DD1840D87B8FA791B7B6D /* MHSNTP-dummy.m */; };
+		4F74D0A0C433C9F9C1EA9B0B50264D32 /* Pods-LaunchReactionMeter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0128F5834B362C0AEFB8950D10673D4F /* Pods-LaunchReactionMeter-dummy.m */; };
+		54A41B5E2E142B3D6DECC3A4FBEFA3C1 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20958A4E9BB3E6F914C2944761C26610 /* Map.swift */; };
 		5AE7B801482350B185BC5128338669C8 /* Pods-LaunchReactionMeterUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7FEC69489ABDC19960F5CB607AFA5 /* Pods-LaunchReactionMeterUITests-dummy.m */; };
-		78C12F206F29B60E95663C6AF40A0444 /* Pods-LaunchReactionMeter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0128F5834B362C0AEFB8950D10673D4F /* Pods-LaunchReactionMeter-dummy.m */; };
-		8A35E5D93F7E4EB3989D332E2B149CA2 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC959DBF81F464964F92168E81591F0 /* Device.swift */; };
-		8F8D2490D625C4E84323D8F4DF0D9621 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAECF94DECBBDD5FE134F3AB85A1EC06 /* Manager.swift */; };
-		94229879B55C04CE49617F586E38BA8B /* SwiftyBluetooth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC1FB56C608B8FBF619226B39A5B4AE /* SwiftyBluetooth-dummy.m */; };
-		9826BB1297F22198033EF9D1D838069C /* CBUUIDConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1983BA8248AE1F49853780D04E319265 /* CBUUIDConvertible.swift */; };
-		A264272540CA989D31E004E40650C829 /* ManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90AE53CCF0E10B22B4617B6620878A /* ManagerDelegate.swift */; };
-		AAC8BE62AD311BE098E40DB4797A2167 /* PeripheralProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5640724BC9DE2A87C15589E0FC4A92 /* PeripheralProxy.swift */; };
-		B1DD300AFCB02907933DE977DF911A52 /* ServiceModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC5481D518F73B3BBF9CA75DA52D646 /* ServiceModelManager.swift */; };
-		BB409F0D2386913312F3A001191A152E /* SwiftyBluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F25A23D7CDD3F8A1D5C14DDF68D5A /* SwiftyBluetooth.swift */; };
-		C11CD205B60EDB001252ECC3EF7DA8BE /* Bluetonium-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 315E02E277BF706F90E7A6221403EFE5 /* Bluetonium-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2310AEB1F8E52D2F50E1C827B00EE90 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162283DB41D5BFCD2B5DD7A267BB2220 /* Util.swift */; };
-		CB99F910318657C2236992EDE4C4B65A /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9354F0D05C62F2D3128E28AD72B04FE8 /* ServiceModel.swift */; };
-		D15E7C517ACA9C8F879F0E4E39970D17 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C0EB1A3D6F014E448B823D9013754E /* Peripheral.swift */; };
-		DF9EDFA138400D47634D0D9ED9647A5E /* Pods-LaunchReactionMeter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0933D86A0925AC847BF9D953A177EF /* Pods-LaunchReactionMeter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FF6CD733CDBEA17251F5BB4C72642FF /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3892E0A12CFEC46ACA87560300800C7 /* Clock.swift */; };
+		67B254C0046AEA6E7D2BC2878E1F5BC5 /* NSDate+MHSNTP.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD92729FCD8DE62E0DD15C74FA9EA14 /* NSDate+MHSNTP.m */; };
+		6921AF1EB46344A7D412C6FDCB6A75BC /* NTPPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792D8052C4DE9114681DBAFC4BE0CB50 /* NTPPacket.swift */; };
+		6A6A84C15807720A7D94BBCDD4C31019 /* CBUUIDConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663C2978099F0D5050D84EB4337E9D1 /* CBUUIDConvertible.swift */; };
+		6C5518A9ADE635799379B4923A571089 /* InternetAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EEDC90578E3DEA428CBF5F84CC9DE /* InternetAddress.swift */; };
+		6FAE7F2D23E1A4835600A6CFB040EFBA /* CentralProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8802352EF771E3853D2D568112B9EA8B /* CentralProxy.swift */; };
+		72DC8E31C89D8C1E0507666B6EF64302 /* MHSNTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 682E6020A2156FA03C0DA54A972D7757 /* MHSNTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C1F41EC24A4755EA94C5793DB5E0763 /* NSTimer+ClosureKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F3D32AACC608F15BB7AF22BCC5401 /* NSTimer+ClosureKit.swift */; };
+		7E4F0161B4D135DA3A0763619A56C2F5 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2163DD779E6BFE418ED4602FDC1FD6AE /* CocoaAsyncSocket-dummy.m */; };
+		8480493AEC1C7AF1B5C0E0BF2F70FB44 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 88221FB20F844DF51F66F9D2FAC2B95E /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		86A41B265D86684C96E0BFFD4ED65E6B /* PeripheralProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CE4141EC050710ECE20737EB0E9FF /* PeripheralProxy.swift */; };
+		87EE4835686EB0A77F2312CDA96D21C5 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177BE180FF7F61D5012A67BB2C8AB46 /* Peripheral.swift */; };
+		8A35E5D93F7E4EB3989D332E2B149CA2 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C345205D32B1E95327F4551743BB78 /* Device.swift */; };
+		8AF383AF237DB325B3A1E564D62F7A25 /* MHSNTPPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = D3D20A316F22C0D6456B32A0485DB08A /* MHSNTPPacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CBC6BD9E596F34ED65A8C72FA5A3BA5 /* DNSResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81C5205891FD440E6FF282E0A55A13A /* DNSResolver.swift */; };
+		8F8D2490D625C4E84323D8F4DF0D9621 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCC2E28FF0AE46102FFA5298061DE2 /* Manager.swift */; };
+		991EA4709AC8B95D941BF2C5427484B7 /* MHSNTPLowLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C57C247423D0C11E1736711D62FA557 /* MHSNTPLowLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F67479AAC806781CAF11941E626598C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */; };
+		A1BBC2EBAA0656D7B5AC208F51824C33 /* MHSNTPPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E75CCF48018E2AF4F431DCB44622BA /* MHSNTPPacket.m */; };
+		A264272540CA989D31E004E40650C829 /* ManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B38F6A9B208B78F99069F74A40BF6 /* ManagerDelegate.swift */; };
+		A330FFC60ED3D8B96C1A9DEC33DB98C5 /* Data+Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA0860E4C1939962AA23DB078C76008 /* Data+Bytes.swift */; };
+		A50FC7BBE173FBA39D9F0EA4B4A48FBB /* SwiftyBluetooth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68F754C86D12DDC57D45FD828D5A7586 /* SwiftyBluetooth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A882891E5A89CADF96C2CA79606409CA /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C3F7ABF75665CA3BD278F6C1BB97F0 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC68277D969E787AC295B705E07C94FF /* Central.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514627E553481E7CD03B27E9129F1048 /* Central.swift */; };
+		AC7DC2A21843CD99040DCD79FF3BE91B /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC865BFFF20595FCB6625724F7046D1 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD0C900781DAFF3C2BA7BFC3827DEE35 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B10BF908C7F1DB55675269E8EEC08B /* Util.swift */; };
+		AEE9644DA0EFCF945438E125BA4F0724 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DB6DC92B75BD9DC397EB9168F653C1 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B1DD300AFCB02907933DE977DF911A52 /* ServiceModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436CE44FBD985093E787B88CAF5EC56B /* ServiceModelManager.swift */; };
+		B688B80E8B12B7F6988B29DC592DA94D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7E85CD06FB5B7EAC4FAD953117F2D2 /* Security.framework */; };
+		BD92E1C024009E0F58D85D8C8616AA20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */; };
+		BF15F45FEC51B6745D9910DA3D76C96E /* CBUUIDPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447FEB41F7BAD371FDF302F0D00B0ED5 /* CBUUIDPath.swift */; };
+		C0B8F5CF77253570F9BD8BDC5A9CA99B /* MHSNTPQueryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4C8B4D8186A1AC5ADA61084A04894C /* MHSNTPQueryOperation.m */; };
+		C11CD205B60EDB001252ECC3EF7DA8BE /* Bluetonium-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9900C282CBC65D8912795A12F869306 /* Bluetonium-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C161CB1C9F06744505E9283476466A0C /* MHSNTPLowLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = DE3F1DF14556DFFAD6B6CD83633ED236 /* MHSNTPLowLevel.m */; };
+		C551322D6940F49D932B69742139405A /* Kronos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC885ED178E192219559199EF0C75760 /* Kronos-dummy.m */; };
+		C7A37C4752EBF0B8C54BC5CEF22026DF /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BA6F6CCD385509DC9FF3B1ACE3E309 /* CocoaAsyncSocket.framework */; };
+		CB99F910318657C2236992EDE4C4B65A /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6777FEE940801EE1E5BB29B0ED37302 /* ServiceModel.swift */; };
+		D01B2EBC1AB52980422F5A831BBCE3F4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18CCAEB371EC97E5B9FA432AB0D5F33 /* CFNetwork.framework */; };
+		D0211F1E4018D53D9D1368E6654684DC /* CBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21E1BB9290B3527331DD0814F53726 /* CBExtensions.swift */; };
+		D378D8C1EEA0772D8D9F5FF376169B58 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4637289787D39C5130B4F0CD1F509E7 /* Result.swift */; };
+		D3D9B62DBAAB4B4CA3F419698A64E928 /* DescriptorValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333D2B9D602234BEC380C4439DE49DB /* DescriptorValue.swift */; };
+		DBCEC549DAE6FBF920A20099E7EC3FA1 /* NTPProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6C6BC8FE38B658B35BA0D90091E83 /* NTPProtocol.swift */; };
+		E3D985D8172E46F3ECEF12C1BF23F69C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */; };
+		E4230DB0D114C94B081018C1AC1E9972 /* CocoaAsyncSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB80443FA66D898D5C04A9DE3635B4F /* CocoaAsyncSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E79BAE88722BCD3040BEE9E1395A6AC2 /* SBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB4ABC6FF2F85B41A90CB67B37DE163 /* SBError.swift */; };
 		E7C5EEC524D69A0A2FF6B0020CC128CC /* Pods-LaunchReactionMeterTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E26267BCFDD63122B89809510DF58DE9 /* Pods-LaunchReactionMeterTests-dummy.m */; };
-		EAC28D8C369D15F66389FB005352BE02 /* Central.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8610A21BCC397F247FB3038AE90B836 /* Central.swift */; };
-		F5C1506F8A9024D803E88148ADE7BD72 /* SwiftyBluetooth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68A711C2D1960A5C61A3BDF7FB61315F /* SwiftyBluetooth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB10E4948462CD8747D86FB2D7D12D2A /* CBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A7186E139BF184DF1D132548E182FB /* CBExtensions.swift */; };
+		EA2E20BA801A2E57B0D5FCEE312F9797 /* TimeFreeze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5ECC2D0C22DF580F3753C43B65DBC5 /* TimeFreeze.swift */; };
+		F3902E34E533FF14871275A61BF577E6 /* Pods-LaunchReactionMeter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0933D86A0925AC847BF9D953A177EF /* Pods-LaunchReactionMeter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4895737A064A8B5C9BAE0D5F7EC4D78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */; };
+		F84213F83FE75349530A59C9E1079CE2 /* MHSNTP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9956DF5AA9F5CB1DE036BB16FE6CFB /* MHSNTP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FABA224B4422D24632A96C0C4BE97D2E /* MHSNTPManager-Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821BFE6A97201345A3FEDB1A7D83324 /* MHSNTPManager-Internal.m */; };
+		FD53967A75394BD6BC81D3BDE898C072 /* MHSNTPManager-Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AB1930E45C03324B81F6370C470C08E /* MHSNTPManager-Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		15A91D542246A79BDD4D9EF5E1D60F73 /* PBXContainerItemProxy */ = {
+		03CAF81BC1058D38E750B12F40527303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC13957AAA3272D5BA3E0F8061B4DFD;
-			remoteInfo = SwiftyBluetooth;
+			remoteGlobalIDString = C010CB4A0834BD633CE773E2677F7B06;
+			remoteInfo = MHSNTP;
 		};
-		AACE13A836E6104AB908C3399263E74F /* PBXContainerItemProxy */ = {
+		1BBCFC62AADA3376E49FA0A709F28FC0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4733469C89276A131EC9739ACF23E762;
 			remoteInfo = Bluetonium;
 		};
+		4E3EC66D0CD9C3D8249CFBA46576EB77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC0D2D2B4EE7C873431AB3502859CA60;
+			remoteInfo = CocoaAsyncSocket;
+		};
+		ACA35D2962256A8FD45360C53307EEDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61CA8B598937C3D2FFFEF901F642682F;
+			remoteInfo = Kronos;
+		};
+		C6BC98BEFC36F139DAFE7BF20CD2DDE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC0D2D2B4EE7C873431AB3502859CA60;
+			remoteInfo = CocoaAsyncSocket;
+		};
+		F6CBF544DC75693CE2AA8C064F092D93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA33A05E9A3545A16FDB8FE1B8EFC0D4;
+			remoteInfo = SwiftyBluetooth;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00DBA3E198A6BF3F5366C7E1F40C7AB6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0128F5834B362C0AEFB8950D10673D4F /* Pods-LaunchReactionMeter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LaunchReactionMeter-dummy.m"; sourceTree = "<group>"; };
-		018ABF4412052C6F240E73957CC293CC /* Bluetonium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Bluetonium.framework; path = Bluetonium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		03B3A0040E50AA68DBAAEEC669AC398B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03F4403976A894F49CE5F6A9DDBD25B9 /* Pods_LaunchReactionMeter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LaunchReactionMeter.framework; path = "Pods-LaunchReactionMeter.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0333D2B9D602234BEC380C4439DE49DB /* DescriptorValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DescriptorValue.swift; path = SwiftyBluetooth/Source/DescriptorValue.swift; sourceTree = "<group>"; };
+		0603BCD6FE9BF722ECDFEEFB43B72BBA /* Bluetonium.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Bluetonium.xcconfig; sourceTree = "<group>"; };
+		068E73B05215F8E7AFB7DA9902CB8928 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06DB6DC92B75BD9DC397EB9168F653C1 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		08B10BF908C7F1DB55675269E8EEC08B /* Util.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Util.swift; path = SwiftyBluetooth/Source/Util.swift; sourceTree = "<group>"; };
 		09C9FA65623C4605B8745B02EEE22DC7 /* Pods-LaunchReactionMeterTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LaunchReactionMeterTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0CC90EBD9508CABBC19A5D4CA9DF00DB /* Bluetonium-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Bluetonium-dummy.m"; sourceTree = "<group>"; };
+		0A54ED4B56B86D4F0DE989FE61D5123A /* MHSNTPManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MHSNTPManager.m; path = MHSNTP/MHSNTPManager.m; sourceTree = "<group>"; };
+		0F62BF00F9EA0AA118490430DBE6AFF2 /* MHSNTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MHSNTPClient.h; path = MHSNTP/MHSNTPClient.h; sourceTree = "<group>"; };
 		0FE4791FD221F200810783E411DC0152 /* Pods-LaunchReactionMeter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LaunchReactionMeter.debug.xcconfig"; sourceTree = "<group>"; };
-		162283DB41D5BFCD2B5DD7A267BB2220 /* Util.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Util.swift; path = SwiftyBluetooth/Source/Util.swift; sourceTree = "<group>"; };
+		143482B967688C12901E2B05B7FF537C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		162F3D32AACC608F15BB7AF22BCC5401 /* NSTimer+ClosureKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTimer+ClosureKit.swift"; path = "Sources/NSTimer+ClosureKit.swift"; sourceTree = "<group>"; };
+		16F13F85F6736F6BA03F47B7781BBD1F /* SwiftyBluetooth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyBluetooth-dummy.m"; sourceTree = "<group>"; };
+		16F29BE42254243ACCD370C5F54DABD5 /* Kronos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kronos-prefix.pch"; sourceTree = "<group>"; };
 		17A65B1D10155B421906888A6C8A11F3 /* Pods-LaunchReactionMeterUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LaunchReactionMeterUITests-umbrella.h"; sourceTree = "<group>"; };
-		17A7186E139BF184DF1D132548E182FB /* CBExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBExtensions.swift; path = SwiftyBluetooth/Source/CBExtensions.swift; sourceTree = "<group>"; };
-		1983BA8248AE1F49853780D04E319265 /* CBUUIDConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBUUIDConvertible.swift; path = SwiftyBluetooth/Source/CBUUIDConvertible.swift; sourceTree = "<group>"; };
+		18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1A5ECC2D0C22DF580F3753C43B65DBC5 /* TimeFreeze.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeFreeze.swift; path = Sources/TimeFreeze.swift; sourceTree = "<group>"; };
+		1AB1930E45C03324B81F6370C470C08E /* MHSNTPManager-Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MHSNTPManager-Internal.h"; path = "MHSNTP/MHSNTPManager-Internal.h"; sourceTree = "<group>"; };
+		20958A4E9BB3E6F914C2944761C26610 /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Source/Map.swift; sourceTree = "<group>"; };
+		2163DD779E6BFE418ED4602FDC1FD6AE /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
 		26F8644C0664D5D3A004F9D6DF16CB14 /* Pods-LaunchReactionMeter-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LaunchReactionMeter-frameworks.sh"; sourceTree = "<group>"; };
-		2D90AE53CCF0E10B22B4617B6620878A /* ManagerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ManagerDelegate.swift; path = Source/Managers/ManagerDelegate.swift; sourceTree = "<group>"; };
-		2FC1FB56C608B8FBF619226B39A5B4AE /* SwiftyBluetooth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyBluetooth-dummy.m"; sourceTree = "<group>"; };
-		315E02E277BF706F90E7A6221403EFE5 /* Bluetonium-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bluetonium-umbrella.h"; sourceTree = "<group>"; };
-		3204AB81EFAD1C88960BD564D46A3BF7 /* Bluetonium-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bluetonium-prefix.pch"; sourceTree = "<group>"; };
+		304B8A4373E4A31DB8AEA58D5E27BF6C /* SwiftyBluetooth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyBluetooth.xcconfig; sourceTree = "<group>"; };
 		347661DCFE4AAE372398C289E655A988 /* Pods-LaunchReactionMeter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LaunchReactionMeter-acknowledgements.markdown"; sourceTree = "<group>"; };
-		389F25A23D7CDD3F8A1D5C14DDF68D5A /* SwiftyBluetooth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyBluetooth.swift; path = SwiftyBluetooth/Source/SwiftyBluetooth.swift; sourceTree = "<group>"; };
+		38BD1537FBEE7EA2768C51E2A35EA92C /* DataTransformers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTransformers.swift; path = Source/DataTransformers.swift; sourceTree = "<group>"; };
 		3FD7FEC69489ABDC19960F5CB607AFA5 /* Pods-LaunchReactionMeterUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LaunchReactionMeterUITests-dummy.m"; sourceTree = "<group>"; };
-		41EA60C8A8DF54B6E35A6655D567614B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		436CE44FBD985093E787B88CAF5EC56B /* ServiceModelManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceModelManager.swift; path = Source/Managers/ServiceModelManager.swift; sourceTree = "<group>"; };
+		447FEB41F7BAD371FDF302F0D00B0ED5 /* CBUUIDPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBUUIDPath.swift; path = SwiftyBluetooth/Source/CBUUIDPath.swift; sourceTree = "<group>"; };
 		463D11AB9887E60DC2C0F63B73939EC4 /* Pods-LaunchReactionMeterUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LaunchReactionMeterUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		46478401010EB298B00933E778F7E1FD /* SwiftyBluetooth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyBluetooth-prefix.pch"; sourceTree = "<group>"; };
+		4BC11C17D674557DEEF4EAD88C03BD06 /* Pods_LaunchReactionMeterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LaunchReactionMeterTests.framework; path = "Pods-LaunchReactionMeterTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEC613B91637B9337D9075D2783248D /* Pods-LaunchReactionMeterUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LaunchReactionMeterUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4D0933D86A0925AC847BF9D953A177EF /* Pods-LaunchReactionMeter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LaunchReactionMeter-umbrella.h"; sourceTree = "<group>"; };
+		4E3EEDC90578E3DEA428CBF5F84CC9DE /* InternetAddress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InternetAddress.swift; path = Sources/InternetAddress.swift; sourceTree = "<group>"; };
 		4EBA9921F9F007CA0B913397F241624E /* Pods-LaunchReactionMeterUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LaunchReactionMeterUITests-resources.sh"; sourceTree = "<group>"; };
-		5A5640724BC9DE2A87C15589E0FC4A92 /* PeripheralProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeripheralProxy.swift; path = SwiftyBluetooth/Source/PeripheralProxy.swift; sourceTree = "<group>"; };
+		4EEA54A9C00DD144A0FDB84EE60FB162 /* SwiftyBluetooth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyBluetooth.swift; path = SwiftyBluetooth/Source/SwiftyBluetooth.swift; sourceTree = "<group>"; };
+		514627E553481E7CD03B27E9129F1048 /* Central.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Central.swift; path = SwiftyBluetooth/Source/Central.swift; sourceTree = "<group>"; };
+		55E75CCF48018E2AF4F431DCB44622BA /* MHSNTPPacket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MHSNTPPacket.m; path = MHSNTP/MHSNTPPacket.m; sourceTree = "<group>"; };
+		5663C2978099F0D5050D84EB4337E9D1 /* CBUUIDConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBUUIDConvertible.swift; path = SwiftyBluetooth/Source/CBUUIDConvertible.swift; sourceTree = "<group>"; };
+		5A21E1BB9290B3527331DD0814F53726 /* CBExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBExtensions.swift; path = SwiftyBluetooth/Source/CBExtensions.swift; sourceTree = "<group>"; };
+		5A7E85CD06FB5B7EAC4FAD953117F2D2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		5C57C247423D0C11E1736711D62FA557 /* MHSNTPLowLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MHSNTPLowLevel.h; path = MHSNTP/MHSNTPLowLevel.h; sourceTree = "<group>"; };
 		5D9CB801B1371A61DF014F693CD38A05 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		627929A4F22464808886624D27B5EDE2 /* SwiftyBluetooth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyBluetooth.modulemap; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		68A711C2D1960A5C61A3BDF7FB61315F /* SwiftyBluetooth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyBluetooth-umbrella.h"; sourceTree = "<group>"; };
-		71B6F313D7881711351AB1BFC4B499F7 /* DataTransformers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTransformers.swift; path = Source/DataTransformers.swift; sourceTree = "<group>"; };
+		5FEF62A18D143D7576F1D1095E140F54 /* SwiftyBluetooth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyBluetooth.modulemap; sourceTree = "<group>"; };
+		62950BF9C66BBAF8E73B6C403545D45C /* MHSNTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MHSNTPClient.m; path = MHSNTP/MHSNTPClient.m; sourceTree = "<group>"; };
+		682E6020A2156FA03C0DA54A972D7757 /* MHSNTP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MHSNTP.h; path = MHSNTP/MHSNTP.h; sourceTree = "<group>"; };
+		68F754C86D12DDC57D45FD828D5A7586 /* SwiftyBluetooth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyBluetooth-umbrella.h"; sourceTree = "<group>"; };
+		7283E6CF63D8603FF86A8595BD9F7964 /* MHSNTP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MHSNTP-prefix.pch"; sourceTree = "<group>"; };
+		74BB8490075DDFF66D6EB0B3CE7C0301 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		762B329C8CCBFE367CC7D9F91812C90B /* MHSNTPQueryOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MHSNTPQueryOperation.h; path = MHSNTP/MHSNTPQueryOperation.h; sourceTree = "<group>"; };
+		7742915CD97ABFE872A228426542EA4D /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
 		7814BC058D73B38E69EEE79453DE1D3A /* Pods-LaunchReactionMeterTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LaunchReactionMeterTests-resources.sh"; sourceTree = "<group>"; };
+		792D8052C4DE9114681DBAFC4BE0CB50 /* NTPPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NTPPacket.swift; path = Sources/NTPPacket.swift; sourceTree = "<group>"; };
+		7A802ABBE7F2682109507E15CB1B45B9 /* SwiftyBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyBluetooth.framework; path = SwiftyBluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AB80443FA66D898D5C04A9DE3635B4F /* CocoaAsyncSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-umbrella.h"; sourceTree = "<group>"; };
+		7CA0860E4C1939962AA23DB078C76008 /* Data+Bytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Bytes.swift"; path = "Sources/Data+Bytes.swift"; sourceTree = "<group>"; };
+		7F81CA46FCF176902131268B34CCA1C8 /* Pods_LaunchReactionMeterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LaunchReactionMeterUITests.framework; path = "Pods-LaunchReactionMeterUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		851142185663DBA77CEB50B2488A7BED /* Pods_LaunchReactionMeter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LaunchReactionMeter.framework; path = "Pods-LaunchReactionMeter.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		854018F5472249BC6D746767CDEB5065 /* Pods-LaunchReactionMeterTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LaunchReactionMeterTests-umbrella.h"; sourceTree = "<group>"; };
-		86B9D059BB9E40D73E3AC3BD41751893 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = SwiftyBluetooth/Source/Result.swift; sourceTree = "<group>"; };
-		9354F0D05C62F2D3128E28AD72B04FE8 /* ServiceModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceModel.swift; path = Source/Models/ServiceModel.swift; sourceTree = "<group>"; };
+		8802352EF771E3853D2D568112B9EA8B /* CentralProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CentralProxy.swift; path = SwiftyBluetooth/Source/CentralProxy.swift; sourceTree = "<group>"; };
+		8821BFE6A97201345A3FEDB1A7D83324 /* MHSNTPManager-Internal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MHSNTPManager-Internal.m"; path = "MHSNTP/MHSNTPManager-Internal.m"; sourceTree = "<group>"; };
+		88221FB20F844DF51F66F9D2FAC2B95E /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		8B4C8B4D8186A1AC5ADA61084A04894C /* MHSNTPQueryOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MHSNTPQueryOperation.m; path = MHSNTP/MHSNTPQueryOperation.m; sourceTree = "<group>"; };
+		91BA6F6CCD385509DC9FF3B1ACE3E309 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9323E3E034494FBE0D0202768FD6A13E /* Kronos.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kronos.xcconfig; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94D993B65AF6970CE598EF7C3840B254 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B3F8D494E90B4A4B29EEC02E7C73DB /* Pods-LaunchReactionMeterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LaunchReactionMeterTests.debug.xcconfig"; sourceTree = "<group>"; };
-		962A2BAB2AA2B0F5516D76F47EDA5302 /* Bluetonium.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Bluetonium.modulemap; sourceTree = "<group>"; };
+		97468F9FFCD18E087706C01D3EF285BD /* MHSNTP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MHSNTP.xcconfig; sourceTree = "<group>"; };
 		996CB3113B22B329F6E60901BFF9A5EC /* Pods-LaunchReactionMeterTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LaunchReactionMeterTests-frameworks.sh"; sourceTree = "<group>"; };
-		9B55D00FD9F3F77D3071D900F7E05819 /* CBUUIDPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBUUIDPath.swift; path = SwiftyBluetooth/Source/CBUUIDPath.swift; sourceTree = "<group>"; };
 		9C487C595846635FDD0A32AB7B6C4E61 /* Pods-LaunchReactionMeterTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LaunchReactionMeterTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9D681185C5D58A86A849B0396D314BEC /* Pods-LaunchReactionMeter-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LaunchReactionMeter-resources.sh"; sourceTree = "<group>"; };
+		9DB4ABC6FF2F85B41A90CB67B37DE163 /* SBError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SBError.swift; path = SwiftyBluetooth/Source/SBError.swift; sourceTree = "<group>"; };
 		9F39C4B407068950EF9CBC03383BDF30 /* Pods-LaunchReactionMeter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LaunchReactionMeter-acknowledgements.plist"; sourceTree = "<group>"; };
+		9F699CB75BEA44E16DCEF107F712758A /* Bluetonium.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Bluetonium.modulemap; sourceTree = "<group>"; };
 		9FA7EF692819A3963049460C01F40265 /* Pods-LaunchReactionMeterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LaunchReactionMeterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9FF9489EED31D5B46C3F2EF1EBD38B69 /* NSDate+MHSNTP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MHSNTP.h"; path = "MHSNTP/NSDate+MHSNTP.h"; sourceTree = "<group>"; };
+		A177BE180FF7F61D5012A67BB2C8AB46 /* Peripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Peripheral.swift; path = SwiftyBluetooth/Source/Peripheral.swift; sourceTree = "<group>"; };
+		A4637289787D39C5130B4F0CD1F509E7 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = SwiftyBluetooth/Source/Result.swift; sourceTree = "<group>"; };
 		A68466D576A309FEE6CBCC4B9C329DF3 /* Pods-LaunchReactionMeterUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LaunchReactionMeterUITests-frameworks.sh"; sourceTree = "<group>"; };
-		A8C0EB1A3D6F014E448B823D9013754E /* Peripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Peripheral.swift; path = SwiftyBluetooth/Source/Peripheral.swift; sourceTree = "<group>"; };
-		ABC5481D518F73B3BBF9CA75DA52D646 /* ServiceModelManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceModelManager.swift; path = Source/Managers/ServiceModelManager.swift; sourceTree = "<group>"; };
-		B414734910ED24E530FFDD2F0451E969 /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Source/Map.swift; sourceTree = "<group>"; };
-		B6604FF9E3C0963A4802D998F1C8282C /* DescriptorValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DescriptorValue.swift; path = SwiftyBluetooth/Source/DescriptorValue.swift; sourceTree = "<group>"; };
-		B662241025B343589249357AB1DDA09C /* Bluetonium.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Bluetonium.xcconfig; sourceTree = "<group>"; };
-		B8610A21BCC397F247FB3038AE90B836 /* Central.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Central.swift; path = SwiftyBluetooth/Source/Central.swift; sourceTree = "<group>"; };
-		BAC959DBF81F464964F92168E81591F0 /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Source/Models/Device.swift; sourceTree = "<group>"; };
+		A8C3F7ABF75665CA3BD278F6C1BB97F0 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		A8D6C6BC8FE38B658B35BA0D90091E83 /* NTPProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NTPProtocol.swift; path = Sources/NTPProtocol.swift; sourceTree = "<group>"; };
+		AD9956DF5AA9F5CB1DE036BB16FE6CFB /* MHSNTP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MHSNTP-umbrella.h"; sourceTree = "<group>"; };
+		AF25BF2E7D074B66686BEAFDE367BBD6 /* Bluetonium-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bluetonium-prefix.pch"; sourceTree = "<group>"; };
+		B7CC536544EBD8D7E7FD097159658700 /* SwiftyBluetooth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyBluetooth-prefix.pch"; sourceTree = "<group>"; };
+		B835770564BAA170E534E0FF378A7017 /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
 		C09F61BC105E9EF505EEC2635755260C /* Pods-LaunchReactionMeterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LaunchReactionMeterTests.release.xcconfig"; sourceTree = "<group>"; };
-		C4EF13CA045C6A51333FAF695FEC1CC6 /* SwiftyBluetooth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyBluetooth.xcconfig; sourceTree = "<group>"; };
-		C537973BA7210EAE191BFA14E326DF15 /* SwiftyBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyBluetooth.framework; path = SwiftyBluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5C345205D32B1E95327F4551743BB78 /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Source/Models/Device.swift; sourceTree = "<group>"; };
 		C6DA8E4B6BDA337E1E22AF5A046FF9D1 /* Pods-LaunchReactionMeterTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LaunchReactionMeterTests.modulemap"; sourceTree = "<group>"; };
 		C7AEBBB5FF1FB2B8406443BCA09EDF11 /* Pods-LaunchReactionMeter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LaunchReactionMeter.release.xcconfig"; sourceTree = "<group>"; };
 		C81054033BA514524CF92CDBA4870E3C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D07668A603AB03C12904ACD8FCB34D3C /* Pods_LaunchReactionMeterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LaunchReactionMeterUITests.framework; path = "Pods-LaunchReactionMeterUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC865BFFF20595FCB6625724F7046D1 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		D2CCC2E28FF0AE46102FFA5298061DE2 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Managers/Manager.swift; sourceTree = "<group>"; };
+		D3892E0A12CFEC46ACA87560300800C7 /* Clock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Clock.swift; path = Sources/Clock.swift; sourceTree = "<group>"; };
+		D3A3E670471997DEBDF951DEE639C0B9 /* Kronos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kronos.modulemap; sourceTree = "<group>"; };
+		D3D20A316F22C0D6456B32A0485DB08A /* MHSNTPPacket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MHSNTPPacket.h; path = MHSNTP/MHSNTPPacket.h; sourceTree = "<group>"; };
 		D904FCF05E195168C2F7A5AB74F5CB6D /* Pods-LaunchReactionMeterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LaunchReactionMeterUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DAECF94DECBBDD5FE134F3AB85A1EC06 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Managers/Manager.swift; sourceTree = "<group>"; };
-		DB09AFE2C3F3B05315F6A8F4E93C6A5E /* CentralProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CentralProxy.swift; path = SwiftyBluetooth/Source/CentralProxy.swift; sourceTree = "<group>"; };
-		DFE21AF6A0BEFBF5724318F1DC090546 /* Pods_LaunchReactionMeterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LaunchReactionMeterTests.framework; path = "Pods-LaunchReactionMeterTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D93D6803B98DD1840D87B8FA791B7B6D /* MHSNTP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MHSNTP-dummy.m"; sourceTree = "<group>"; };
+		DE3F1DF14556DFFAD6B6CD83633ED236 /* MHSNTPLowLevel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MHSNTPLowLevel.m; path = MHSNTP/MHSNTPLowLevel.m; sourceTree = "<group>"; };
+		DF439E93A1C82ADEA0138056BCBAC558 /* CocoaAsyncSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaAsyncSocket.modulemap; sourceTree = "<group>"; };
+		E0BA44936DC16703C12606E06AEA6EE6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E218AD4FCAE46C828786897B2BE579AB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E26267BCFDD63122B89809510DF58DE9 /* Pods-LaunchReactionMeterTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LaunchReactionMeterTests-dummy.m"; sourceTree = "<group>"; };
+		E4817179B989D7CF302ED494DF43587B /* MHSNTPManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MHSNTPManager.h; path = MHSNTP/MHSNTPManager.h; sourceTree = "<group>"; };
+		E5255AA63D154F903ECF8134CB1D03E4 /* Bluetonium-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Bluetonium-dummy.m"; sourceTree = "<group>"; };
+		E6777FEE940801EE1E5BB29B0ED37302 /* ServiceModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceModel.swift; path = Source/Models/ServiceModel.swift; sourceTree = "<group>"; };
+		E9900C282CBC65D8912795A12F869306 /* Bluetonium-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bluetonium-umbrella.h"; sourceTree = "<group>"; };
+		EAA666AEB193E1EC58582D6B01997180 /* NTPClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NTPClient.swift; path = Sources/NTPClient.swift; sourceTree = "<group>"; };
 		EAA9EE6661FD54A4381B4A1D12E72EFD /* Pods-LaunchReactionMeter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LaunchReactionMeter.modulemap"; sourceTree = "<group>"; };
+		EC24A8C987C4538A13147E2BB6B5245C /* Kronos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kronos-umbrella.h"; sourceTree = "<group>"; };
+		EC351149E16E0F7ECCEC2188200831CC /* MHSNTP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MHSNTP.modulemap; sourceTree = "<group>"; };
+		EC7CE4141EC050710ECE20737EB0E9FF /* PeripheralProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeripheralProxy.swift; path = SwiftyBluetooth/Source/PeripheralProxy.swift; sourceTree = "<group>"; };
+		F18CCAEB371EC97E5B9FA432AB0D5F33 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		F3B42C6BB74FA78ED348FA35BDB99A4C /* MHSNTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MHSNTP.framework; path = MHSNTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4DC8E6D056C4E6F8296D5CA48B22E47 /* Bluetonium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Bluetonium.framework; path = Bluetonium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5DAD3F49017BF893FD287CB203A35FE /* Kronos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kronos.framework; path = Kronos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67FB41F54E791847A0D8716D12689C9 /* Pods-LaunchReactionMeterUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LaunchReactionMeterUITests.modulemap"; sourceTree = "<group>"; };
-		FEE93DCFB67B5D0CE4B85CA084154EB8 /* SBError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SBError.swift; path = SwiftyBluetooth/Source/SBError.swift; sourceTree = "<group>"; };
+		F81C5205891FD440E6FF282E0A55A13A /* DNSResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DNSResolver.swift; path = Sources/DNSResolver.swift; sourceTree = "<group>"; };
+		FC885ED178E192219559199EF0C75760 /* Kronos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kronos-dummy.m"; sourceTree = "<group>"; };
+		FC9B38F6A9B208B78F99069F74A40BF6 /* ManagerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ManagerDelegate.swift; path = Source/Managers/ManagerDelegate.swift; sourceTree = "<group>"; };
+		FCD92729FCD8DE62E0DD15C74FA9EA14 /* NSDate+MHSNTP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MHSNTP.m"; path = "MHSNTP/NSDate+MHSNTP.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1B3222AB2FA60FA4FF1DFB7416F7D35A /* Frameworks */ = {
+		07CB2E7B42288C9D84E35C0C1475F725 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02B3F2D18A65A40AFF6D1E65B5174FDE /* Foundation.framework in Frameworks */,
+				C7A37C4752EBF0B8C54BC5CEF22026DF /* CocoaAsyncSocket.framework in Frameworks */,
+				BD92E1C024009E0F58D85D8C8616AA20 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +266,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0000630F9988BE0046B7C1EBDB2B37A4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F68D3119F422AA23A05F79951EF46A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4895737A064A8B5C9BAE0D5F7EC4D78 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,36 +293,93 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFCA03EB61B4EAE7060C50A9BF0E654B /* Frameworks */ = {
+		88C5FBAD9DC164DA2813C99CAF8DA823 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ABDBDA048E247A0B76D692BA0BB1578 /* Foundation.framework in Frameworks */,
+				9F67479AAC806781CAF11941E626598C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD9F6718D3E4A2BC5590A44A26E4E2DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3D985D8172E46F3ECEF12C1BF23F69C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1C2C126168B038B9B15BF2A4C96FDDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D01B2EBC1AB52980422F5A831BBCE3F4 /* CFNetwork.framework in Frameworks */,
+				2DAA98C8614A6DED26CE8712531AE1FC /* Foundation.framework in Frameworks */,
+				B688B80E8B12B7F6988B29DC592DA94D /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0267095BDAEC042CAB907E46B0EE952A /* Products */ = {
+		063F4FA69140FC3CD53D965811D6A9A7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				018ABF4412052C6F240E73957CC293CC /* Bluetonium.framework */,
-				03F4403976A894F49CE5F6A9DDBD25B9 /* Pods_LaunchReactionMeter.framework */,
-				DFE21AF6A0BEFBF5724318F1DC090546 /* Pods_LaunchReactionMeterTests.framework */,
-				D07668A603AB03C12904ACD8FCB34D3C /* Pods_LaunchReactionMeterUITests.framework */,
-				C537973BA7210EAE191BFA14E326DF15 /* SwiftyBluetooth.framework */,
+				74BB8490075DDFF66D6EB0B3CE7C0301 /* Info.plist */,
+				5FEF62A18D143D7576F1D1095E140F54 /* SwiftyBluetooth.modulemap */,
+				304B8A4373E4A31DB8AEA58D5E27BF6C /* SwiftyBluetooth.xcconfig */,
+				16F13F85F6736F6BA03F47B7781BBD1F /* SwiftyBluetooth-dummy.m */,
+				B7CC536544EBD8D7E7FD097159658700 /* SwiftyBluetooth-prefix.pch */,
+				68F754C86D12DDC57D45FD828D5A7586 /* SwiftyBluetooth-umbrella.h */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyBluetooth";
 			sourceTree = "<group>";
 		};
-		264179540F2B6C5EA23BD0E52B55AB6B /* Pods */ = {
+		0B83431081C53688152532C32EA38BCA /* MHSNTP */ = {
 			isa = PBXGroup;
 			children = (
-				C435B40647FB1BFB778A94E35F37ACC8 /* Bluetonium */,
-				E5EC58C49864200A60F712E4F4DC300A /* SwiftyBluetooth */,
+				682E6020A2156FA03C0DA54A972D7757 /* MHSNTP.h */,
+				0F62BF00F9EA0AA118490430DBE6AFF2 /* MHSNTPClient.h */,
+				62950BF9C66BBAF8E73B6C403545D45C /* MHSNTPClient.m */,
+				5C57C247423D0C11E1736711D62FA557 /* MHSNTPLowLevel.h */,
+				DE3F1DF14556DFFAD6B6CD83633ED236 /* MHSNTPLowLevel.m */,
+				E4817179B989D7CF302ED494DF43587B /* MHSNTPManager.h */,
+				0A54ED4B56B86D4F0DE989FE61D5123A /* MHSNTPManager.m */,
+				1AB1930E45C03324B81F6370C470C08E /* MHSNTPManager-Internal.h */,
+				8821BFE6A97201345A3FEDB1A7D83324 /* MHSNTPManager-Internal.m */,
+				D3D20A316F22C0D6456B32A0485DB08A /* MHSNTPPacket.h */,
+				55E75CCF48018E2AF4F431DCB44622BA /* MHSNTPPacket.m */,
+				762B329C8CCBFE367CC7D9F91812C90B /* MHSNTPQueryOperation.h */,
+				8B4C8B4D8186A1AC5ADA61084A04894C /* MHSNTPQueryOperation.m */,
+				9FF9489EED31D5B46C3F2EF1EBD38B69 /* NSDate+MHSNTP.h */,
+				FCD92729FCD8DE62E0DD15C74FA9EA14 /* NSDate+MHSNTP.m */,
+				B26D4F5A7BFDEAAABC7016158154ED53 /* Support Files */,
+			);
+			name = MHSNTP;
+			path = MHSNTP;
+			sourceTree = "<group>";
+		};
+		10340D500017FB6281307701D3A3E18E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5547293AEFB1F6C944458D29303F4 /* Bluetonium */,
+				CA4AF3A0E0BBF063F796EBD45F1C3BC5 /* CocoaAsyncSocket */,
+				BB4E1CFD2F9104F135D3E897B3061582 /* Kronos */,
+				0B83431081C53688152532C32EA38BCA /* MHSNTP */,
+				4B9A193587E5A0A097395DFBD6F09260 /* SwiftyBluetooth */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2B933D4B764323E14C9F306E59BA9E9E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F18CCAEB371EC97E5B9FA432AB0D5F33 /* CFNetwork.framework */,
+				18B811B7AE0E054C1E1A26521285653C /* Foundation.framework */,
+				5A7E85CD06FB5B7EAC4FAD953117F2D2 /* Security.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		3EBA0D70040D3F984489AA672400378C /* Pods-LaunchReactionMeterUITests */ = {
@@ -214,18 +400,25 @@
 			path = "Target Support Files/Pods-LaunchReactionMeterUITests";
 			sourceTree = "<group>";
 		};
-		3EE1BE76437B86D8D46352229A99D0AC /* Support Files */ = {
+		4B9A193587E5A0A097395DFBD6F09260 /* SwiftyBluetooth */ = {
 			isa = PBXGroup;
 			children = (
-				41EA60C8A8DF54B6E35A6655D567614B /* Info.plist */,
-				627929A4F22464808886624D27B5EDE2 /* SwiftyBluetooth.modulemap */,
-				C4EF13CA045C6A51333FAF695FEC1CC6 /* SwiftyBluetooth.xcconfig */,
-				2FC1FB56C608B8FBF619226B39A5B4AE /* SwiftyBluetooth-dummy.m */,
-				46478401010EB298B00933E778F7E1FD /* SwiftyBluetooth-prefix.pch */,
-				68A711C2D1960A5C61A3BDF7FB61315F /* SwiftyBluetooth-umbrella.h */,
+				5A21E1BB9290B3527331DD0814F53726 /* CBExtensions.swift */,
+				5663C2978099F0D5050D84EB4337E9D1 /* CBUUIDConvertible.swift */,
+				447FEB41F7BAD371FDF302F0D00B0ED5 /* CBUUIDPath.swift */,
+				514627E553481E7CD03B27E9129F1048 /* Central.swift */,
+				8802352EF771E3853D2D568112B9EA8B /* CentralProxy.swift */,
+				0333D2B9D602234BEC380C4439DE49DB /* DescriptorValue.swift */,
+				A177BE180FF7F61D5012A67BB2C8AB46 /* Peripheral.swift */,
+				EC7CE4141EC050710ECE20737EB0E9FF /* PeripheralProxy.swift */,
+				A4637289787D39C5130B4F0CD1F509E7 /* Result.swift */,
+				9DB4ABC6FF2F85B41A90CB67B37DE163 /* SBError.swift */,
+				4EEA54A9C00DD144A0FDB84EE60FB162 /* SwiftyBluetooth.swift */,
+				08B10BF908C7F1DB55675269E8EEC08B /* Util.swift */,
+				063F4FA69140FC3CD53D965811D6A9A7 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyBluetooth";
+			name = SwiftyBluetooth;
+			path = SwiftyBluetooth;
 			sourceTree = "<group>";
 		};
 		5779D80643888E3AB91A8427C74AEB17 /* Pods-LaunchReactionMeterTests */ = {
@@ -250,19 +443,57 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				264179540F2B6C5EA23BD0E52B55AB6B /* Pods */,
-				0267095BDAEC042CAB907E46B0EE952A /* Products */,
+				E57D8BB42B7367E2EA1AB4BAF61E5D44 /* Frameworks */,
+				10340D500017FB6281307701D3A3E18E /* Pods */,
+				F9F2F0C929352DA9F83424F83FA1BE58 /* Products */,
 				CA3D0C96AA0018B0A16015BE9B62A06D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		AE552F300B717A5358FB57525240E13D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				9F699CB75BEA44E16DCEF107F712758A /* Bluetonium.modulemap */,
+				0603BCD6FE9BF722ECDFEEFB43B72BBA /* Bluetonium.xcconfig */,
+				E5255AA63D154F903ECF8134CB1D03E4 /* Bluetonium-dummy.m */,
+				AF25BF2E7D074B66686BEAFDE367BBD6 /* Bluetonium-prefix.pch */,
+				E9900C282CBC65D8912795A12F869306 /* Bluetonium-umbrella.h */,
+				068E73B05215F8E7AFB7DA9902CB8928 /* Info.plist */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/Bluetonium";
+			sourceTree = "<group>";
+		};
+		B26D4F5A7BFDEAAABC7016158154ED53 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				143482B967688C12901E2B05B7FF537C /* Info.plist */,
+				EC351149E16E0F7ECCEC2188200831CC /* MHSNTP.modulemap */,
+				97468F9FFCD18E087706C01D3EF285BD /* MHSNTP.xcconfig */,
+				D93D6803B98DD1840D87B8FA791B7B6D /* MHSNTP-dummy.m */,
+				7283E6CF63D8603FF86A8595BD9F7964 /* MHSNTP-prefix.pch */,
+				AD9956DF5AA9F5CB1DE036BB16FE6CFB /* MHSNTP-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MHSNTP";
+			sourceTree = "<group>";
+		};
+		BB4E1CFD2F9104F135D3E897B3061582 /* Kronos */ = {
+			isa = PBXGroup;
+			children = (
+				D3892E0A12CFEC46ACA87560300800C7 /* Clock.swift */,
+				7CA0860E4C1939962AA23DB078C76008 /* Data+Bytes.swift */,
+				F81C5205891FD440E6FF282E0A55A13A /* DNSResolver.swift */,
+				4E3EEDC90578E3DEA428CBF5F84CC9DE /* InternetAddress.swift */,
+				162F3D32AACC608F15BB7AF22BCC5401 /* NSTimer+ClosureKit.swift */,
+				EAA666AEB193E1EC58582D6B01997180 /* NTPClient.swift */,
+				792D8052C4DE9114681DBAFC4BE0CB50 /* NTPPacket.swift */,
+				A8D6C6BC8FE38B658B35BA0D90091E83 /* NTPProtocol.swift */,
+				1A5ECC2D0C22DF580F3753C43B65DBC5 /* TimeFreeze.swift */,
+				D50C87D0362EA5841D2D525DF99284D5 /* Support Files */,
+			);
+			name = Kronos;
+			path = Kronos;
 			sourceTree = "<group>";
 		};
 		C2A06B3D6EA884F88F90D6D4DD94FF18 /* Pods-LaunchReactionMeter */ = {
@@ -283,17 +514,17 @@
 			path = "Target Support Files/Pods-LaunchReactionMeter";
 			sourceTree = "<group>";
 		};
-		C435B40647FB1BFB778A94E35F37ACC8 /* Bluetonium */ = {
+		C7C5547293AEFB1F6C944458D29303F4 /* Bluetonium */ = {
 			isa = PBXGroup;
 			children = (
-				71B6F313D7881711351AB1BFC4B499F7 /* DataTransformers.swift */,
-				BAC959DBF81F464964F92168E81591F0 /* Device.swift */,
-				DAECF94DECBBDD5FE134F3AB85A1EC06 /* Manager.swift */,
-				2D90AE53CCF0E10B22B4617B6620878A /* ManagerDelegate.swift */,
-				B414734910ED24E530FFDD2F0451E969 /* Map.swift */,
-				9354F0D05C62F2D3128E28AD72B04FE8 /* ServiceModel.swift */,
-				ABC5481D518F73B3BBF9CA75DA52D646 /* ServiceModelManager.swift */,
-				E8791BB9A71343B2482FA8FF4E409EAF /* Support Files */,
+				38BD1537FBEE7EA2768C51E2A35EA92C /* DataTransformers.swift */,
+				C5C345205D32B1E95327F4551743BB78 /* Device.swift */,
+				D2CCC2E28FF0AE46102FFA5298061DE2 /* Manager.swift */,
+				FC9B38F6A9B208B78F99069F74A40BF6 /* ManagerDelegate.swift */,
+				20958A4E9BB3E6F914C2944761C26610 /* Map.swift */,
+				E6777FEE940801EE1E5BB29B0ED37302 /* ServiceModel.swift */,
+				436CE44FBD985093E787B88CAF5EC56B /* ServiceModelManager.swift */,
+				AE552F300B717A5358FB57525240E13D /* Support Files */,
 			);
 			name = Bluetonium;
 			path = Bluetonium;
@@ -309,52 +540,92 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		CA4AF3A0E0BBF063F796EBD45F1C3BC5 /* CocoaAsyncSocket */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				A8C3F7ABF75665CA3BD278F6C1BB97F0 /* GCDAsyncSocket.h */,
+				88221FB20F844DF51F66F9D2FAC2B95E /* GCDAsyncSocket.m */,
+				CDC865BFFF20595FCB6625724F7046D1 /* GCDAsyncUdpSocket.h */,
+				06DB6DC92B75BD9DC397EB9168F653C1 /* GCDAsyncUdpSocket.m */,
+				CE6810780015387E09710EE4CBDB8D37 /* Support Files */,
 			);
-			name = iOS;
+			name = CocoaAsyncSocket;
+			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
-		E5EC58C49864200A60F712E4F4DC300A /* SwiftyBluetooth */ = {
+		CE6810780015387E09710EE4CBDB8D37 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				17A7186E139BF184DF1D132548E182FB /* CBExtensions.swift */,
-				1983BA8248AE1F49853780D04E319265 /* CBUUIDConvertible.swift */,
-				9B55D00FD9F3F77D3071D900F7E05819 /* CBUUIDPath.swift */,
-				B8610A21BCC397F247FB3038AE90B836 /* Central.swift */,
-				DB09AFE2C3F3B05315F6A8F4E93C6A5E /* CentralProxy.swift */,
-				B6604FF9E3C0963A4802D998F1C8282C /* DescriptorValue.swift */,
-				A8C0EB1A3D6F014E448B823D9013754E /* Peripheral.swift */,
-				5A5640724BC9DE2A87C15589E0FC4A92 /* PeripheralProxy.swift */,
-				86B9D059BB9E40D73E3AC3BD41751893 /* Result.swift */,
-				FEE93DCFB67B5D0CE4B85CA084154EB8 /* SBError.swift */,
-				389F25A23D7CDD3F8A1D5C14DDF68D5A /* SwiftyBluetooth.swift */,
-				162283DB41D5BFCD2B5DD7A267BB2220 /* Util.swift */,
-				3EE1BE76437B86D8D46352229A99D0AC /* Support Files */,
-			);
-			name = SwiftyBluetooth;
-			path = SwiftyBluetooth;
-			sourceTree = "<group>";
-		};
-		E8791BB9A71343B2482FA8FF4E409EAF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				962A2BAB2AA2B0F5516D76F47EDA5302 /* Bluetonium.modulemap */,
-				B662241025B343589249357AB1DDA09C /* Bluetonium.xcconfig */,
-				0CC90EBD9508CABBC19A5D4CA9DF00DB /* Bluetonium-dummy.m */,
-				3204AB81EFAD1C88960BD564D46A3BF7 /* Bluetonium-prefix.pch */,
-				315E02E277BF706F90E7A6221403EFE5 /* Bluetonium-umbrella.h */,
-				03B3A0040E50AA68DBAAEEC669AC398B /* Info.plist */,
+				DF439E93A1C82ADEA0138056BCBAC558 /* CocoaAsyncSocket.modulemap */,
+				7742915CD97ABFE872A228426542EA4D /* CocoaAsyncSocket.xcconfig */,
+				2163DD779E6BFE418ED4602FDC1FD6AE /* CocoaAsyncSocket-dummy.m */,
+				B835770564BAA170E534E0FF378A7017 /* CocoaAsyncSocket-prefix.pch */,
+				7AB80443FA66D898D5C04A9DE3635B4F /* CocoaAsyncSocket-umbrella.h */,
+				E0BA44936DC16703C12606E06AEA6EE6 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Bluetonium";
+			path = "../Target Support Files/CocoaAsyncSocket";
+			sourceTree = "<group>";
+		};
+		D50C87D0362EA5841D2D525DF99284D5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				00DBA3E198A6BF3F5366C7E1F40C7AB6 /* Info.plist */,
+				D3A3E670471997DEBDF951DEE639C0B9 /* Kronos.modulemap */,
+				9323E3E034494FBE0D0202768FD6A13E /* Kronos.xcconfig */,
+				FC885ED178E192219559199EF0C75760 /* Kronos-dummy.m */,
+				16F29BE42254243ACCD370C5F54DABD5 /* Kronos-prefix.pch */,
+				EC24A8C987C4538A13147E2BB6B5245C /* Kronos-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Kronos";
+			sourceTree = "<group>";
+		};
+		E57D8BB42B7367E2EA1AB4BAF61E5D44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91BA6F6CCD385509DC9FF3B1ACE3E309 /* CocoaAsyncSocket.framework */,
+				2B933D4B764323E14C9F306E59BA9E9E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9F2F0C929352DA9F83424F83FA1BE58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4DC8E6D056C4E6F8296D5CA48B22E47 /* Bluetonium.framework */,
+				94D993B65AF6970CE598EF7C3840B254 /* CocoaAsyncSocket.framework */,
+				F5DAD3F49017BF893FD287CB203A35FE /* Kronos.framework */,
+				F3B42C6BB74FA78ED348FA35BDB99A4C /* MHSNTP.framework */,
+				851142185663DBA77CEB50B2488A7BED /* Pods_LaunchReactionMeter.framework */,
+				4BC11C17D674557DEEF4EAD88C03BD06 /* Pods_LaunchReactionMeterTests.framework */,
+				7F81CA46FCF176902131268B34CCA1C8 /* Pods_LaunchReactionMeterUITests.framework */,
+				7A802ABBE7F2682109507E15CB1B45B9 /* SwiftyBluetooth.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		066131069354C4CC132CAB645145E8F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4230DB0D114C94B081018C1AC1E9972 /* CocoaAsyncSocket-umbrella.h in Headers */,
+				A882891E5A89CADF96C2CA79606409CA /* GCDAsyncSocket.h in Headers */,
+				AC7DC2A21843CD99040DCD79FF3BE91B /* GCDAsyncUdpSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07FAD68206FE05449995915B16FCBA61 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				092A8DF870522623D85B8DCE70AB2431 /* Kronos-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0A0725C18F0028D025B7AED0D7A4CF1A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,19 +642,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7848DBD6A85C0CC0197CABF8A2929650 /* Headers */ = {
+		918B0F6E8E22FE8BAEDD25C103016ECE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5C1506F8A9024D803E88148ADE7BD72 /* SwiftyBluetooth-umbrella.h in Headers */,
+				F84213F83FE75349530A59C9E1079CE2 /* MHSNTP-umbrella.h in Headers */,
+				72DC8E31C89D8C1E0507666B6EF64302 /* MHSNTP.h in Headers */,
+				058129505C7B534FDCABB34DFF6AEEFA /* MHSNTPClient.h in Headers */,
+				991EA4709AC8B95D941BF2C5427484B7 /* MHSNTPLowLevel.h in Headers */,
+				FD53967A75394BD6BC81D3BDE898C072 /* MHSNTPManager-Internal.h in Headers */,
+				249E657C0D6B87E23B5B005D3E2BAF67 /* MHSNTPManager.h in Headers */,
+				8AF383AF237DB325B3A1E564D62F7A25 /* MHSNTPPacket.h in Headers */,
+				3923E6224349ECAD6F7DFF339211D3D3 /* MHSNTPQueryOperation.h in Headers */,
+				27189AD334F29CEDFDDAE4EF2A69DE7B /* NSDate+MHSNTP.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F12730BAEF788B99E9697EF566A4FDFE /* Headers */ = {
+		EC1EBBC2852545EFF96D236BC6A86645 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF9EDFA138400D47634D0D9ED9647A5E /* Pods-LaunchReactionMeter-umbrella.h in Headers */,
+				A50FC7BBE173FBA39D9F0EA4B4A48FBB /* SwiftyBluetooth-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F39D40872D15C111A42843540E1346E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3902E34E533FF14871275A61BF577E6 /* Pods-LaunchReactionMeter-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,24 +699,24 @@
 			);
 			name = Bluetonium;
 			productName = Bluetonium;
-			productReference = 018ABF4412052C6F240E73957CC293CC /* Bluetonium.framework */;
+			productReference = F4DC8E6D056C4E6F8296D5CA48B22E47 /* Bluetonium.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8DC13957AAA3272D5BA3E0F8061B4DFD /* SwiftyBluetooth */ = {
+		61CA8B598937C3D2FFFEF901F642682F /* Kronos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0D1E5FF01539F42C560D13550F42FF4 /* Build configuration list for PBXNativeTarget "SwiftyBluetooth" */;
+			buildConfigurationList = F0242A1460B5AD172DF5117329C0B3CD /* Build configuration list for PBXNativeTarget "Kronos" */;
 			buildPhases = (
-				0915D7B0BB386EAFE6B5B5094C13E055 /* Sources */,
-				1B3222AB2FA60FA4FF1DFB7416F7D35A /* Frameworks */,
-				7848DBD6A85C0CC0197CABF8A2929650 /* Headers */,
+				3A1B1A6B579AAC4757EA20881CDED396 /* Sources */,
+				4F68D3119F422AA23A05F79951EF46A6 /* Frameworks */,
+				07FAD68206FE05449995915B16FCBA61 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftyBluetooth;
-			productName = SwiftyBluetooth;
-			productReference = C537973BA7210EAE191BFA14E326DF15 /* SwiftyBluetooth.framework */;
+			name = Kronos;
+			productName = Kronos;
+			productReference = F5DAD3F49017BF893FD287CB203A35FE /* Kronos.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9C5A5FE7B12E5C4D5E7D74D588DB1081 /* Pods-LaunchReactionMeterUITests */ = {
@@ -446,7 +733,42 @@
 			);
 			name = "Pods-LaunchReactionMeterUITests";
 			productName = "Pods-LaunchReactionMeterUITests";
-			productReference = D07668A603AB03C12904ACD8FCB34D3C /* Pods_LaunchReactionMeterUITests.framework */;
+			productReference = 7F81CA46FCF176902131268B34CCA1C8 /* Pods_LaunchReactionMeterUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AC0D2D2B4EE7C873431AB3502859CA60 /* CocoaAsyncSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2A03B912F777B2BFB05E7B9E903B15F /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */;
+			buildPhases = (
+				FD452A203117FF8DFA26B0711D439093 /* Sources */,
+				D1C2C126168B038B9B15BF2A4C96FDDC /* Frameworks */,
+				066131069354C4CC132CAB645145E8F7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaAsyncSocket;
+			productName = CocoaAsyncSocket;
+			productReference = 94D993B65AF6970CE598EF7C3840B254 /* CocoaAsyncSocket.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C010CB4A0834BD633CE773E2677F7B06 /* MHSNTP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D12D7710F461B68F49ABD8B5EB8A4B68 /* Build configuration list for PBXNativeTarget "MHSNTP" */;
+			buildPhases = (
+				6C6E58B0E37EDBD7778C34305731B8E4 /* Sources */,
+				07CB2E7B42288C9D84E35C0C1475F725 /* Frameworks */,
+				918B0F6E8E22FE8BAEDD25C103016ECE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C47849A06F67DF2FFC31B9FFAFEA63F5 /* PBXTargetDependency */,
+			);
+			name = MHSNTP;
+			productName = MHSNTP;
+			productReference = F3B42C6BB74FA78ED348FA35BDB99A4C /* MHSNTP.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C52A0718B975449B37E44F064ADDCA04 /* Pods-LaunchReactionMeterTests */ = {
@@ -463,26 +785,46 @@
 			);
 			name = "Pods-LaunchReactionMeterTests";
 			productName = "Pods-LaunchReactionMeterTests";
-			productReference = DFE21AF6A0BEFBF5724318F1DC090546 /* Pods_LaunchReactionMeterTests.framework */;
+			productReference = 4BC11C17D674557DEEF4EAD88C03BD06 /* Pods_LaunchReactionMeterTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FBDD5DF0DB21AAF35572939B71C7A82A /* Pods-LaunchReactionMeter */ = {
+		D41C56406724A619CDE1DDDF312A786D /* Pods-LaunchReactionMeter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5E434BC09E1C27EF9F5CF84EC08E011 /* Build configuration list for PBXNativeTarget "Pods-LaunchReactionMeter" */;
+			buildConfigurationList = A4A2C6FBA2BED068EBA7EB8581435D0C /* Build configuration list for PBXNativeTarget "Pods-LaunchReactionMeter" */;
 			buildPhases = (
-				AC150CB75E758E5A9C2AA739700154BB /* Sources */,
-				AFCA03EB61B4EAE7060C50A9BF0E654B /* Frameworks */,
-				F12730BAEF788B99E9697EF566A4FDFE /* Headers */,
+				F476C49E2C86E3DB16C06F96FF98E642 /* Sources */,
+				88C5FBAD9DC164DA2813C99CAF8DA823 /* Frameworks */,
+				F39D40872D15C111A42843540E1346E4 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B03F369E97BAAC42486B4A1A87C32A54 /* PBXTargetDependency */,
-				20118629EDD33D1FFB6142D538097A9E /* PBXTargetDependency */,
+				F33B776B05D7535286D794F2DB56C6F5 /* PBXTargetDependency */,
+				D53962ACB9E988D4E75334203DEB2883 /* PBXTargetDependency */,
+				2065FEDB602936170D2CC007539DF6A6 /* PBXTargetDependency */,
+				310A66E0092ECAB9DF613BD0BD8FFF74 /* PBXTargetDependency */,
+				6B5D7BA9CA9FEB6312FF574A429B1F22 /* PBXTargetDependency */,
 			);
 			name = "Pods-LaunchReactionMeter";
 			productName = "Pods-LaunchReactionMeter";
-			productReference = 03F4403976A894F49CE5F6A9DDBD25B9 /* Pods_LaunchReactionMeter.framework */;
+			productReference = 851142185663DBA77CEB50B2488A7BED /* Pods_LaunchReactionMeter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA33A05E9A3545A16FDB8FE1B8EFC0D4 /* SwiftyBluetooth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 169899E338DB1F0E8748AC0C6A36C669 /* Build configuration list for PBXNativeTarget "SwiftyBluetooth" */;
+			buildPhases = (
+				2D481BD13A32A15AFD853400BB78CEF7 /* Sources */,
+				BD9F6718D3E4A2BC5590A44A26E4E2DD /* Frameworks */,
+				EC1EBBC2852545EFF96D236BC6A86645 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyBluetooth;
+			productName = SwiftyBluetooth;
+			productReference = 7A802ABBE7F2682109507E15CB1B45B9 /* SwiftyBluetooth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -502,40 +844,23 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 0267095BDAEC042CAB907E46B0EE952A /* Products */;
+			productRefGroup = F9F2F0C929352DA9F83424F83FA1BE58 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4733469C89276A131EC9739ACF23E762 /* Bluetonium */,
-				FBDD5DF0DB21AAF35572939B71C7A82A /* Pods-LaunchReactionMeter */,
+				AC0D2D2B4EE7C873431AB3502859CA60 /* CocoaAsyncSocket */,
+				61CA8B598937C3D2FFFEF901F642682F /* Kronos */,
+				C010CB4A0834BD633CE773E2677F7B06 /* MHSNTP */,
+				D41C56406724A619CDE1DDDF312A786D /* Pods-LaunchReactionMeter */,
 				C52A0718B975449B37E44F064ADDCA04 /* Pods-LaunchReactionMeterTests */,
 				9C5A5FE7B12E5C4D5E7D74D588DB1081 /* Pods-LaunchReactionMeterUITests */,
-				8DC13957AAA3272D5BA3E0F8061B4DFD /* SwiftyBluetooth */,
+				DA33A05E9A3545A16FDB8FE1B8EFC0D4 /* SwiftyBluetooth */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0915D7B0BB386EAFE6B5B5094C13E055 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB10E4948462CD8747D86FB2D7D12D2A /* CBExtensions.swift in Sources */,
-				9826BB1297F22198033EF9D1D838069C /* CBUUIDConvertible.swift in Sources */,
-				1C544894CEBC999F80F59EE978158689 /* CBUUIDPath.swift in Sources */,
-				EAC28D8C369D15F66389FB005352BE02 /* Central.swift in Sources */,
-				1E5F2093B0143C374C3F0D7C20B2576F /* CentralProxy.swift in Sources */,
-				2179A580497A741B9310FA5AE7DF6FC9 /* DescriptorValue.swift in Sources */,
-				D15E7C517ACA9C8F879F0E4E39970D17 /* Peripheral.swift in Sources */,
-				AAC8BE62AD311BE098E40DB4797A2167 /* PeripheralProxy.swift in Sources */,
-				067FF5680E253F787FCD64614ADDD415 /* Result.swift in Sources */,
-				09308DB9C1DB0062E360C4AE63E8FBEB /* SBError.swift in Sources */,
-				94229879B55C04CE49617F586E38BA8B /* SwiftyBluetooth-dummy.m in Sources */,
-				BB409F0D2386913312F3A001191A152E /* SwiftyBluetooth.swift in Sources */,
-				C2310AEB1F8E52D2F50E1C827B00EE90 /* Util.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0C74BF75DBA93DBA4F7A878175456D00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -552,11 +877,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC150CB75E758E5A9C2AA739700154BB /* Sources */ = {
+		2D481BD13A32A15AFD853400BB78CEF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78C12F206F29B60E95663C6AF40A0444 /* Pods-LaunchReactionMeter-dummy.m in Sources */,
+				D0211F1E4018D53D9D1368E6654684DC /* CBExtensions.swift in Sources */,
+				6A6A84C15807720A7D94BBCDD4C31019 /* CBUUIDConvertible.swift in Sources */,
+				BF15F45FEC51B6745D9910DA3D76C96E /* CBUUIDPath.swift in Sources */,
+				AC68277D969E787AC295B705E07C94FF /* Central.swift in Sources */,
+				6FAE7F2D23E1A4835600A6CFB040EFBA /* CentralProxy.swift in Sources */,
+				D3D9B62DBAAB4B4CA3F419698A64E928 /* DescriptorValue.swift in Sources */,
+				87EE4835686EB0A77F2312CDA96D21C5 /* Peripheral.swift in Sources */,
+				86A41B265D86684C96E0BFFD4ED65E6B /* PeripheralProxy.swift in Sources */,
+				D378D8C1EEA0772D8D9F5FF376169B58 /* Result.swift in Sources */,
+				E79BAE88722BCD3040BEE9E1395A6AC2 /* SBError.swift in Sources */,
+				21AE22397BFD1A2FD0FC4782A223846B /* SwiftyBluetooth-dummy.m in Sources */,
+				3A167F90002F53C82290C5D9C5A9EA3F /* SwiftyBluetooth.swift in Sources */,
+				AD0C900781DAFF3C2BA7BFC3827DEE35 /* Util.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A1B1A6B579AAC4757EA20881CDED396 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FF6CD733CDBEA17251F5BB4C72642FF /* Clock.swift in Sources */,
+				A330FFC60ED3D8B96C1A9DEC33DB98C5 /* Data+Bytes.swift in Sources */,
+				8CBC6BD9E596F34ED65A8C72FA5A3BA5 /* DNSResolver.swift in Sources */,
+				6C5518A9ADE635799379B4923A571089 /* InternetAddress.swift in Sources */,
+				C551322D6940F49D932B69742139405A /* Kronos-dummy.m in Sources */,
+				7C1F41EC24A4755EA94C5793DB5E0763 /* NSTimer+ClosureKit.swift in Sources */,
+				0FD639E0448B12ADD0CC08B50FC5F26D /* NTPClient.swift in Sources */,
+				6921AF1EB46344A7D412C6FDCB6A75BC /* NTPPacket.swift in Sources */,
+				DBCEC549DAE6FBF920A20099E7EC3FA1 /* NTPProtocol.swift in Sources */,
+				EA2E20BA801A2E57B0D5FCEE312F9797 /* TimeFreeze.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C6E58B0E37EDBD7778C34305731B8E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F57B6A8B5549CF9ABB3BB4C21D12F2D /* MHSNTP-dummy.m in Sources */,
+				01BF3429F294258D3F03E847E8282439 /* MHSNTPClient.m in Sources */,
+				C161CB1C9F06744505E9283476466A0C /* MHSNTPLowLevel.m in Sources */,
+				FABA224B4422D24632A96C0C4BE97D2E /* MHSNTPManager-Internal.m in Sources */,
+				10F194E06B33A9C65D3791C15B1ECA8F /* MHSNTPManager.m in Sources */,
+				A1BBC2EBAA0656D7B5AC208F51824C33 /* MHSNTPPacket.m in Sources */,
+				C0B8F5CF77253570F9BD8BDC5A9CA99B /* MHSNTPQueryOperation.m in Sources */,
+				67B254C0046AEA6E7D2BC2878E1F5BC5 /* NSDate+MHSNTP.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,59 +944,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F476C49E2C86E3DB16C06F96FF98E642 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F74D0A0C433C9F9C1EA9B0B50264D32 /* Pods-LaunchReactionMeter-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD452A203117FF8DFA26B0711D439093 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E4F0161B4D135DA3A0763619A56C2F5 /* CocoaAsyncSocket-dummy.m in Sources */,
+				8480493AEC1C7AF1B5C0E0BF2F70FB44 /* GCDAsyncSocket.m in Sources */,
+				AEE9644DA0EFCF945438E125BA4F0724 /* GCDAsyncUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		20118629EDD33D1FFB6142D538097A9E /* PBXTargetDependency */ = {
+		2065FEDB602936170D2CC007539DF6A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kronos;
+			target = 61CA8B598937C3D2FFFEF901F642682F /* Kronos */;
+			targetProxy = ACA35D2962256A8FD45360C53307EEDF /* PBXContainerItemProxy */;
+		};
+		310A66E0092ECAB9DF613BD0BD8FFF74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MHSNTP;
+			target = C010CB4A0834BD633CE773E2677F7B06 /* MHSNTP */;
+			targetProxy = 03CAF81BC1058D38E750B12F40527303 /* PBXContainerItemProxy */;
+		};
+		6B5D7BA9CA9FEB6312FF574A429B1F22 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyBluetooth;
-			target = 8DC13957AAA3272D5BA3E0F8061B4DFD /* SwiftyBluetooth */;
-			targetProxy = 15A91D542246A79BDD4D9EF5E1D60F73 /* PBXContainerItemProxy */;
+			target = DA33A05E9A3545A16FDB8FE1B8EFC0D4 /* SwiftyBluetooth */;
+			targetProxy = F6CBF544DC75693CE2AA8C064F092D93 /* PBXContainerItemProxy */;
 		};
-		B03F369E97BAAC42486B4A1A87C32A54 /* PBXTargetDependency */ = {
+		C47849A06F67DF2FFC31B9FFAFEA63F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = AC0D2D2B4EE7C873431AB3502859CA60 /* CocoaAsyncSocket */;
+			targetProxy = C6BC98BEFC36F139DAFE7BF20CD2DDE5 /* PBXContainerItemProxy */;
+		};
+		D53962ACB9E988D4E75334203DEB2883 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = AC0D2D2B4EE7C873431AB3502859CA60 /* CocoaAsyncSocket */;
+			targetProxy = 4E3EC66D0CD9C3D8249CFBA46576EB77 /* PBXContainerItemProxy */;
+		};
+		F33B776B05D7535286D794F2DB56C6F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Bluetonium;
 			target = 4733469C89276A131EC9739ACF23E762 /* Bluetonium */;
-			targetProxy = AACE13A836E6104AB908C3399263E74F /* PBXContainerItemProxy */;
+			targetProxy = 1BBCFC62AADA3376E49FA0A709F28FC0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		01F26FCF486B7823FC473221A557A722 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4EF13CA045C6A51333FAF695FEC1CC6 /* SwiftyBluetooth.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyBluetooth/SwiftyBluetooth-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyBluetooth/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyBluetooth/SwiftyBluetooth.modulemap";
-				PRODUCT_NAME = SwiftyBluetooth;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		189C2726B8E60893B7DCC21474461BC6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B662241025B343589249357AB1DDA09C /* Bluetonium.xcconfig */;
+			baseConfigurationReference = 0603BCD6FE9BF722ECDFEEFB43B72BBA /* Bluetonium.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -656,6 +1035,101 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		18A74452F53D0016BF84CEBB9981437B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7742915CD97ABFE872A228426542EA4D /* CocoaAsyncSocket.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
+				PRODUCT_NAME = CocoaAsyncSocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1CE129FAE3159625D3DD59EDEF5DBDB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7AEBBB5FF1FB2B8406443BCA09EDF11 /* Pods-LaunchReactionMeter.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LaunchReactionMeter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LaunchReactionMeter/Pods-LaunchReactionMeter.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LaunchReactionMeter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		23D382772C29133EA182C9B45FD4BDE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7742915CD97ABFE872A228426542EA4D /* CocoaAsyncSocket.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
+				PRODUCT_NAME = CocoaAsyncSocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		2FA3844A2E154AD031C7F3396666815B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -691,7 +1165,7 @@
 		};
 		35BEC341F0E2A72B74B772B14863ADE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B662241025B343589249357AB1DDA09C /* Bluetonium.xcconfig */;
+			baseConfigurationReference = 0603BCD6FE9BF722ECDFEEFB43B72BBA /* Bluetonium.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -746,40 +1220,6 @@
 				PRODUCT_NAME = Pods_LaunchReactionMeterUITests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4D0FAFBE5004CB7D9B880683EDD6C34A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0FE4791FD221F200810783E411DC0152 /* Pods-LaunchReactionMeter.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LaunchReactionMeter/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LaunchReactionMeter/Pods-LaunchReactionMeter.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LaunchReactionMeter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -849,9 +1289,9 @@
 			};
 			name = Debug;
 		};
-		5178AA73CA78105CFA97559F07F6FB82 /* Release */ = {
+		61CBBBC35A4AA6793301E28D51816E48 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7AEBBB5FF1FB2B8406443BCA09EDF11 /* Pods-LaunchReactionMeter.release.xcconfig */;
+			baseConfigurationReference = 9323E3E034494FBE0D0202768FD6A13E /* Kronos.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -862,47 +1302,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LaunchReactionMeter/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Kronos/Kronos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kronos/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LaunchReactionMeter/Pods-LaunchReactionMeter.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LaunchReactionMeter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6CE931EE244F425CE8EE47832DF500D4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4EF13CA045C6A51333FAF695FEC1CC6 /* SwiftyBluetooth.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyBluetooth/SwiftyBluetooth-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyBluetooth/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyBluetooth/SwiftyBluetooth.modulemap";
-				PRODUCT_NAME = SwiftyBluetooth;
+				MODULEMAP_FILE = "Target Support Files/Kronos/Kronos.modulemap";
+				PRODUCT_NAME = Kronos;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -972,6 +1378,68 @@
 			};
 			name = Release;
 		};
+		834B9DB84B553684E91077C88B410DF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97468F9FFCD18E087706C01D3EF285BD /* MHSNTP.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MHSNTP/MHSNTP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MHSNTP/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MHSNTP/MHSNTP.modulemap";
+				PRODUCT_NAME = MHSNTP;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B974CA6AF6C36F4DA47FD8B31D4744CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9323E3E034494FBE0D0202768FD6A13E /* Kronos.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kronos/Kronos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kronos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kronos/Kronos.modulemap";
+				PRODUCT_NAME = Kronos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C36AAAEA6C6C872BD137643BFD18DE1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C09F61BC105E9EF505EEC2635755260C /* Pods-LaunchReactionMeterTests.release.xcconfig */;
@@ -998,6 +1466,134 @@
 				PRODUCT_NAME = Pods_LaunchReactionMeterTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C6FFD750DD601B70048E2612119FC826 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 304B8A4373E4A31DB8AEA58D5E27BF6C /* SwiftyBluetooth.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyBluetooth/SwiftyBluetooth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyBluetooth/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyBluetooth/SwiftyBluetooth.modulemap";
+				PRODUCT_NAME = SwiftyBluetooth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C7F96C7DB29B00CC67FA5EE26081EC78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FE4791FD221F200810783E411DC0152 /* Pods-LaunchReactionMeter.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LaunchReactionMeter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LaunchReactionMeter/Pods-LaunchReactionMeter.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LaunchReactionMeter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D52C87454C4941B3D36C10D548CFF4FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 304B8A4373E4A31DB8AEA58D5E27BF6C /* SwiftyBluetooth.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyBluetooth/SwiftyBluetooth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyBluetooth/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyBluetooth/SwiftyBluetooth.modulemap";
+				PRODUCT_NAME = SwiftyBluetooth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E96DD8E7344E8C7A9B43255C036333A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97468F9FFCD18E087706C01D3EF285BD /* MHSNTP.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MHSNTP/MHSNTP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MHSNTP/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MHSNTP/MHSNTP.modulemap";
+				PRODUCT_NAME = MHSNTP;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1041,6 +1637,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		169899E338DB1F0E8748AC0C6A36C669 /* Build configuration list for PBXNativeTarget "SwiftyBluetooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D52C87454C4941B3D36C10D548CFF4FC /* Debug */,
+				C6FFD750DD601B70048E2612119FC826 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1068,20 +1673,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0D1E5FF01539F42C560D13550F42FF4 /* Build configuration list for PBXNativeTarget "SwiftyBluetooth" */ = {
+		A4A2C6FBA2BED068EBA7EB8581435D0C /* Build configuration list for PBXNativeTarget "Pods-LaunchReactionMeter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6CE931EE244F425CE8EE47832DF500D4 /* Debug */,
-				01F26FCF486B7823FC473221A557A722 /* Release */,
+				C7F96C7DB29B00CC67FA5EE26081EC78 /* Debug */,
+				1CE129FAE3159625D3DD59EDEF5DBDB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5E434BC09E1C27EF9F5CF84EC08E011 /* Build configuration list for PBXNativeTarget "Pods-LaunchReactionMeter" */ = {
+		D12D7710F461B68F49ABD8B5EB8A4B68 /* Build configuration list for PBXNativeTarget "MHSNTP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D0FAFBE5004CB7D9B880683EDD6C34A /* Debug */,
-				5178AA73CA78105CFA97559F07F6FB82 /* Release */,
+				834B9DB84B553684E91077C88B410DF9 /* Debug */,
+				E96DD8E7344E8C7A9B43255C036333A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0242A1460B5AD172DF5117329C0B3CD /* Build configuration list for PBXNativeTarget "Kronos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61CBBBC35A4AA6793301E28D51816E48 /* Debug */,
+				B974CA6AF6C36F4DA47FD8B31D4744CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2A03B912F777B2BFB05E7B9E903B15F /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23D382772C29133EA182C9B45FD4BDE7 /* Debug */,
+				18A74452F53D0016BF84CEBB9981437B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,15 +1,24 @@
 PODS:
   - Bluetonium (2.1.0)
+  - CocoaAsyncSocket (7.6.2)
+  - Kronos (1.0.1)
+  - MHSNTP (0.0.3):
+    - CocoaAsyncSocket (~> 7)
   - SwiftyBluetooth (1.0.0)
 
 DEPENDENCIES:
   - Bluetonium
+  - Kronos
+  - MHSNTP
   - SwiftyBluetooth
 
 SPEC CHECKSUMS:
   Bluetonium: 45d465084e1a663b579e2c8d937aebf5551c2d67
+  CocoaAsyncSocket: 3541e024f48c54b251638ef72d51dd42808de932
+  Kronos: 3bc3f4e60b03a6cd9767e9e06b2b1fd20377a652
+  MHSNTP: 73fc7c11f40f69ea54399fcb43ce8173167913a8
   SwiftyBluetooth: 9e26b1367f56aa60f35713f6d968382144bccfd5
 
-PODFILE CHECKSUM: 09a30497f7dc37016f005910bf686f7a0b655c64
+PODFILE CHECKSUM: 0d201b24b405c7e0e4dbaa6ca096a3d552db4558
 
 COCOAPODS: 1.4.0

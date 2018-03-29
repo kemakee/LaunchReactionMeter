@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Bluetonium" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyBluetooth"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Bluetonium" "${PODS_CONFIGURATION_BUILD_DIR}/CocoaAsyncSocket" "${PODS_CONFIGURATION_BUILD_DIR}/Kronos" "${PODS_CONFIGURATION_BUILD_DIR}/MHSNTP" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyBluetooth"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Bluetonium/Bluetonium.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyBluetooth/SwiftyBluetooth.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Bluetonium" -framework "SwiftyBluetooth"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Bluetonium/Bluetonium.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Kronos/Kronos.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/MHSNTP/MHSNTP.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyBluetooth/SwiftyBluetooth.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Bluetonium" -framework "CocoaAsyncSocket" -framework "Kronos" -framework "MHSNTP" -framework "SwiftyBluetooth"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

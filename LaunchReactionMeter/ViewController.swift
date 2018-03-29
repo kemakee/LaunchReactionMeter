@@ -8,9 +8,11 @@
 
 import UIKit
 import MultipeerConnectivity
+import Kronos
+import AudioToolbox
 
 
-class ViewController: UIViewController, MultiPeerCommunicationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
+class ViewController: BaseContentViewController, MultiPeerCommunicationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     private var peerList: UITableView!
     private var connectedList: UITableView!
@@ -23,7 +25,6 @@ class ViewController: UIViewController, MultiPeerCommunicationManagerDelegate, U
     let communication = MultiPeerCommunicationManager()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.lightGray
         
@@ -52,8 +53,28 @@ class ViewController: UIViewController, MultiPeerCommunicationManagerDelegate, U
         communication.delegate = self
         self.view.addSubview(connectedList)
         self.view.addSubview(peerList)
+        
+
+        //Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.timerFired), userInfo: nil, repeats: true)
+        
     
     }
+    
+    @objc func timerFired() {
+//        print("------------------------------------------")
+//        print(Date().dateWithMillisecInString())
+//        print(TimeMnanager.shared.now().dateWithMillisecInString())
+//
+//        if let date = Clock.now {
+//            print(date.dateWithMillisecInString())
+//        }
+
+        print(TimeMnanager.shared.now().dateWithMillisecInString())
+        AudioServicesPlaySystemSound(1322)
+        
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -103,6 +124,23 @@ class ViewController: UIViewController, MultiPeerCommunicationManagerDelegate, U
             let session = communication.session
             browser.invitePeer(selectedPeer, to: session, withContext: nil, timeout: 10)
         }
+        if tableView == self.connectedList
+        {
+            do {
+                let date = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "y-MM-dd H:m:ss.SSSS"
+                Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.timerFired), userInfo: self, repeats: false)
+                try  communication.session.send(dateFormatter.string(from: TimeMnanager.shared.calculateStartTime(offset: 4)).data(using: .utf8)!, toPeers: connectedPeers, with: .reliable)
+                
+                print(dateFormatter.string(from: date))
+            }
+            catch let error {
+                NSLog("%@", "Error for sending: \(error)")
+            }
+        }
+        
+       
         
     }
     
