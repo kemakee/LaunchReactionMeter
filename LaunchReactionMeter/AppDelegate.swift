@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,9 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        _ = TimeMnanager.shared
+        _ = TimeManager.shared
         initScreenManagement()
         initApplication()
+        UIApplication.shared.statusBarStyle = .lightContent
+        FirebaseApp.configure()
         
         return true
     }
@@ -65,6 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let headerVC = HeaderViewController()
         self.mainViewController.load(header: headerVC)
         self.mainViewController.updateContentLayerFrame()
+
 //        self.mainViewController.load(menu: MenuViewController())
         
 

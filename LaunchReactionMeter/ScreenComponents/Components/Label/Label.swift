@@ -105,5 +105,18 @@ class Label: UILabel, ConfigurationProtocol {
         let height: CGFloat = font.lineHeight * CGFloat(self.numberOfLines)
         return height == 0 ? CGFloat.greatestFiniteMagnitude : height
     }
+    func setTextAndResize(_ text: String!, withFontSize size:(CGFloat)){
+        self.text = text.replacingOccurrences(of: "\\r", with: "")
+        self.text = self.text!.replacingOccurrences(of: "\\t", with: " ")
+        self.text = self.text?.replacingOccurrences(of: "\\n", with: "\n")
+        
+        let textSize: CGSize = text.getFrame(withFont: UIFont(name: self.font.fontName, size: size)!, constrainedToSize: CGSize(width: self.bounds.size.width, height: 10000))
+        self.font = UIFont(name: self.font.fontName, size: size)
+        self.frame = CGRect(x: self.x,y: self.y, width: self.width,height: textSize.height)
+    }
+    
+    func setTextAndResize(_ text: String!){
+        setTextAndResize(text, withFontSize: self.font.pointSize)
+    }
 
 }

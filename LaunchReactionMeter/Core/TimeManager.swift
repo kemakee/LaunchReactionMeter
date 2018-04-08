@@ -10,9 +10,9 @@ import Foundation
 import MHSNTP
 import Kronos
 
-class TimeMnanager: NSObject {
+class TimeManager: NSObject {
     
-    static let shared = TimeMnanager()
+    static let shared = TimeManager()
     
     let sntp = MHSNTPManager()
     

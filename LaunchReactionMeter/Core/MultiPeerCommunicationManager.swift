@@ -122,7 +122,7 @@ extension MultiPeerCommunicationManager : MCSessionDelegate
         let startdate = dateFormatter.date(from: str)!
         
         DispatchQueue.main.async {
-            let offset = TimeMnanager.shared.calculateOffsetFromNetActualTime(date: startdate)
+            let offset = TimeManager.shared.calculateOffsetFromNetActualTime(date: startdate)
             Timer.scheduledTimer(timeInterval: offset, target: self, selector: #selector(self.timerFired), userInfo: self, repeats: false)
         }
         
@@ -149,7 +149,7 @@ extension MultiPeerCommunicationManager : MCSessionDelegate
         //            print(date.dateWithMillisecInString())
         //        }
         
-        print(TimeMnanager.shared.now().dateWithMillisecInString())
+        print(TimeManager.shared.now().dateWithMillisecInString())
         AudioServicesPlaySystemSound(1322)
         
     }

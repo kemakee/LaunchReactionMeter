@@ -10,6 +10,9 @@ target 'LaunchReactionMeter' do
 	pod 'SwiftyBluetooth'
 	pod 'MHSNTP'
 	pod 'Kronos'
+    	pod 'SnapKit'
+	pod 'Firebase/Core'
+	pod 'Firebase/Auth'
   target 'LaunchReactionMeterTests' do
     inherit! :search_paths
     # Pods for testing

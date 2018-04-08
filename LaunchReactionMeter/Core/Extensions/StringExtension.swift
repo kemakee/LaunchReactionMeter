@@ -120,5 +120,13 @@ extension String {
     var integerValue: Int? {
         return NumFormatter.instance.number(from: self)?.intValue
     }
+    
+    func getFrame(withFont font: UIFont!, constrainedToSize size: CGSize) -> CGSize{
+        let attributesDictionary: NSDictionary = [NSAttributedStringKey.font: font]
+        let options: NSStringDrawingOptions = [.usesLineFragmentOrigin, .usesFontLeading]
+        let frame: CGRect = self.boundingRect(with: size, options: options, attributes: attributesDictionary as? [NSAttributedStringKey: AnyObject], context: nil)
+        
+        return frame.size
+    }
 
 }
