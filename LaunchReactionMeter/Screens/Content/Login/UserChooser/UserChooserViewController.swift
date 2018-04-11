@@ -40,10 +40,15 @@ class UserChooserViewController: BaseContentViewController {
         let configAthBtn : ConfigurationLRMButton = ConfigurationLRMButton(y: 0, text: "Athlete", color: .orange, size: .normal)
         athleteButton = LRMButton(configuration: configAthBtn)
         self.svContent.addSubview(athleteButton)
+        athleteButton.addTarget(self, action: #selector(athletePressed), for: .touchUpInside)
+
+        
         
         let configCoachBtn : ConfigurationLRMButton = ConfigurationLRMButton(y: 0, text: "Coach", color: .orange, size: .normal)
         coachButton = LRMButton(configuration: configCoachBtn)
         self.svContent.addSubview(coachButton)
+        coachButton.addTarget(self, action: #selector(coachPressed), for: .touchUpInside)
+
         
         let configRegBtn : ConfigurationLRMButton = ConfigurationLRMButton(y: 0, text: "Registration", color: .white, size: .normal)
         registrationButton = LRMButton(configuration: configRegBtn)
@@ -92,6 +97,16 @@ class UserChooserViewController: BaseContentViewController {
     @objc func regPressed()
     {
         loginInteractor.navigateToRegistrationScreen()
+    }
+    
+    @objc func athletePressed()
+    {
+        loginInteractor.navigateToLogin()
+    }
+    
+    @objc func coachPressed()
+    {
+        loginInteractor.navigateToLogin()
     }
     
    

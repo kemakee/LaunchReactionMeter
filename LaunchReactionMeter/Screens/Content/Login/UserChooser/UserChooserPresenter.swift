@@ -10,12 +10,18 @@ import UIKit
 
 @objc protocol UserChooserPresenterProtocol : BasePresenterProtocol{
     func navigateToRegistrationScreen()
+    func navigateToLogin()
 }
 
 class UserChooserPresenter: BasePresenter, UserChooserPresenterProtocol {
     func navigateToRegistrationScreen() {
         MainViewController.shared.load(content: RegistrationViewController())
     }
+    
+    func navigateToLogin() {
+        MainViewController.shared.load(content: LoginViewController())
+    }
+    
     
 
     

@@ -49,6 +49,8 @@
 		BE16AC5A206D6FA100E99BD0 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16AC58206D6FA100E99BD0 /* HamburgerButton.swift */; };
 		BE16AC5E206D703A00E99BD0 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16AC5D206D703A00E99BD0 /* Label.swift */; };
 		BE16AC61206D704700E99BD0 /* ConfigurationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16AC60206D704700E99BD0 /* ConfigurationLabel.swift */; };
+		BE441680207E04DE0016DA17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44167F207E04DE0016DA17 /* LoginViewController.swift */; };
+		BE441682207E05360016DA17 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE441681207E05360016DA17 /* LoginPresenter.swift */; };
 		BE45369D207A21D2009B602A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BE45369C207A21D2009B602A /* logo.png */; };
 		BE4536A1207A2CA4009B602A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4536A0207A2CA4009B602A /* RegistrationViewController.swift */; };
 		BE4536A3207A2CBE009B602A /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4536A2207A2CBE009B602A /* RegistrationPresenter.swift */; };
@@ -59,7 +61,7 @@
 		BE4536B2207A2E86009B602A /* ConfigurationLRMTextFieldWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4536AE207A2E86009B602A /* ConfigurationLRMTextFieldWithError.swift */; };
 		BE4536B3207A2E86009B602A /* ConfigurationLRMRegTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4536B0207A2E86009B602A /* ConfigurationLRMRegTextField.swift */; };
 		BE4536B5207A40DF009B602A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE4536B4207A40DE009B602A /* GoogleService-Info.plist */; };
-		BE4536B8207A4304009B602A /* RegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4536B7207A4304009B602A /* RegistrationData.swift */; };
+		BE4536B8207A4304009B602A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4536B7207A4304009B602A /* UserData.swift */; };
 		BE4536BB207A5D33009B602A /* blindeye.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4536B9207A5D33009B602A /* blindeye.png */; };
 		BE4536BC207A5D33009B602A /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4536BA207A5D33009B602A /* eye.png */; };
 		BE4536BE207A5D8F009B602A /* editPencil.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4536BD207A5D8F009B602A /* editPencil.png */; };
@@ -152,6 +154,8 @@
 		BE16AC58206D6FA100E99BD0 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		BE16AC5D206D703A00E99BD0 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		BE16AC60206D704700E99BD0 /* ConfigurationLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationLabel.swift; sourceTree = "<group>"; };
+		BE44167F207E04DE0016DA17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BE441681207E05360016DA17 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		BE45369C207A21D2009B602A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		BE4536A0207A2CA4009B602A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		BE4536A2207A2CBE009B602A /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
@@ -162,7 +166,7 @@
 		BE4536AE207A2E86009B602A /* ConfigurationLRMTextFieldWithError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationLRMTextFieldWithError.swift; sourceTree = "<group>"; };
 		BE4536B0207A2E86009B602A /* ConfigurationLRMRegTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationLRMRegTextField.swift; sourceTree = "<group>"; };
 		BE4536B4207A40DE009B602A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BE4536B7207A4304009B602A /* RegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationData.swift; sourceTree = "<group>"; };
+		BE4536B7207A4304009B602A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		BE4536B9207A5D33009B602A /* blindeye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blindeye.png; sourceTree = "<group>"; };
 		BE4536BA207A5D33009B602A /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye.png; sourceTree = "<group>"; };
 		BE4536BD207A5D8F009B602A /* editPencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editPencil.png; sourceTree = "<group>"; };
@@ -380,6 +384,15 @@
 			path = Label;
 			sourceTree = "<group>";
 		};
+		BE44167E207E04A20016DA17 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BE44167F207E04DE0016DA17 /* LoginViewController.swift */,
+				BE441681207E05360016DA17 /* LoginPresenter.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
 		BE45369B207A21D2009B602A /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,7 +463,7 @@
 		BE4536B6207A42F3009B602A /* DataClasses */ = {
 			isa = PBXGroup;
 			children = (
-				BE4536B7207A4304009B602A /* RegistrationData.swift */,
+				BE4536B7207A4304009B602A /* UserData.swift */,
 			);
 			path = DataClasses;
 			sourceTree = "<group>";
@@ -458,6 +471,7 @@
 		BE5C28BC207A0CBF00327871 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				BE44167E207E04A20016DA17 /* LoginScreen */,
 				BE45369F207A299B009B602A /* Registration */,
 				BE45369E207A298B009B602A /* UserChooser */,
 				BE5C28BD207A0D2300327871 /* LoginInteractor.swift */,
@@ -963,7 +977,7 @@
 				BE16ABF7206D6D6500E99BD0 /* UIView.swift in Sources */,
 				BE16ABCE206D6D1400E99BD0 /* BaseModalViewController.swift in Sources */,
 				BECAFFBB205087C000B20AAF /* SingleLineTableViewCell.swift in Sources */,
-				BE4536B8207A4304009B602A /* RegistrationData.swift in Sources */,
+				BE4536B8207A4304009B602A /* UserData.swift in Sources */,
 				BE5C28BB207A0C8700327871 /* UserChooserViewController.swift in Sources */,
 				BE16ABEF206D6D6500E99BD0 /* NSDateExtension.swift in Sources */,
 				BE16ABF6206D6D6500E99BD0 /* UIScrollViewExtension.swift in Sources */,
@@ -974,6 +988,7 @@
 				BE4536AA207A2E68009B602A /* LRMTextFieldWithError.swift in Sources */,
 				BE16ABDE206D6D3600E99BD0 /* LifeCycleDelegate.swift in Sources */,
 				BE16ABF0206D6D6500E99BD0 /* NSMutableAttributedStringExtension.swift in Sources */,
+				BE441682207E05360016DA17 /* LoginPresenter.swift in Sources */,
 				BE16AC01206D6F2800E99BD0 /* TabbedPager.swift in Sources */,
 				BE16ABF5206D6D6500E99BD0 /* UIScreen.swift in Sources */,
 				BE16ABDF206D6D3600E99BD0 /* MainMovementExtension.swift in Sources */,
@@ -989,6 +1004,7 @@
 				BE16ABE2206D6D3600E99BD0 /* ShadeLayer.swift in Sources */,
 				BE16ABCD206D6D1400E99BD0 /* BaseMenuViewController.swift in Sources */,
 				BE16ABFB206D6DD000E99BD0 /* MovementProtocol.swift in Sources */,
+				BE441680207E04DE0016DA17 /* LoginViewController.swift in Sources */,
 				BEBC6B8620449553005C9F86 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

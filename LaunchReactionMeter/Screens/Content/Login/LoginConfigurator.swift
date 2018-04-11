@@ -10,6 +10,22 @@ import UIKit
 
 class LoginConfigurator: BaseConfigurator {
     
+    class func configureLoginController(viewController : LoginViewController) {
+        let loginInteractor: LoginInteractorProtocol = getInteractor()
+        
+        // configure  presenter
+        let presenter = LoginPresenter()
+        presenter.viewController = viewController
+        
+        // configure  viewcontroller
+        viewController.interactor = loginInteractor
+        
+        // configure  interactor
+        loginInteractor.registerPresenter(presenter)
+        
+    }
+    
+    
     class func configureSuccessfulControler(viewController : SuccessfulRegistrationViewController) {
         let loginInteractor: LoginInteractorProtocol = getInteractor()
         

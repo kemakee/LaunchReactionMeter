@@ -1,21 +1,19 @@
 //
-//  RegistrationViewController.swift
+//  LoginViewController.swift
 //  LaunchReactionMeter
 //
-//  Created by Ákos Kemenes on 2018. 04. 08..
+//  Created by Ákos Kemenes on 2018. 04. 11..
 //  Copyright © 2018. Ákos Kemenes. All rights reserved.
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
 
-class RegistrationViewController: BaseContentViewController, LRMRegTextFieldDelegate {
+class LoginViewController: BaseContentViewController, LRMRegTextFieldDelegate {
 
     var nameField : LRMRegTextField!
     var passwordField : LRMRegTextField!
     var emailField : LRMRegTextField!
-    var registrationButton : LRMButton!
+    var loginButton : LRMButton!
     var ScreenComponent: [UIView] = []
     
     let padding = UIScreen.scale(8)
@@ -39,7 +37,7 @@ class RegistrationViewController: BaseContentViewController, LRMRegTextFieldDele
         self.svContent.backgroundColor = Constants.COLOR_LRM_BLACK
         
         
-        LoginConfigurator.configureRegistrationViewControler(viewController: self)
+        LoginConfigurator.configureLoginController(viewController: self)
         
         let configEmailField = ConfigurationLRMRegTextField(lblText: "e-mail", hinttext: nil, text: nil, errorText: nil, frame: CGRect(x: 0, y: 0, width: UIScreen.screenWidth*0.75, height: UIScreen.scale(30)), isPassword: false, keyBoardType: UIKeyboardType.emailAddress, isEditField: false)
         emailField = LRMRegTextField(configuration: configEmailField)
@@ -56,13 +54,13 @@ class RegistrationViewController: BaseContentViewController, LRMRegTextFieldDele
         self.svContent.addSubview(passwordField)
         
         
-     
         
-        let configRegBtn : ConfigurationLRMButton = ConfigurationLRMButton(y: 0, text: "Registrate", color: .orange, size: .normal)
-        registrationButton = LRMButton(configuration: configRegBtn)
-        self.svContent.addSubview(registrationButton)
-        registrationButton.addTarget(self, action: #selector(regPressed), for: .touchUpInside)
-
+        
+        let configLoginBtn : ConfigurationLRMButton = ConfigurationLRMButton(y: 0, text: "Login", color: .orange, size: .normal)
+        loginButton = LRMButton(configuration: configLoginBtn)
+        self.svContent.addSubview(loginButton)
+        loginButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
+        
         
         self.view.setNeedsUpdateConstraints()
         
@@ -86,30 +84,30 @@ class RegistrationViewController: BaseContentViewController, LRMRegTextFieldDele
         }
         
         
-        registrationButton.snp.makeConstraints { (make) in
+        loginButton.snp.makeConstraints { (make) in
             make.bottom.equalTo(UIScreen.screenHeight*0.80)
-            make.left.equalTo((UIScreen.screenWidth/2-registrationButton.width/2))
-            make.width.equalTo(registrationButton.width)
-            make.height.equalTo(registrationButton.height)
+            make.left.equalTo((UIScreen.screenWidth/2-loginButton.width/2))
+            make.width.equalTo(loginButton.width)
+            make.height.equalTo(loginButton.height)
         }
         
         
     }
     
-    @objc func regPressed()
+    @objc func loginPressed()
     {
-        let regData = UserData(password: passwordField.tfdWidthError.textField.text!, email: emailField.tfdWidthError.textField.text!)
-        loginInteractor.doRegister(regData: regData)
+        let loginData = UserData(password: passwordField.tfdWidthError.textField.text!, email: emailField.tfdWidthError.textField.text!)
+        //loginInteractor.doLogin()
         
     }
     
     func regTextFieldHeightChanged(_ tfreg: LRMRegTextField, different: CGFloat) {
-
+        
         UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut, animations: {
             for index in 1...self.ScreenComponent.count-1
             {
                 self.ScreenComponent[index].frame.origin.y = self.ScreenComponent[index].frame.origin.y + different
-        
+                
             }
             
         }, completion: { (Bool) in
@@ -117,8 +115,9 @@ class RegistrationViewController: BaseContentViewController, LRMRegTextFieldDele
         })
         
         
-       self.contentHeight = ScreenComponent.last!.y + ScreenComponent.last!.height + UIScreen.scale(10)
-    
+        self.contentHeight = ScreenComponent.last!.y + ScreenComponent.last!.height + UIScreen.scale(10)
+        
     }
+
 
 }

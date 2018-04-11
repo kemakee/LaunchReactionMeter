@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationData: NSObject {
+class UserData: NSObject {
     var password : String?
     var email : String?
     

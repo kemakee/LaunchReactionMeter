@@ -13,8 +13,9 @@ import FirebaseAuth
 @objc protocol LoginInteractorProtocol : BaseInteractorProtocol {
 
     func navigateToRegistrationScreen()
-    func doRegister(regData: RegistrationData)
+    func doRegister(regData: UserData)
     func navigateToUserChooser()
+    func navigateToLogin()
 }
 @objc enum textFieldType: Int{
     case email
@@ -31,6 +32,12 @@ class LoginInteractor: BaseInteractor, LoginInteractorProtocol {
     {
          let presenter = try! self.getLastPresenter(byProtocol: SuccessfulRegistrationPresenterProtocol.self) as! SuccessfulRegistrationPresenterProtocol
         presenter.navigateToUserChooser()
+    }
+    
+    func navigateToLogin()
+    {
+        let presenter = try! self.getLastPresenter(byProtocol: UserChooserPresenterProtocol.self) as! UserChooserPresenterProtocol
+        presenter.navigateToLogin()
     }
     
     
@@ -67,7 +74,7 @@ class LoginInteractor: BaseInteractor, LoginInteractorProtocol {
 ////        return hasError
 //    }
     
-    func ValidateData(regData: RegistrationData) -> Bool
+    func ValidateData(regData: UserData) -> Bool
     {
         var hasError = false
         let presenter: RegistrationPresenterProtocol = try! self.getLastPresenter(byProtocol: RegistrationPresenterProtocol.self) as! RegistrationPresenterProtocol
@@ -114,7 +121,7 @@ class LoginInteractor: BaseInteractor, LoginInteractorProtocol {
         return emailTest.evaluate(with: testStr)
     }
     
-    func doRegister(regData: RegistrationData) {
+    func doRegister(regData: UserData) {
         
         let isError = ValidateData(regData: regData)
         
