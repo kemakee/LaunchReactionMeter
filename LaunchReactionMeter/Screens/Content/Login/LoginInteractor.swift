@@ -15,7 +15,9 @@ import FirebaseAuth
     func navigateToRegistrationScreen()
     func doRegister(regData: UserData)
     func navigateToUserChooser()
-    func navigateToLogin()
+    func navigateToLogin(_ userType : UserType)
+    func doLogin(loginData : UserData, _ userType : UserType)
+    func ValidateEmailAndPasswd(loginData: UserData) -> Bool
 }
 @objc enum textFieldType: Int{
     case email
@@ -24,55 +26,98 @@ import FirebaseAuth
 }
 
 class LoginInteractor: BaseInteractor, LoginInteractorProtocol {
+    
+    
+    func doRegister(regData: UserData) {
+        let isError = ValidateData(regData: regData)
+        
+        if !isError
+        {
+            Auth.auth().createUser(withEmail: regData.email!, password: regData.password!, completion: { (user, error) in
+                if error == nil {
+                    print("You have successfully signed up")
+                    let presenter: RegistrationPresenterProtocol = try! self.getLastPresenter(byProtocol: RegistrationPresenterProtocol.self) as! RegistrationPresenterProtocol
+                    presenter.doNavigateToSuccessScreen()
+                    
+                    
+                } else {
+                    print("notgud")
+                }
+            })
+        }
+    }
+    
+    func ValidateEmailAndPasswd(loginData: UserData) -> Bool {
+        var hasError = false
+        let presenter: LoginPresenterProtocol = try! self.getLastPresenter(byProtocol: LoginPresenterProtocol.self) as! LoginPresenterProtocol
+        
+        presenter.hideAllError()
+        
+        if loginData.email == nil || loginData.email == ""
+        {
+            presenter.showEmptyError(error: .email)
+            hasError=true
+        }
+        else if isValidEmail(testStr: loginData.email!) == false
+        {
+            presenter.showNotValidEmailError()
+            hasError = true
+        }
+        
+        if loginData.password == nil || loginData.password! == ""
+        {
+            hasError = true
+            presenter.showEmptyError(error: .password)
+        }
+        else if (loginData.password!.length) < 5
+        {
+            hasError = true
+            presenter.showSmallPasswordError()
+        }
+        
+        return hasError
+    }
+    
+
+    
     func navigateToRegistrationScreen() {
        let presenter = try! self.getLastPresenter(byProtocol: UserChooserPresenterProtocol.self) as! UserChooserPresenterProtocol
         presenter.navigateToRegistrationScreen()
     }
+    
     func navigateToUserChooser()
     {
          let presenter = try! self.getLastPresenter(byProtocol: SuccessfulRegistrationPresenterProtocol.self) as! SuccessfulRegistrationPresenterProtocol
         presenter.navigateToUserChooser()
     }
     
-    func navigateToLogin()
+    func navigateToLogin(_ userType: UserType)
     {
         let presenter = try! self.getLastPresenter(byProtocol: UserChooserPresenterProtocol.self) as! UserChooserPresenterProtocol
-        presenter.navigateToLogin()
+        presenter.navigateToLogin(userType)
     }
     
+    func doLogin(loginData: UserData, _ userType: UserType) {
+        let presenter = try! self.getLastPresenter(byProtocol: LoginPresenterProtocol.self) as! LoginPresenterProtocol
+        if !ValidateEmailAndPasswd(loginData: loginData)
+        {
+            Auth.auth().signIn(withEmail: loginData.email!, password: loginData.password!) { (user, error) in
+                
+                if error == nil {
+                    presenter.navigateToLoggedIn(userType)
+                    
+                } else {
+              
+                    presenter.showWrongEmailOrPassword()
+                }
+                
+            }
+            
+        }
+       
+        
+    }
     
-    
-//    func ValidateEmailAndPasswd(loginData: LoginData) -> Bool
-//    {
-////        var hasError = false
-////        let presenter: EmailLoginPresenterProtocol = try! self.getLastPresenterByProtocol(EmailLoginPresenterProtocol.self) as! EmailLoginPresenterProtocol
-////
-////        presenter.hideAllError()
-////
-////        if loginData.email == nil || loginData.email == ""
-////        {
-////            presenter.showEmailEmptyError()
-////            hasError=true
-////        }
-////        else if isValidEmail(testStr: loginData.email!) == false
-////        {
-////            presenter.showInvalidEmailError()
-////            hasError = true
-////        }
-////
-////        if loginData.password == nil || loginData.password! == ""
-////        {
-////            hasError = true
-////            presenter.showEmptyPassWdError()
-////        }
-////        else if (loginData.password!.length) < 5
-////        {
-////            hasError = true
-////            presenter.showSmallPasswordError()
-////        }
-////
-////        return hasError
-//    }
     
     func ValidateData(regData: UserData) -> Bool
     {
@@ -121,24 +166,6 @@ class LoginInteractor: BaseInteractor, LoginInteractorProtocol {
         return emailTest.evaluate(with: testStr)
     }
     
-    func doRegister(regData: UserData) {
-        
-        let isError = ValidateData(regData: regData)
-        
-        if !isError
-        {
-            Auth.auth().createUser(withEmail: regData.email!, password: regData.password!, completion: { (user, error) in
-                if error == nil {
-                    print("You have successfully signed up")
-                    let presenter: RegistrationPresenterProtocol = try! self.getLastPresenter(byProtocol: RegistrationPresenterProtocol.self) as! RegistrationPresenterProtocol
-                    presenter.doNavigateToSuccessScreen()
-                    
-                    
-                } else {
-                    print("notgud")
-                }
-            })
-        }
-    }
+ 
 
 }

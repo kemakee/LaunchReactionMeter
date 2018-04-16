@@ -101,12 +101,12 @@ class UserChooserViewController: BaseContentViewController {
     
     @objc func athletePressed()
     {
-        loginInteractor.navigateToLogin()
+        loginInteractor.navigateToLogin(.athlete)
     }
     
     @objc func coachPressed()
     {
-        loginInteractor.navigateToLogin()
+        loginInteractor.navigateToLogin(.coach)
     }
     
    

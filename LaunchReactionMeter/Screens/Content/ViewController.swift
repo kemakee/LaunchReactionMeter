@@ -13,6 +13,12 @@ import AudioToolbox
 
 
 class ViewController: BaseContentViewController, MultiPeerCommunicationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
+    func lostPeer(_ peerID: MCPeerID) {
+        
+    }
+    
+  
+    
     
     private var peerList: UITableView!
     private var connectedList: UITableView!
@@ -22,7 +28,7 @@ class ViewController: BaseContentViewController, MultiPeerCommunicationManagerDe
     private var peers = [MCPeerID]()
     private var connectedPeers = [MCPeerID]()
 
-    let communication = MultiPeerCommunicationManager()
+    let communication = MultiPeerCommunicationManager(userType: .athlete)
 
     override func viewDidLoad() {
         
@@ -55,19 +61,11 @@ class ViewController: BaseContentViewController, MultiPeerCommunicationManagerDe
         self.view.addSubview(peerList)
         
 
-        //Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.timerFired), userInfo: nil, repeats: true)
         
     
     }
     
     @objc func timerFired() {
-//        print("------------------------------------------")
-//        print(Date().dateWithMillisecInString())
-//        print(TimeMnanager.shared.now().dateWithMillisecInString())
-//
-//        if let date = Clock.now {
-//            print(date.dateWithMillisecInString())
-//        }
 
         print(TimeManager.shared.now().dateWithMillisecInString())
         AudioServicesPlaySystemSound(1322)
@@ -98,14 +96,14 @@ class ViewController: BaseContentViewController, MultiPeerCommunicationManagerDe
         if tableView == self.peerList
         {
             cell = tableView.dequeueReusableCell(withIdentifier: listCellIdentifier, for: indexPath) as! SingleLineTableViewCell
-            let configCell = ConfigurationSingeLineTableViewCell(deviceName: String(describing: peers[indexPath.row].displayName))
+            let configCell = ConfigurationSingeLineTableViewCell(deviceName: String(describing: peers[indexPath.row].displayName), backColor: Constants.COLOR_LRM_BLACK)
             cell.configure(configCell)
             
         }
         if tableView == self.connectedList
         {
             cell = tableView.dequeueReusableCell(withIdentifier: connectedListCellIdentifier, for: indexPath) as! SingleLineTableViewCell
-            let configCell = ConfigurationSingeLineTableViewCell(deviceName: String(describing: connectedPeers[indexPath.row].displayName))
+            let configCell = ConfigurationSingeLineTableViewCell(deviceName: String(describing: connectedPeers[indexPath.row].displayName), backColor: Constants.COLOR_LRM_BLACK)
             cell.configure(configCell)
         }
         
@@ -122,7 +120,7 @@ class ViewController: BaseContentViewController, MultiPeerCommunicationManagerDe
             let selectedPeer = peers[indexPath.row]
             let browser = communication.browser
             let session = communication.session
-            browser.invitePeer(selectedPeer, to: session, withContext: nil, timeout: 10)
+            browser?.invitePeer(selectedPeer, to: session, withContext: nil, timeout: 10)
         }
         if tableView == self.connectedList
         {

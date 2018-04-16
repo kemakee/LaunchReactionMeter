@@ -85,6 +85,13 @@
 		BECAFFB82050877F00B20AAF /* ConfigurationSingeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAFFB72050877F00B20AAF /* ConfigurationSingeLineTableViewCell.swift */; };
 		BECAFFBB205087C000B20AAF /* SingleLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAFFBA205087C000B20AAF /* SingleLineTableViewCell.swift */; };
 		BECE1F182049D7AC006CC347 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECE1F172049D7AC006CC347 /* ExternalAccessory.framework */; };
+		BED6474420851F8100FF9DE6 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6474320851F8100FF9DE6 /* SegmentedControl.swift */; };
+		BED6474620851F9600FF9DE6 /* ConfigurationSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6474520851F9600FF9DE6 /* ConfigurationSegmentedControl.swift */; };
+		BED64749208520C800FF9DE6 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED64748208520C800FF9DE6 /* SegmentedViewController.swift */; };
+		BED6474B2085212800FF9DE6 /* SegmentedViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6474A2085212800FF9DE6 /* SegmentedViewPresenter.swift */; };
+		BED6474D2085213B00FF9DE6 /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6474C2085213B00FF9DE6 /* LoggedInInteractor.swift */; };
+		BED6474F2085214600FF9DE6 /* LoggedInConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6474E2085214600FF9DE6 /* LoggedInConfigurator.swift */; };
+		BEEB131F2085382D009189F3 /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB131E2085382D009189F3 /* UserType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +204,13 @@
 		BECAFFBA205087C000B20AAF /* SingleLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineTableViewCell.swift; sourceTree = "<group>"; };
 		BECE1F172049D7AC006CC347 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		BECE1F192049D7AC006CC347 /* LaunchReactionMeter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LaunchReactionMeter.entitlements; sourceTree = "<group>"; };
+		BED6474320851F8100FF9DE6 /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		BED6474520851F9600FF9DE6 /* ConfigurationSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationSegmentedControl.swift; sourceTree = "<group>"; };
+		BED64748208520C800FF9DE6 /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
+		BED6474A2085212800FF9DE6 /* SegmentedViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewPresenter.swift; sourceTree = "<group>"; };
+		BED6474C2085213B00FF9DE6 /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
+		BED6474E2085214600FF9DE6 /* LoggedInConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInConfigurator.swift; sourceTree = "<group>"; };
+		BEEB131E2085382D009189F3 /* UserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +332,7 @@
 		BE16AC03206D6F7300E99BD0 /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				BED6474020851DEC00FF9DE6 /* LoggedIn */,
 				BE5C28BC207A0CBF00327871 /* Login */,
 				BEBC6B58204493BB005C9F86 /* ViewController.swift */,
 			);
@@ -464,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				BE4536B7207A4304009B602A /* UserData.swift */,
+				BEEB131E2085382D009189F3 /* UserType.swift */,
 			);
 			path = DataClasses;
 			sourceTree = "<group>";
@@ -573,6 +589,7 @@
 		BECAFFAE2050865A00B20AAF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BED6474120851F5B00FF9DE6 /* SegmentedControl */,
 				BE4536A4207A2E68009B602A /* TextField */,
 				BE16AC5C206D703A00E99BD0 /* Label */,
 				BE16AC57206D6FA100E99BD0 /* Button */,
@@ -586,6 +603,7 @@
 		BECAFFAF2050866000B20AAF /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				BED6474220851F6400FF9DE6 /* SegmentedControl */,
 				BE4536AC207A2E86009B602A /* TextField */,
 				BE5C28C5207A133A00327871 /* Button */,
 				BE16AC5F206D704700E99BD0 /* Label */,
@@ -609,6 +627,41 @@
 				BECAFFBA205087C000B20AAF /* SingleLineTableViewCell.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		BED6474020851DEC00FF9DE6 /* LoggedIn */ = {
+			isa = PBXGroup;
+			children = (
+				BED64747208520B000FF9DE6 /* SegmentedView */,
+				BED6474C2085213B00FF9DE6 /* LoggedInInteractor.swift */,
+				BED6474E2085214600FF9DE6 /* LoggedInConfigurator.swift */,
+			);
+			path = LoggedIn;
+			sourceTree = "<group>";
+		};
+		BED6474120851F5B00FF9DE6 /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				BED6474320851F8100FF9DE6 /* SegmentedControl.swift */,
+			);
+			path = SegmentedControl;
+			sourceTree = "<group>";
+		};
+		BED6474220851F6400FF9DE6 /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				BED6474520851F9600FF9DE6 /* ConfigurationSegmentedControl.swift */,
+			);
+			path = SegmentedControl;
+			sourceTree = "<group>";
+		};
+		BED64747208520B000FF9DE6 /* SegmentedView */ = {
+			isa = PBXGroup;
+			children = (
+				BED64748208520C800FF9DE6 /* SegmentedViewController.swift */,
+				BED6474A2085212800FF9DE6 /* SegmentedViewPresenter.swift */,
+			);
+			path = SegmentedView;
 			sourceTree = "<group>";
 		};
 		FC59859B1544BED20BE03E98 /* Frameworks */ = {
@@ -941,6 +994,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BECAFFB5205086D600B20AAF /* ConfigurationProtocol.swift in Sources */,
+				BED6474D2085213B00FF9DE6 /* LoggedInInteractor.swift in Sources */,
 				BE16ABF2206D6D6500E99BD0 /* StringExtension.swift in Sources */,
 				BE16ABDD206D6D3600E99BD0 /* BasePresenter.swift in Sources */,
 				BE16ABDC206D6D3600E99BD0 /* BaseInteractor.swift in Sources */,
@@ -951,14 +1005,17 @@
 				BE16ABCC206D6D1400E99BD0 /* BaseHeaderViewController.swift in Sources */,
 				BECAFFB3205086CF00B20AAF /* ConfigurationComponent.swift in Sources */,
 				BE16AC5A206D6FA100E99BD0 /* HamburgerButton.swift in Sources */,
+				BED6474620851F9600FF9DE6 /* ConfigurationSegmentedControl.swift in Sources */,
 				BE4536B1207A2E86009B602A /* ConfigurationLRMTextField.swift in Sources */,
 				BE5C28BE207A0D2300327871 /* LoginInteractor.swift in Sources */,
 				BE16ABDB206D6D3600E99BD0 /* BaseConfigurator.swift in Sources */,
 				BE4536A1207A2CA4009B602A /* RegistrationViewController.swift in Sources */,
+				BED6474F2085214600FF9DE6 /* LoggedInConfigurator.swift in Sources */,
 				BE16AC61206D704700E99BD0 /* ConfigurationLabel.swift in Sources */,
 				BEBC6B57204493BB005C9F86 /* AppDelegate.swift in Sources */,
 				BE16AC50206D6F7300E99BD0 /* HeaderViewController.swift in Sources */,
 				BE16ABEE206D6D6500E99BD0 /* Array.swift in Sources */,
+				BED6474B2085212800FF9DE6 /* SegmentedViewPresenter.swift in Sources */,
 				BE4536C0207A605B009B602A /* SuccessfulRegistrationViewController.swift in Sources */,
 				BE5C28C2207A0DEF00327871 /* LoginConfigurator.swift in Sources */,
 				BE16ABFE206D6EEF00E99BD0 /* CoreEnvironment.swift in Sources */,
@@ -975,7 +1032,9 @@
 				BE4536B3207A2E86009B602A /* ConfigurationLRMRegTextField.swift in Sources */,
 				BE16AC55206D6F7300E99BD0 /* SnackbarViewController.swift in Sources */,
 				BE16ABF7206D6D6500E99BD0 /* UIView.swift in Sources */,
+				BED6474420851F8100FF9DE6 /* SegmentedControl.swift in Sources */,
 				BE16ABCE206D6D1400E99BD0 /* BaseModalViewController.swift in Sources */,
+				BEEB131F2085382D009189F3 /* UserType.swift in Sources */,
 				BECAFFBB205087C000B20AAF /* SingleLineTableViewCell.swift in Sources */,
 				BE4536B8207A4304009B602A /* UserData.swift in Sources */,
 				BE5C28BB207A0C8700327871 /* UserChooserViewController.swift in Sources */,
@@ -1004,6 +1063,7 @@
 				BE16ABE2206D6D3600E99BD0 /* ShadeLayer.swift in Sources */,
 				BE16ABCD206D6D1400E99BD0 /* BaseMenuViewController.swift in Sources */,
 				BE16ABFB206D6DD000E99BD0 /* MovementProtocol.swift in Sources */,
+				BED64749208520C800FF9DE6 /* SegmentedViewController.swift in Sources */,
 				BE441680207E04DE0016DA17 /* LoginViewController.swift in Sources */,
 				BEBC6B8620449553005C9F86 /* Constants.swift in Sources */,
 			);

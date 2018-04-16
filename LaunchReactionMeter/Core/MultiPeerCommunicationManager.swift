@@ -16,6 +16,7 @@ protocol MultiPeerCommunicationManagerDelegate : NSObjectProtocol{
     func peersChanged(peers: [MCPeerID])
     func invitationReceived(fromPeer: String)
     func connectedWithPeer(_ peerID: MCPeerID)
+    func lostPeer(_ peerID : MCPeerID)
 }
 
 class MultiPeerCommunicationManager: NSObject {
@@ -24,8 +25,8 @@ class MultiPeerCommunicationManager: NSObject {
     private let serviceType = "launch-meter"
     private let myPeerdID = MCPeerID(displayName: UIDevice.current.name)
     
-    let advertiser : MCNearbyServiceAdvertiser
-    let browser : MCNearbyServiceBrowser
+    var advertiser : MCNearbyServiceAdvertiser!
+    var browser : MCNearbyServiceBrowser!
     lazy var session : MCSession = {
         let session = MCSession(peer: self.myPeerdID, securityIdentity: nil, encryptionPreference: .none)
         session.delegate = self
@@ -37,14 +38,25 @@ class MultiPeerCommunicationManager: NSObject {
     
     var invitationHandler: ((Bool, MCSession?)->Void)!
     
-    override init() {
-        self.advertiser = MCNearbyServiceAdvertiser(peer: myPeerdID, discoveryInfo: nil, serviceType: serviceType)
-        self.browser = MCNearbyServiceBrowser(peer: myPeerdID, serviceType: serviceType)
+    init(userType : UserType) {
         super.init()
-        self.advertiser.delegate = self
-        self.advertiser.startAdvertisingPeer()
-        self.browser.delegate = self
-        self.browser.startBrowsingForPeers()
+       
+        
+        switch userType {
+        case .athlete:
+            self.advertiser = MCNearbyServiceAdvertiser(peer: myPeerdID, discoveryInfo: nil, serviceType: serviceType)
+            self.advertiser.delegate = self
+            self.advertiser.startAdvertisingPeer()
+            break;
+        case .coach:
+            self.browser = MCNearbyServiceBrowser(peer: myPeerdID, serviceType: serviceType)
+            self.browser.delegate = self
+            self.browser.startBrowsingForPeers()
+            break;
+
+        default:
+            break;
+        }
         
     }
     
@@ -79,6 +91,7 @@ extension MultiPeerCommunicationManager : MCNearbyServiceBrowserDelegate
             index += 1
         }
         delegate?.peersChanged(peers: foundPeers)
+        delegate?.lostPeer(peerID)
     }
     func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
         print("Unable to start browsing, error: \(error)")
@@ -112,13 +125,9 @@ extension MultiPeerCommunicationManager : MCSessionDelegate
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-//        print("recieved from \(peerID), data: \(data)")
-        let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "y-MM-dd H:m:ss.SSSS"
         let str = String(data: data, encoding: .utf8)!
-//        print(str)
-//        print(dateFormatter.string(from: date))
         let startdate = dateFormatter.date(from: str)!
         
         DispatchQueue.main.async {
@@ -141,13 +150,7 @@ extension MultiPeerCommunicationManager : MCSessionDelegate
     }
     
     @objc func timerFired() {
-        //        print("------------------------------------------")
-        //        print(Date().dateWithMillisecInString())
-        //        print(TimeMnanager.shared.now().dateWithMillisecInString())
-        //
-        //        if let date = Clock.now {
-        //            print(date.dateWithMillisecInString())
-        //        }
+
         
         print(TimeManager.shared.now().dateWithMillisecInString())
         AudioServicesPlaySystemSound(1322)

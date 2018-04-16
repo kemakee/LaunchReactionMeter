@@ -18,13 +18,15 @@ class LoginViewController: BaseContentViewController, LRMRegTextFieldDelegate {
     
     let padding = UIScreen.scale(8)
     var logoIV : UIImageView!
+    var userType : UserType!
     var loginInteractor: LoginInteractorProtocol {
         
         return interactor as! LoginInteractorProtocol
     }
     
-    init()
+    init(_ userType : UserType)
     {
+        self.userType = userType
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -39,14 +41,14 @@ class LoginViewController: BaseContentViewController, LRMRegTextFieldDelegate {
         
         LoginConfigurator.configureLoginController(viewController: self)
         
-        let configEmailField = ConfigurationLRMRegTextField(lblText: "e-mail", hinttext: nil, text: nil, errorText: nil, frame: CGRect(x: 0, y: 0, width: UIScreen.screenWidth*0.75, height: UIScreen.scale(30)), isPassword: false, keyBoardType: UIKeyboardType.emailAddress, isEditField: false)
+        let configEmailField = ConfigurationLRMRegTextField(lblText: "e-mail", hinttext: nil, text: "kemi@inf.elte.hu", errorText: nil, frame: CGRect(x: 0, y: 0, width: UIScreen.screenWidth*0.75, height: UIScreen.scale(30)), isPassword: false, keyBoardType: UIKeyboardType.emailAddress, isEditField: false)
         emailField = LRMRegTextField(configuration: configEmailField)
         emailField.delegate = self
         emailField.tag = 0
         ScreenComponent.append(emailField)
         self.svContent.addSubview(emailField)
         
-        let configPasswordField = ConfigurationLRMRegTextField(lblText: "password", hinttext: nil, text: nil, errorText: nil, frame: CGRect(x: 0, y: 0, width: UIScreen.screenWidth*0.75, height: UIScreen.scale(30)), isPassword: true, keyBoardType: UIKeyboardType.alphabet, isEditField: false)
+        let configPasswordField = ConfigurationLRMRegTextField(lblText: "password", hinttext: nil, text: "Xxx.akos", errorText: nil, frame: CGRect(x: 0, y: 0, width: UIScreen.screenWidth*0.75, height: UIScreen.scale(30)), isPassword: true, keyBoardType: UIKeyboardType.alphabet, isEditField: false)
         passwordField = LRMRegTextField(configuration: configPasswordField)
         passwordField.delegate = self
         passwordField.tag = 0
@@ -97,7 +99,7 @@ class LoginViewController: BaseContentViewController, LRMRegTextFieldDelegate {
     @objc func loginPressed()
     {
         let loginData = UserData(password: passwordField.tfdWidthError.textField.text!, email: emailField.tfdWidthError.textField.text!)
-        //loginInteractor.doLogin()
+        loginInteractor.doLogin(loginData: loginData, userType)
         
     }
     
