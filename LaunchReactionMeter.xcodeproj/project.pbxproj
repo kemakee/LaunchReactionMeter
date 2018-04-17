@@ -85,6 +85,7 @@
 		BECAFFB82050877F00B20AAF /* ConfigurationSingeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAFFB72050877F00B20AAF /* ConfigurationSingeLineTableViewCell.swift */; };
 		BECAFFBB205087C000B20AAF /* SingleLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAFFBA205087C000B20AAF /* SingleLineTableViewCell.swift */; };
 		BECE1F182049D7AC006CC347 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECE1F172049D7AC006CC347 /* ExternalAccessory.framework */; };
+		BED0115E20867E4100CC3292 /* PeersWithConnectedStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0115D20867E4100CC3292 /* PeersWithConnectedStatus.swift */; };
 		BED6474420851F8100FF9DE6 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6474320851F8100FF9DE6 /* SegmentedControl.swift */; };
 		BED6474620851F9600FF9DE6 /* ConfigurationSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6474520851F9600FF9DE6 /* ConfigurationSegmentedControl.swift */; };
 		BED64749208520C800FF9DE6 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED64748208520C800FF9DE6 /* SegmentedViewController.swift */; };
@@ -204,6 +205,7 @@
 		BECAFFBA205087C000B20AAF /* SingleLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineTableViewCell.swift; sourceTree = "<group>"; };
 		BECE1F172049D7AC006CC347 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		BECE1F192049D7AC006CC347 /* LaunchReactionMeter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LaunchReactionMeter.entitlements; sourceTree = "<group>"; };
+		BED0115D20867E4100CC3292 /* PeersWithConnectedStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeersWithConnectedStatus.swift; sourceTree = "<group>"; };
 		BED6474320851F8100FF9DE6 /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		BED6474520851F9600FF9DE6 /* ConfigurationSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationSegmentedControl.swift; sourceTree = "<group>"; };
 		BED64748208520C800FF9DE6 /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 			children = (
 				BE4536B7207A4304009B602A /* UserData.swift */,
 				BEEB131E2085382D009189F3 /* UserType.swift */,
+				BED0115D20867E4100CC3292 /* PeersWithConnectedStatus.swift */,
 			);
 			path = DataClasses;
 			sourceTree = "<group>";
@@ -1016,6 +1019,7 @@
 				BE16AC50206D6F7300E99BD0 /* HeaderViewController.swift in Sources */,
 				BE16ABEE206D6D6500E99BD0 /* Array.swift in Sources */,
 				BED6474B2085212800FF9DE6 /* SegmentedViewPresenter.swift in Sources */,
+				BED0115E20867E4100CC3292 /* PeersWithConnectedStatus.swift in Sources */,
 				BE4536C0207A605B009B602A /* SuccessfulRegistrationViewController.swift in Sources */,
 				BE5C28C2207A0DEF00327871 /* LoginConfigurator.swift in Sources */,
 				BE16ABFE206D6EEF00E99BD0 /* CoreEnvironment.swift in Sources */,

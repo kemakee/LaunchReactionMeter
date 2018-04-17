@@ -74,6 +74,7 @@ extension MultiPeerCommunicationManager : MCNearbyServiceAdvertiserDelegate
         delegate?.invitationReceived(fromPeer: peerID.displayName)
         print("Recieved invitation from peer: \(peerID)")
     }
+    
 }
 
 extension MultiPeerCommunicationManager : MCNearbyServiceBrowserDelegate
@@ -154,7 +155,19 @@ extension MultiPeerCommunicationManager : MCSessionDelegate
         
         print(TimeManager.shared.now().dateWithMillisecInString())
         AudioServicesPlaySystemSound(1322)
+        blinkScreen()
         
+    }
+    
+    func blinkScreen(){
+        var wnd = UIApplication.shared.keyWindow;
+        var v = UIView(frame: CGRect(x:0, y:0, width: wnd!.frame.size.width, height:wnd!.frame.size.height))
+        wnd!.addSubview(v);
+        v.backgroundColor = UIColor.white
+        UIView.beginAnimations(nil, context: nil)
+        UIView.setAnimationDuration(1.0)
+        v.alpha = 0.0;
+        UIView.commitAnimations();
     }
     
 }

@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class SingleLineTableViewCell: UITableViewCell, ConfigurationProtocol {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -39,7 +41,7 @@ class SingleLineTableViewCell: UITableViewCell, ConfigurationProtocol {
         config = configuration as! ConfigurationSingeLineTableViewCell
         
         if nameLbl == nil {
-            nameLbl = UILabel(frame: CGRect(x:UIScreen.scale(8), y: 0, width: self.frame.width, height: self.frame.height))
+            nameLbl = UILabel(frame: CGRect(x:UIScreen.scale(8), y: 0, width: UIScreen.screenWidth-UIScreen.scale(16), height: self.frame.height-UIScreen.scale(2)))
             nameLbl.backgroundColor = Constants.COLOR_LRM_BLACK
             nameLbl.textColor = Constants.COLOR_LRM_ORANGE
             self.contentView.addSubview(nameLbl)
@@ -47,14 +49,16 @@ class SingleLineTableViewCell: UITableViewCell, ConfigurationProtocol {
         nameLbl.text = config.deviceName
         
         if separatorView == nil {
-            separatorView = UIView(frame: CGRect(x:UIScreen.scale(7), y: self.height-UIScreen.scale(2), width: self.frame.width-UIScreen.scale(14), height: UIScreen.scale(2)))
+            separatorView = UIView(frame: CGRect(x:UIScreen.scale(7), y: self.height-UIScreen.scale(2), width: UIScreen.screenWidth-UIScreen.scale(14), height: UIScreen.scale(2)))
             separatorView.backgroundColor = Constants.COLOR_LRM_ORANGE
             self.contentView.addSubview(separatorView)
         }
         
-        
-        
-        self.contentView.backgroundColor = config.backColor
+        self.backgroundColor = Constants.COLOR_LRM_BLACK
+        self.contentView.backgroundColor = Constants.COLOR_LRM_BLACK
+
+        self.separatorView.backgroundColor = config.connectedColor
+
         
     }
     
@@ -70,11 +74,12 @@ class SingleLineTableViewCell: UITableViewCell, ConfigurationProtocol {
         
         nameLbl.text = config.deviceName
 
-        separatorView = UIView(frame: CGRect(x:UIScreen.scale(7), y: self.height-UIScreen.scale(2), width: self.frame.width-UIScreen.scale(14), height: UIScreen.scale(2)))
+        separatorView = UIView(frame: CGRect(x:UIScreen.scale(7), y: self.height-UIScreen.scale(2), width: UIScreen.screenWidth-UIScreen.scale(14), height: UIScreen.scale(2)))
         separatorView.backgroundColor = Constants.COLOR_LRM_ORANGE
         self.contentView.addSubview(separatorView)
-      
-        self.contentView.backgroundColor = config.backColor
+        
+    
+       self.separatorView.backgroundColor = config.connectedColor
         
         
     }

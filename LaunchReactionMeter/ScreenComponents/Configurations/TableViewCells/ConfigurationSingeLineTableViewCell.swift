@@ -10,11 +10,13 @@ import UIKit
 
 class ConfigurationSingeLineTableViewCell: ConfigurationComponent {
     var deviceName : String!
-    var backColor : UIColor!
+    var connectedColor : UIColor!
+    var isConnected : Bool!
     
-    init(deviceName: String, backColor: UIColor) {
+    init(deviceName: String, backColor: UIColor, isConnected : Bool = false) {
         super.init()
         self.deviceName = deviceName
-        self.backColor = backColor
+        self.connectedColor = backColor
+        self.isConnected = isConnected
     }
 }
