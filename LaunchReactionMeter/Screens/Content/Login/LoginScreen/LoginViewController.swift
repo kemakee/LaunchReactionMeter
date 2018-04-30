@@ -98,7 +98,6 @@ class LoginViewController: BaseContentViewController, LRMRegTextFieldDelegate {
     
     @objc func loginPressed()
     {
-        loginButton.isEnabled = false
         let loginData = UserData(password: passwordField.tfdWidthError.textField.text!, email: emailField.tfdWidthError.textField.text!)
         loginInteractor.doLogin(loginData: loginData, userType)
         
