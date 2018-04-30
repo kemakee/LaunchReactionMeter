@@ -101,6 +101,7 @@ class LoginInteractor: BaseInteractor, LoginInteractorProtocol {
         let presenter = try! self.getLastPresenter(byProtocol: LoginPresenterProtocol.self) as! LoginPresenterProtocol
         if !ValidateEmailAndPasswd(loginData: loginData)
         {
+            presenter.disableButton()
             Auth.auth().signIn(withEmail: loginData.email!, password: loginData.password!) { (user, error) in
                 
                 if error == nil {
@@ -109,6 +110,7 @@ class LoginInteractor: BaseInteractor, LoginInteractorProtocol {
                 } else {
               
                     presenter.showWrongEmailOrPassword()
+                    presenter.enableButton()
                 }
                 
             }

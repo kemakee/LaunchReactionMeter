@@ -21,8 +21,14 @@ import UIKit
     func hideAllError()
     
     func showWrongEmailOrPassword()
+    
+    func enableButton()
+    
+    func disableButton()
 }
 class LoginPresenter: BasePresenter, LoginPresenterProtocol {
+  
+    
     func navigateToLoggedIn(_ userType: UserType) {
          MainViewController.shared.replace(content: SegmentedViewController(userType))
     }
@@ -34,7 +40,13 @@ class LoginPresenter: BasePresenter, LoginPresenterProtocol {
     }
     
     
+    func enableButton() {
+        loginVC.loginButton.isEnabled=true
+    }
     
+    func disableButton() {
+        loginVC.loginButton.isEnabled=false
+    }
     func showEmptyError(error: textFieldType) {
         
         switch error {

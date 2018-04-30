@@ -2,4 +2,118 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LaunchReactionMeter/Screens/Content/Login/LoginScreen/LoginViewController.swift"
+            timestampString = "546791845.049289"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "regTextFieldHeightChanged(_:different:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LaunchReactionMeter.LoginViewController.regTextFieldHeightChanged(LaunchReactionMeter.LRMRegTextField, different: CoreGraphics.CGFloat) -&gt; ()"
+                  moduleName = "LaunchReactionMeter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kemi/Documents/LaunchReactionMeter/LaunchReactionMeter/LaunchReactionMeter/Screens/Content/Login/LoginScreen/LoginViewController.swift"
+                  timestampString = "546791726.877579"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in LaunchReactionMeter.LoginViewController.regTextFieldHeightChanged(LaunchReactionMeter.LRMRegTextField, different: CoreGraphics.CGFloat) -&gt; ()"
+                  moduleName = "LaunchReactionMeter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kemi/Documents/LaunchReactionMeter/LaunchReactionMeter/LaunchReactionMeter/Screens/Content/Login/LoginScreen/LoginViewController.swift"
+                  timestampString = "546791726.879023"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LaunchReactionMeter/Screens/Content/Login/LoginInteractor.swift"
+            timestampString = "546791845.049378"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "doLogin(loginData:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LaunchReactionMeter/Screens/Content/Login/LoginScreen/LoginViewController.swift"
+            timestampString = "546791845.049435"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "regTextFieldHeightChanged(_:different:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LaunchReactionMeter.LoginViewController.regTextFieldHeightChanged(LaunchReactionMeter.LRMRegTextField, different: CoreGraphics.CGFloat) -&gt; ()"
+                  moduleName = "LaunchReactionMeter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kemi/Documents/LaunchReactionMeter/LaunchReactionMeter/LaunchReactionMeter/Screens/Content/Login/LoginScreen/LoginViewController.swift"
+                  timestampString = "546791747.061811"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in LaunchReactionMeter.LoginViewController.regTextFieldHeightChanged(LaunchReactionMeter.LRMRegTextField, different: CoreGraphics.CGFloat) -&gt; ()"
+                  moduleName = "LaunchReactionMeter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kemi/Documents/LaunchReactionMeter/LaunchReactionMeter/LaunchReactionMeter/Screens/Content/Login/LoginScreen/LoginViewController.swift"
+                  timestampString = "546791747.063338"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
