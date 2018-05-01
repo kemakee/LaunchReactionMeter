@@ -308,8 +308,9 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
             let date = Date()
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "y-MM-dd H:m:ss.SSSS"
-            Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.timerFired), userInfo: self, repeats: false)
-            try  communication.session.send(dateFormatter.string(from: TimeManager.shared.calculateStartTime(offset: 4)).data(using: .utf8)!, toPeers: connectedPeers, with: .reliable)
+            let randomOffset = Double.random(min: 0.7, max: 1.5)
+            Timer.scheduledTimer(timeInterval: randomOffset, target: self, selector: #selector(self.timerFired), userInfo: self, repeats: false)
+            try  communication.session.send(dateFormatter.string(from: TimeManager.shared.calculateStartTime(offset: randomOffset)).data(using: .utf8)!, toPeers: connectedPeers, with: .reliable)
 
             print(dateFormatter.string(from: date))
         }
@@ -326,8 +327,8 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
         
     }
     func blinkScreen(){
-        var wnd = UIApplication.shared.keyWindow;
-        var v = UIView(frame: CGRect(x:0, y:0, width: wnd!.frame.size.width, height:wnd!.frame.size.height))
+        let wnd = UIApplication.shared.keyWindow;
+        let v = UIView(frame: CGRect(x:0, y:0, width: wnd!.frame.size.width, height:wnd!.frame.size.height))
         wnd!.addSubview(v);
         v.backgroundColor = UIColor.white
         UIView.beginAnimations(nil, context: nil)
@@ -335,5 +336,23 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
         v.alpha = 0.0;
         UIView.commitAnimations()
     }
+    
+    
 
+}
+
+public extension Double {
+    
+    /// Returns a random floating point number between 0.0 and 1.0, inclusive.
+    public static var random: Double {
+        return Double(arc4random()) / 0xFFFFFFFF
+    }
+    
+    /// Random double between 0 and n-1.
+    ///
+    /// - Parameter n:  Interval max
+    /// - Returns:      Returns a random double point number between 0 and n max
+    public static func random(min: Double, max: Double) -> Double {
+        return Double.random * (max - min) + min
+    }
 }

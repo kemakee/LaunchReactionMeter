@@ -30,7 +30,7 @@ class TimeManager: NSObject {
         return date.timeIntervalSince1970 - now().timeIntervalSince1970
     }
     
-    func calculateStartTime(offset: Int = 5) -> Date {
+    func calculateStartTime(offset: Double ) -> Date {
         return now().addSeconds(offset)
     }
     

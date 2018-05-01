@@ -54,8 +54,8 @@ extension Date {
     }
     
     
-    func addSeconds(_ secondToAdd: Int) -> Date {
-        let seconds: TimeInterval = Double(secondToAdd)
+    func addSeconds(_ secondToAdd: Double) -> Date {
+        let seconds: TimeInterval = secondToAdd
         let dateWithSecondsAdded: Date = self.addingTimeInterval(seconds)
         
         return dateWithSecondsAdded

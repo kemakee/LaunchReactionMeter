@@ -40,8 +40,6 @@ class MultiPeerCommunicationManager: NSObject {
     
     init(userType : UserType) {
         super.init()
-       
-        
         switch userType {
         case .athlete:
             self.advertiser = MCNearbyServiceAdvertiser(peer: myPeerdID, discoveryInfo: nil, serviceType: serviceType)
@@ -59,8 +57,7 @@ class MultiPeerCommunicationManager: NSObject {
         }
         
     }
-    
-    
+
     
 }
 
