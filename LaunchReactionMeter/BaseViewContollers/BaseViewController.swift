@@ -36,8 +36,7 @@ class BaseViewController: UIViewController, LifeCycleDelegate, RefreshProtocol {
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        print("viewwilllayoutsubview")
-        print(NSStringFromCGRect(self.view!.frame))
+  
     }
 
     deinit {

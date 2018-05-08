@@ -13,6 +13,7 @@ target 'LaunchReactionMeter' do
     	pod 'SnapKit'
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
+	pod 'Firebase/Firestore'
   target 'LaunchReactionMeterTests' do
     inherit! :search_paths
     # Pods for testing

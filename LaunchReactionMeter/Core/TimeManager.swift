@@ -16,7 +16,7 @@ class TimeManager: NSObject {
     
     let sntp = MHSNTPManager()
     
-    override init() {
+    private override init() {
         sntp.addAppleSNTPServers()
         Clock.sync()
     }

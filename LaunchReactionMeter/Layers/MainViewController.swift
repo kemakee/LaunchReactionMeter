@@ -206,7 +206,7 @@ class MainViewController: UIViewController {
 
     func loadFirstScreen() {
         clearSavedContents()
-        replace(content: UserChooserViewController())
+        replace(content: UserChooserViewController(), needHeader: false)
     }
 
     func clearSavedContents() {

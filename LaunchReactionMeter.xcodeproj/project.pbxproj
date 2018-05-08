@@ -10,6 +10,13 @@
 		1EB9BB02E5DED0BCEFED84C6 /* Pods_LaunchReactionMeter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262A6A11C6742733CCAD0C04 /* Pods_LaunchReactionMeter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2A1772F75EA48332DD9EF30F /* Pods_LaunchReactionMeterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92238792B01086CEC75BA318 /* Pods_LaunchReactionMeterUITests.framework */; };
 		3F7B67381E7E275E628A5DA4 /* Pods_LaunchReactionMeterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB228874DD2FF5E883CFA57 /* Pods_LaunchReactionMeterTests.framework */; };
+		98004F9120A20CAB00F287D0 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98004F9020A20CAB00F287D0 /* MotionManager.swift */; };
+		9826918D20A22A1D00AF4510 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9826918C20A22A1D00AF4510 /* DatabaseManager.swift */; };
+		985B22A320A22FF00064CD34 /* UserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B22A220A22FF00064CD34 /* UserResult.swift */; };
+		985B22A520A233310064CD34 /* SingleLineWithTwoDataTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B22A420A233310064CD34 /* SingleLineWithTwoDataTableCell.swift */; };
+		985B22A720A235000064CD34 /* ConfigurationSingleLineWithTwoLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B22A620A235000064CD34 /* ConfigurationSingleLineWithTwoLabelCell.swift */; };
+		985B22A920A23EDD0064CD34 /* AthleteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B22A820A23EDD0064CD34 /* AthleteResult.swift */; };
+		985B22AB20A246430064CD34 /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B22AA20A246430064CD34 /* TimerState.swift */; };
 		BE16ABC0206D590100E99BD0 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16ABBF206D590100E99BD0 /* TimeManager.swift */; };
 		BE16ABCB206D6D1400E99BD0 /* BaseContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16ABC4206D6D1300E99BD0 /* BaseContentViewController.swift */; };
 		BE16ABCC206D6D1400E99BD0 /* BaseHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16ABC5206D6D1300E99BD0 /* BaseHeaderViewController.swift */; };
@@ -74,7 +81,6 @@
 		BE5C28C4207A128E00327871 /* LRMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C28C3207A128E00327871 /* LRMButton.swift */; };
 		BE5C28C7207A135600327871 /* ConfigurationLRMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C28C6207A135600327871 /* ConfigurationLRMButton.swift */; };
 		BEBC6B57204493BB005C9F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC6B56204493BB005C9F86 /* AppDelegate.swift */; };
-		BEBC6B59204493BB005C9F86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC6B58204493BB005C9F86 /* ViewController.swift */; };
 		BEBC6B5E204493BB005C9F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEBC6B5D204493BB005C9F86 /* Assets.xcassets */; };
 		BEBC6B6C204493BB005C9F86 /* LaunchReactionMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC6B6B204493BB005C9F86 /* LaunchReactionMeterTests.swift */; };
 		BEBC6B77204493BB005C9F86 /* LaunchReactionMeterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC6B76204493BB005C9F86 /* LaunchReactionMeterUITests.swift */; };
@@ -122,6 +128,13 @@
 		58DD6A01CCF916D298730FA6 /* Pods-LaunchReactionMeterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchReactionMeterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaunchReactionMeterUITests/Pods-LaunchReactionMeterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CBA3F48632026533C7C346A /* Pods-LaunchReactionMeterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchReactionMeterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaunchReactionMeterUITests/Pods-LaunchReactionMeterUITests.release.xcconfig"; sourceTree = "<group>"; };
 		92238792B01086CEC75BA318 /* Pods_LaunchReactionMeterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaunchReactionMeterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98004F9020A20CAB00F287D0 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		9826918C20A22A1D00AF4510 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		985B22A220A22FF00064CD34 /* UserResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResult.swift; sourceTree = "<group>"; };
+		985B22A420A233310064CD34 /* SingleLineWithTwoDataTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineWithTwoDataTableCell.swift; sourceTree = "<group>"; };
+		985B22A620A235000064CD34 /* ConfigurationSingleLineWithTwoLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationSingleLineWithTwoLabelCell.swift; sourceTree = "<group>"; };
+		985B22A820A23EDD0064CD34 /* AthleteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteResult.swift; sourceTree = "<group>"; };
+		985B22AA20A246430064CD34 /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
 		BE16ABBC206D553100E99BD0 /* LaunchReactionMeter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LaunchReactionMeter-Bridging-Header.h"; sourceTree = "<group>"; };
 		BE16ABBF206D590100E99BD0 /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 		BE16ABC4206D6D1300E99BD0 /* BaseContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContentViewController.swift; sourceTree = "<group>"; };
@@ -188,7 +201,6 @@
 		BE5C28C6207A135600327871 /* ConfigurationLRMButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationLRMButton.swift; sourceTree = "<group>"; };
 		BEBC6B53204493BB005C9F86 /* LaunchReactionMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchReactionMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBC6B56204493BB005C9F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BEBC6B58204493BB005C9F86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BEBC6B5D204493BB005C9F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEBC6B62204493BB005C9F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEBC6B67204493BB005C9F86 /* LaunchReactionMeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaunchReactionMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -336,7 +348,6 @@
 			children = (
 				BED6474020851DEC00FF9DE6 /* LoggedIn */,
 				BE5C28BC207A0CBF00327871 /* Login */,
-				BEBC6B58204493BB005C9F86 /* ViewController.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -483,6 +494,9 @@
 				BE4536B7207A4304009B602A /* UserData.swift */,
 				BEEB131E2085382D009189F3 /* UserType.swift */,
 				BED0115D20867E4100CC3292 /* PeersWithConnectedStatus.swift */,
+				985B22A220A22FF00064CD34 /* UserResult.swift */,
+				985B22A820A23EDD0064CD34 /* AthleteResult.swift */,
+				985B22AA20A246430064CD34 /* TimerState.swift */,
 			);
 			path = DataClasses;
 			sourceTree = "<group>";
@@ -576,6 +590,8 @@
 				BEBC6B8520449553005C9F86 /* Constants.swift */,
 				BECAFFAB2050786D00B20AAF /* MultiPeerCommunicationManager.swift */,
 				BE16ABBF206D590100E99BD0 /* TimeManager.swift */,
+				98004F9020A20CAB00F287D0 /* MotionManager.swift */,
+				9826918C20A22A1D00AF4510 /* DatabaseManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -620,6 +636,7 @@
 			isa = PBXGroup;
 			children = (
 				BECAFFB72050877F00B20AAF /* ConfigurationSingeLineTableViewCell.swift */,
+				985B22A620A235000064CD34 /* ConfigurationSingleLineWithTwoLabelCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -628,6 +645,7 @@
 			isa = PBXGroup;
 			children = (
 				BECAFFBA205087C000B20AAF /* SingleLineTableViewCell.swift */,
+				985B22A420A233310064CD34 /* SingleLineWithTwoDataTableCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -690,7 +708,6 @@
 				BEBC6B50204493BB005C9F86 /* Frameworks */,
 				BEBC6B51204493BB005C9F86 /* Resources */,
 				B4B82A306867C7DCE30E55AD /* [CP] Embed Pods Frameworks */,
-				5A23A52ABAD0E22723AAD39A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -709,8 +726,6 @@
 				BEBC6B63204493BB005C9F86 /* Sources */,
 				BEBC6B64204493BB005C9F86 /* Frameworks */,
 				BEBC6B65204493BB005C9F86 /* Resources */,
-				C0C3E96BD3086E8BE5EAD5C1 /* [CP] Embed Pods Frameworks */,
-				9BC837C7570B24631729AFB7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -730,8 +745,6 @@
 				BEBC6B6E204493BB005C9F86 /* Sources */,
 				BEBC6B6F204493BB005C9F86 /* Frameworks */,
 				BEBC6B70204493BB005C9F86 /* Resources */,
-				C94170A144CFAFAC30E32245 /* [CP] Embed Pods Frameworks */,
-				C912C3E18D73E5CC3F8AFDD3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -844,36 +857,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5A23A52ABAD0E22723AAD39A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaunchReactionMeter/Pods-LaunchReactionMeter-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9BC837C7570B24631729AFB7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaunchReactionMeterTests/Pods-LaunchReactionMeterTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B4B82A306867C7DCE30E55AD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -882,75 +865,44 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LaunchReactionMeter/Pods-LaunchReactionMeter-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bluetonium/Bluetonium.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kronos/Kronos.framework",
 				"${BUILT_PRODUCTS_DIR}/MHSNTP/MHSNTP.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBluetooth/SwiftyBluetooth.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bluetonium.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kronos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MHSNTP.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBluetooth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaunchReactionMeter/Pods-LaunchReactionMeter-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C0C3E96BD3086E8BE5EAD5C1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaunchReactionMeterTests/Pods-LaunchReactionMeterTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C912C3E18D73E5CC3F8AFDD3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaunchReactionMeterUITests/Pods-LaunchReactionMeterUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C94170A144CFAFAC30E32245 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LaunchReactionMeterUITests/Pods-LaunchReactionMeterUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CA06BA48513DD1B2727C648C /* [CP] Check Pods Manifest.lock */ = {
@@ -998,17 +950,18 @@
 			files = (
 				BECAFFB5205086D600B20AAF /* ConfigurationProtocol.swift in Sources */,
 				BED6474D2085213B00FF9DE6 /* LoggedInInteractor.swift in Sources */,
+				985B22A920A23EDD0064CD34 /* AthleteResult.swift in Sources */,
 				BE16ABF2206D6D6500E99BD0 /* StringExtension.swift in Sources */,
 				BE16ABDD206D6D3600E99BD0 /* BasePresenter.swift in Sources */,
 				BE16ABDC206D6D3600E99BD0 /* BaseInteractor.swift in Sources */,
 				BE4536AB207A2E68009B602A /* LRMRegTextField.swift in Sources */,
 				BE16AC53206D6F7300E99BD0 /* MenuPresenter.swift in Sources */,
 				BE5C28C4207A128E00327871 /* LRMButton.swift in Sources */,
-				BEBC6B59204493BB005C9F86 /* ViewController.swift in Sources */,
 				BE16ABCC206D6D1400E99BD0 /* BaseHeaderViewController.swift in Sources */,
 				BECAFFB3205086CF00B20AAF /* ConfigurationComponent.swift in Sources */,
 				BE16AC5A206D6FA100E99BD0 /* HamburgerButton.swift in Sources */,
 				BED6474620851F9600FF9DE6 /* ConfigurationSegmentedControl.swift in Sources */,
+				985B22AB20A246430064CD34 /* TimerState.swift in Sources */,
 				BE4536B1207A2E86009B602A /* ConfigurationLRMTextField.swift in Sources */,
 				BE5C28BE207A0D2300327871 /* LoginInteractor.swift in Sources */,
 				BE16ABDB206D6D3600E99BD0 /* BaseConfigurator.swift in Sources */,
@@ -1029,6 +982,7 @@
 				BE16AC56206D6F7300E99BD0 /* FullScreenWaitingViewController.swift in Sources */,
 				BE16ABD0206D6D1400E99BD0 /* BaseViewController.swift in Sources */,
 				BE16AC54206D6F7300E99BD0 /* MenuViewController.swift in Sources */,
+				9826918D20A22A1D00AF4510 /* DatabaseManager.swift in Sources */,
 				BE4536A9207A2E68009B602A /* LRMTextField.swift in Sources */,
 				BE16ABCB206D6D1400E99BD0 /* BaseContentViewController.swift in Sources */,
 				BE4536B2207A2E86009B602A /* ConfigurationLRMTextFieldWithError.swift in Sources */,
@@ -1042,9 +996,11 @@
 				BECAFFBB205087C000B20AAF /* SingleLineTableViewCell.swift in Sources */,
 				BE4536B8207A4304009B602A /* UserData.swift in Sources */,
 				BE5C28BB207A0C8700327871 /* UserChooserViewController.swift in Sources */,
+				985B22A520A233310064CD34 /* SingleLineWithTwoDataTableCell.swift in Sources */,
 				BE16ABEF206D6D6500E99BD0 /* NSDateExtension.swift in Sources */,
 				BE16ABF6206D6D6500E99BD0 /* UIScrollViewExtension.swift in Sources */,
 				BE5C28C7207A135600327871 /* ConfigurationLRMButton.swift in Sources */,
+				985B22A320A22FF00064CD34 /* UserResult.swift in Sources */,
 				BE5C28C0207A0DB800327871 /* UserChooserPresenter.swift in Sources */,
 				BE4536A3207A2CBE009B602A /* RegistrationPresenter.swift in Sources */,
 				BE16ABE0206D6D3600E99BD0 /* MainViewController.swift in Sources */,
@@ -1056,7 +1012,9 @@
 				BE16ABF5206D6D6500E99BD0 /* UIScreen.swift in Sources */,
 				BE16ABDF206D6D3600E99BD0 /* MainMovementExtension.swift in Sources */,
 				BE4536C2207A624F009B602A /* SuccessfulRegistrationPresenter.swift in Sources */,
+				985B22A720A235000064CD34 /* ConfigurationSingleLineWithTwoLabelCell.swift in Sources */,
 				BE16AC5E206D703A00E99BD0 /* Label.swift in Sources */,
+				98004F9120A20CAB00F287D0 /* MotionManager.swift in Sources */,
 				BE16ABFC206D6DD000E99BD0 /* RefreshProtocol.swift in Sources */,
 				BECAFFAC2050786D00B20AAF /* MultiPeerCommunicationManager.swift in Sources */,
 				BE16ABF1206D6D6500E99BD0 /* PHAssetExtension.swift in Sources */,

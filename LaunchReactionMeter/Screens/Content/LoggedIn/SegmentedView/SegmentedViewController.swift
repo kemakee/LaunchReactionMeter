@@ -11,12 +11,11 @@ import MultipeerConnectivity
 import Kronos
 import AudioToolbox
 
-class SegmentedViewController: BaseContentViewController, SegmentedControlDelegate,  UITableViewDataSource, UITableViewDelegate, MultiPeerCommunicationManagerDelegate  {
+class SegmentedViewController: BaseContentViewController, SegmentedControlDelegate,  UITableViewDataSource, UITableViewDelegate, MultiPeerCommunicationManagerDelegate, MotionManagerDelegate  {
 
 
     let scBackViewHeight = UIScreen.scale(50)
     var viewsHeight: CGFloat!
-    var listView: UIView!
     var items: [String]!
     var viewArray: [UIView] = []
     var LRMSecCon : SegmentedControl!
@@ -24,6 +23,12 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
     var communication : MultiPeerCommunicationManager!
     var launchBtn : LRMButton!
     var connectedLbl : Label!
+    var stopperLbl : Label!
+    var shotTime : Date!
+    var userResults: [UserResult]!
+    var athleteResults: [AthleteResult] = [AthleteResult]()
+    let resultDateFormatter = DateFormatter()
+    var timerState: TimerState = .go
     
     
     private var peers = [PeersWithConnectedStatus]()
@@ -34,9 +39,12 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
     
 
 
-    let cellIdentifier = "cellIdentifier"
-    let cellIdentifier1 = "cellIdentifier1"
+    let cellIdentifierForLaunch = "cellIdentifierForLaunch"
+    let cellIdentifierForResults = "cellIdentifierForResults"
 
+    var counter = 0.0
+    var timer = Timer()
+    var isPlaying = false
 
 
     var loggedInInteractor: LoggedInInteractorProtocol {
@@ -62,48 +70,61 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
         self.svContent.isScrollEnabled = false
         self.svContent.backgroundColor = Constants.COLOR_LRM_BLACK
         
-        viewsHeight = self.svContent.height-scBackViewHeight
+        viewsHeight = UIScreen.screenHeight - UIScreen.statusBarHeight - scBackViewHeight
 
         LoggedInConfigurator.configureLoggedInSegmentedController(viewController: self)
-        
-        listView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.screenHeight, height: viewsHeight))
-        self.svContent.addSubview(listView)
-        listView.isUserInteractionEnabled = true
-        
+
+        let forLaunchView = UIView(frame: CGRect(x: 0, y: contentHeight, width: self.view.frame.size.width, height: viewsHeight))
+        self.svContent.addSubview(forLaunchView)
+        viewArray.append(forLaunchView)
+
         if userType == .coach
         {
-            tvListForLaunch = UITableView(frame: CGRect(x: 0, y: contentHeight, width: self.view.frame.size.width, height: self.view.frame.size.height - (MainViewController.shared.headerLayer?.height)!-contentHeight), style: .plain)
+            tvListForLaunch = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height - (MainViewController.shared.headerLayer?.height)!), style: .plain)
             tvListForLaunch.dataSource = self
             tvListForLaunch.delegate = self
             tvListForLaunch.separatorStyle = .none
-            tvListForLaunch.register(SingleLineTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+            tvListForLaunch.register(SingleLineTableViewCell.self, forCellReuseIdentifier: cellIdentifierForLaunch)
             tvListForLaunch.backgroundColor = Constants.COLOR_LRM_BLACK
-            self.svContent.addSubview(tvListForLaunch)
-            viewArray.append(tvListForLaunch)
+            forLaunchView.addSubview(tvListForLaunch)
+
+            let configStopperbl = ConfigurationLabel(size: CGSize(width: UIScreen.screenWidth*0.6, height: UIScreen.scale(50)), text: "00:00")
+            configStopperbl.font = UIFont.systemFont(ofSize: UIFont.systemFontSize+30)
+            stopperLbl = Label(configuration: configStopperbl)
+            stopperLbl.textAlignment = .center
+            stopperLbl.textColor = Constants.COLOR_LRM_WHITE
+            forLaunchView.addSubview(stopperLbl)
+
+
+            let configLaunchBtn = ConfigurationLRMButton(y: 0, text: "GO!", color: .white, size: .normal)
+            launchBtn = LRMButton(configuration: configLaunchBtn)
+            forLaunchView.addSubview(launchBtn)
+            launchBtn.addTarget(self, action: #selector(goPressed), for: .touchUpInside)
         }
         //MARK: TODO
+        resultDateFormatter.dateFormat = "H:m:ss"
         tvListForResults = UITableView(frame: CGRect(x: 0, y: contentHeight, width: self.view.frame.size.width, height: self.view.frame.size.height - (MainViewController.shared.headerLayer?.height)!-contentHeight-UIScreen.screenHeight*0.30), style: .plain)
         tvListForResults.dataSource = self
         tvListForResults.delegate = self
         tvListForResults.separatorStyle = .none
-        tvListForResults.register(SingleLineTableViewCell.self, forCellReuseIdentifier: cellIdentifier1)
+        tvListForResults.register(SingleLineWithTwoDataTableCell.self, forCellReuseIdentifier: cellIdentifierForResults)
         tvListForResults.backgroundColor = Constants.COLOR_LRM_BLACK
-        
-        if userType == .coach
-        {
-            let configLaunchBtn = ConfigurationLRMButton(y: 0, text: "GO!", color: .white, size: .normal)
-            launchBtn = LRMButton(configuration: configLaunchBtn)
-            self.svContent.addSubview(launchBtn)
-            launchBtn.addTarget(self, action: #selector(goPressed), for: .touchUpInside)
+        self.svContent.addSubview(tvListForResults)
+        tvListForResults.isHidden = true
 
-        }
+
         if userType == .athlete
         {
             let configConnectedLbl = ConfigurationLabel(size: CGSize(width: UIScreen.screenWidth*0.6, height: UIScreen.scale(50)), text: "Not Connected")
             connectedLbl = Label(configuration: configConnectedLbl)
             connectedLbl.textAlignment = .center
             connectedLbl.backgroundColor = Constants.COLOR_LRM_RED_50
-            self.svContent.addSubview(connectedLbl)
+            forLaunchView.addSubview(connectedLbl)
+
+            DatabaseManager.shared.readResults { (results) in
+                self.userResults = results
+                self.tvListForResults.reloadData()
+            }
             
         }
         
@@ -119,6 +140,7 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
         LRMSecCon.delegate = self
         
         communication.delegate = self
+
         
         self.svContent.addSubview(LRMSecCon)
 
@@ -138,7 +160,7 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
         if userType == .athlete
         {
             connectedLbl.snp.makeConstraints { (make) in
-                make.bottom.equalTo(UIScreen.screenHeight*0.60)
+                make.top.equalTo(UIScreen.screenHeight*0.60)
                 make.left.equalTo((UIScreen.screenWidth/2-connectedLbl.width/2))
                 make.width.equalTo(connectedLbl.width)
                 make.height.equalTo(connectedLbl.height)
@@ -147,10 +169,17 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
         if userType == .coach
         {
             launchBtn.snp.makeConstraints { (make) in
-                make.bottom.equalTo(UIScreen.screenHeight*0.70)
+                make.top.equalTo(UIScreen.screenHeight*0.70)
                 make.left.equalTo((UIScreen.screenWidth/2-launchBtn.width/2))
                 make.width.equalTo(launchBtn.width)
                 make.height.equalTo(launchBtn.height)
+            }
+
+            stopperLbl.snp.makeConstraints { (make) in
+                make.top.equalTo(UIScreen.screenHeight*0.60)
+                make.left.equalTo((UIScreen.screenWidth/2-stopperLbl.width/2))
+                make.width.equalTo(stopperLbl.width)
+                make.height.equalTo(stopperLbl.height)
             }
         }
         
@@ -159,7 +188,14 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
         }
 
     func SegmentedControlWichPressed(_ segmentedControl: SegmentedControl, whichPressed: Int) {
-          viewArray.forEach({ $0.isHidden = !$0.isHidden })
+        viewArray.forEach({ $0.isHidden = !$0.isHidden })
+        if(whichPressed == 1)
+        {
+            DatabaseManager.shared.readResults { (results) in
+                self.userResults = results
+                self.tvListForResults.reloadData()
+            }
+        }
     }
     
   
@@ -274,21 +310,64 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
         self.tvListForLaunch.reloadData()
         
     }
+
+    func startHappend(startdate: Date) {
+
+        DispatchQueue.main.async {
+            let offset = TimeManager.shared.calculateOffsetFromNetActualTime(date: startdate)
+            Timer.scheduledTimer(timeInterval: offset, target: self, selector: #selector(self.timerFired), userInfo: self, repeats: false)
+        }
+
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
-        return peers.count
+        if tableView == tvListForLaunch {
+            return peers.count
+        }
+        else if tableView == tvListForResults {
+            if userType == .athlete{
+                return userResults != nil ? userResults.count : 0
+            }else {
+                return athleteResults.count
+            }
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell : SingleLineTableViewCell!
-        
-        cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SingleLineTableViewCell
-      
-        let configCell = ConfigurationSingeLineTableViewCell(deviceName:String(describing: peers[indexPath.row].peer.displayName), backColor : peers[indexPath.row].isConnected ? Constants.COLOR_LRM_GREEN : Constants.COLOR_LRM_ORANGE)
-        cell.configure(configCell)
+        if(tableView == tvListForLaunch){
+            var cell : SingleLineTableViewCell!
 
-        return cell
+            cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifierForLaunch, for: indexPath) as! SingleLineTableViewCell
+
+            let configCell = ConfigurationSingeLineTableViewCell(deviceName:String(describing: peers[indexPath.row].peer.displayName), backColor : peers[indexPath.row].isConnected ? Constants.COLOR_LRM_GREEN : Constants.COLOR_LRM_ORANGE)
+            cell.configure(configCell)
+
+            return cell
+        }
+        else if tableView == tvListForResults {
+            let cell : SingleLineWithTwoDataTableCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifierForResults, for: indexPath) as! SingleLineWithTwoDataTableCell
+            let configCell: ConfigurationSingleLineWithTwoLabelCell
+            if userType == .athlete{
+
+                let userResult = userResults[indexPath.row]
+                configCell = ConfigurationSingleLineWithTwoLabelCell(dataText: resultDateFormatter.string(from: userResult.date!) , resultText: String(userResult.result))
+
+            }
+            else {
+                let athleteResult = athleteResults[indexPath.row]
+                configCell = ConfigurationSingleLineWithTwoLabelCell(dataText: athleteResult.name , resultText: String(athleteResult.result))
+
+            }
+            cell.configure(configCell)
+            return cell
+        }
+
+        return UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == self.tvListForLaunch && !peers[indexPath.row].isConnected
@@ -304,27 +383,89 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
     
     @objc func goPressed()
     {
-        do {
-            let date = Date()
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "y-MM-dd H:m:ss.SSSS"
-            let randomOffset = Double.random(min: 0.7, max: 1.5)
-            Timer.scheduledTimer(timeInterval: randomOffset, target: self, selector: #selector(self.timerFired), userInfo: self, repeats: false)
-            try  communication.session.send(dateFormatter.string(from: TimeManager.shared.calculateStartTime(offset: randomOffset)).data(using: .utf8)!, toPeers: connectedPeers, with: .reliable)
+        guard self.connectedPeers.count != 0 else {
+            return
+        }
 
-            print(dateFormatter.string(from: date))
+        if(timerState == .go)
+        {
+            do {
+                athleteResults.removeAll()
+                let date = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "y-MM-dd H:m:ss.SSSS"
+                let randomOffset = Double.random(min: 0.7, max: 1.5)
+                Timer.scheduledTimer(timeInterval: randomOffset, target: self, selector: #selector(self.timerFired), userInfo: self, repeats: false)
+                try  communication.session.send(dateFormatter.string(from: TimeManager.shared.calculateStartTime(offset: randomOffset)).data(using: .utf8)!, toPeers: connectedPeers, with: .reliable)
+
+                print(dateFormatter.string(from: date))
+            }
+            catch let error {
+                NSLog("%@", "Error for sending: \(error)")
+            }
         }
-        catch let error {
-            NSLog("%@", "Error for sending: \(error)")
+        else if(timerState == .stop)
+        {
+            stopTimer()
         }
+        else if(timerState == .reset)
+        {
+            resetTimer()
+        }
+
         
     }
     @objc func timerFired() {
+
+        shotTime = Date()
+        if userType == .athlete
+        {
+            MotionManager.shared.start()
+            MotionManager.shared.delegate = self
+            AudioServicesPlaySystemSound(1322)
+        }
+        else{
+            startTimer()
+        }
         
         print(TimeManager.shared.now().dateWithMillisecInString())
-        AudioServicesPlaySystemSound(1322)
         blinkScreen()
         
+        
+    }
+
+    func gyroTriggered() {
+
+        let difference = Date().timeIntervalSince(shotTime)
+        let result = Double(difference)
+        showResult(result)
+        DatabaseManager.shared.addResult(result: result)
+        try? communication.session.send(String(result).data(using: .utf8)!, toPeers: [connectedPeers.first!], with: .reliable)
+    }
+
+    func resultRecieved(_ peerID: MCPeerID, _ timeInterval: Double) {
+        let result = AthleteResult()
+        result.name = peerID.displayName
+        result.result = timeInterval
+        athleteResults.append(result)
+        DispatchQueue.main.async {
+            self.tvListForResults.reloadData()
+        }
+
+    }
+
+    func showResult(_ timeInterval : Double)
+    {
+        let alert = UIAlertController(title: "Result", message: "\(timeInterval) is your reaction time.", preferredStyle: UIAlertControllerStyle.alert)
+
+        let acceptAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (alertAction) -> Void in
+            self.communication.invitationHandler(true, self.communication.session)
+        }
+
+
+        alert.addAction(acceptAction)
+
+        self.present(alert, animated: true, completion: nil)
     }
     func blinkScreen(){
         let wnd = UIApplication.shared.keyWindow;
@@ -336,8 +477,33 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
         v.alpha = 0.0;
         UIView.commitAnimations()
     }
+
+    func startTimer() {
+        timerState = .stop
+        launchBtn.setTitle("STOP", for: .normal)
+
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true)
+    }
+
+    func stopTimer() {
+        timerState = .reset
+        launchBtn.setTitle("RESET", for: .normal)
+        timer.invalidate()
+    }
+
+    func resetTimer()
+    {
+        timerState = .go
+        launchBtn.setTitle("GO", for: .normal)
+        stopperLbl.text = "00:00:00"
+        counter = 0
+    }
     
-    
+    @objc func updateTimer() {
+        counter = counter + 0.01
+        let minute = Int(counter/60)
+        stopperLbl.text = String(minute) + ":" + String(format: "%.2f", counter - Double(minute)*60)
+    }
 
 }
 

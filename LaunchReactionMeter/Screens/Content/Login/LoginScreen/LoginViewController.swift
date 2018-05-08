@@ -101,6 +101,7 @@ class LoginViewController: BaseContentViewController, LRMRegTextFieldDelegate {
         let loginData = UserData(password: passwordField.tfdWidthError.textField.text!, email: emailField.tfdWidthError.textField.text!)
         loginInteractor.doLogin(loginData: loginData, userType)
         
+        
     }
     
     func regTextFieldHeightChanged(_ tfreg: LRMRegTextField, different: CGFloat) {

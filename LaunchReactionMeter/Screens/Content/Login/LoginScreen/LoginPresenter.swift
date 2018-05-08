@@ -30,7 +30,7 @@ class LoginPresenter: BasePresenter, LoginPresenterProtocol {
   
     
     func navigateToLoggedIn(_ userType: UserType) {
-         MainViewController.shared.replace(content: SegmentedViewController(userType))
+         MainViewController.shared.replace(content: SegmentedViewController(userType), needHeader: false)
     }
     
     

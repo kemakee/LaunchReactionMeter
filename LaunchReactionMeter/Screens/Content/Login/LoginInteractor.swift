@@ -106,6 +106,7 @@ class LoginInteractor: BaseInteractor, LoginInteractorProtocol {
                 
                 if error == nil {
                     presenter.navigateToLoggedIn(userType)
+                    CoreEnvironment.shared.userType = userType
                     
                 } else {
               

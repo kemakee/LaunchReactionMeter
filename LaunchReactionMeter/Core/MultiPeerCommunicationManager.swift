@@ -17,9 +17,16 @@ protocol MultiPeerCommunicationManagerDelegate : NSObjectProtocol{
     func invitationReceived(fromPeer: String)
     func connectedWithPeer(_ peerID: MCPeerID)
     func lostPeer(_ peerID : MCPeerID)
+    func startHappend(startdate: Date)
+    func resultRecieved(_ peerID: MCPeerID,_ timeInterval : Double)
+
 }
 
-class MultiPeerCommunicationManager: NSObject {
+class MultiPeerCommunicationManager: NSObject, MotionManagerDelegate {
+    func gyroTriggered() {
+
+    }
+
 
     
     private let serviceType = "launch-meter"
@@ -123,16 +130,22 @@ extension MultiPeerCommunicationManager : MCSessionDelegate
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "y-MM-dd H:m:ss.SSSS"
-        let str = String(data: data, encoding: .utf8)!
-        let startdate = dateFormatter.date(from: str)!
-        
-        DispatchQueue.main.async {
-            let offset = TimeManager.shared.calculateOffsetFromNetActualTime(date: startdate)
-            Timer.scheduledTimer(timeInterval: offset, target: self, selector: #selector(self.timerFired), userInfo: self, repeats: false)
+        if CoreEnvironment.shared.userType == UserType.athlete
+        {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "y-MM-dd H:m:ss.SSSS"
+            let str = String(data: data, encoding: .utf8)!
+            let startdate = dateFormatter.date(from: str)!
+
+            delegate?.startHappend(startdate: startdate)
         }
-        
+        else
+        {
+            let str = String(data: data, encoding: .utf8)!
+            let timeInterval = Double(str)
+            delegate?.resultRecieved(peerID,timeInterval!)
+        }
+
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
@@ -146,15 +159,7 @@ extension MultiPeerCommunicationManager : MCSessionDelegate
     func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
         NSLog("%@", "didFinishReceivingResourceWithName")
     }
-    
-    @objc func timerFired() {
 
-        
-        print(TimeManager.shared.now().dateWithMillisecInString())
-        AudioServicesPlaySystemSound(1322)
-        blinkScreen()
-        
-    }
     
     func blinkScreen(){
         var wnd = UIApplication.shared.keyWindow;

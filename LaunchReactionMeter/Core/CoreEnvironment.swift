@@ -22,6 +22,7 @@ class CoreEnvironment: NSObject {
 
     var applicationVersion: String!
     var buildNumber: String!
+    var userType : UserType!
 
     var currentInteractor: BaseInteractorProtocol!
 

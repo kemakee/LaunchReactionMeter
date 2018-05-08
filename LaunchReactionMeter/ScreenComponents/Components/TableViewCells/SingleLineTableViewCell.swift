@@ -65,23 +65,9 @@ class SingleLineTableViewCell: UITableViewCell, ConfigurationProtocol {
     func reconfigure(_ configuration: ConfigurationComponent) {
         
         config = configuration as! ConfigurationSingeLineTableViewCell
-        
-      
-        nameLbl = UILabel(frame: CGRect(x:UIScreen.scale(8), y: 0, width: self.frame.width, height: self.frame.height))
-        nameLbl.backgroundColor = Constants.COLOR_LRM_BLACK
-        nameLbl.textColor = Constants.COLOR_LRM_ORANGE
-        self.contentView.addSubview(nameLbl)
-        
         nameLbl.text = config.deviceName
+        self.separatorView.backgroundColor = config.connectedColor
 
-        separatorView = UIView(frame: CGRect(x:UIScreen.scale(7), y: self.height-UIScreen.scale(2), width: UIScreen.screenWidth-UIScreen.scale(14), height: UIScreen.scale(2)))
-        separatorView.backgroundColor = Constants.COLOR_LRM_ORANGE
-        self.contentView.addSubview(separatorView)
-        
-    
-       self.separatorView.backgroundColor = config.connectedColor
-        
-        
     }
     
     func getConfiguration() -> ConfigurationComponent {
