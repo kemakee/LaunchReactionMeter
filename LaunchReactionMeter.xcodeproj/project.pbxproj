@@ -45,7 +45,6 @@
 		BE16ABFB206D6DD000E99BD0 /* MovementProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16ABF9206D6DD000E99BD0 /* MovementProtocol.swift */; };
 		BE16ABFC206D6DD000E99BD0 /* RefreshProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16ABFA206D6DD000E99BD0 /* RefreshProtocol.swift */; };
 		BE16ABFE206D6EEF00E99BD0 /* CoreEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16ABFD206D6EEF00E99BD0 /* CoreEnvironment.swift */; };
-		BE16AC01206D6F2800E99BD0 /* TabbedPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16AC00206D6F2800E99BD0 /* TabbedPager.swift */; };
 		BE16AC50206D6F7300E99BD0 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16AC2A206D6F7300E99BD0 /* HeaderViewController.swift */; };
 		BE16AC51206D6F7300E99BD0 /* MenuConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16AC2C206D6F7300E99BD0 /* MenuConfigurator.swift */; };
 		BE16AC52206D6F7300E99BD0 /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16AC2D206D6F7300E99BD0 /* MenuInteractor.swift */; };
@@ -62,7 +61,6 @@
 		BE4536A1207A2CA4009B602A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4536A0207A2CA4009B602A /* RegistrationViewController.swift */; };
 		BE4536A3207A2CBE009B602A /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4536A2207A2CBE009B602A /* RegistrationPresenter.swift */; };
 		BE4536A9207A2E68009B602A /* LRMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4536A5207A2E68009B602A /* LRMTextField.swift */; };
-		BE4536AA207A2E68009B602A /* LRMTextFieldWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4536A6207A2E68009B602A /* LRMTextFieldWithError.swift */; };
 		BE4536AB207A2E68009B602A /* LRMRegTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4536A8207A2E68009B602A /* LRMRegTextField.swift */; };
 		BE4536B1207A2E86009B602A /* ConfigurationLRMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4536AD207A2E86009B602A /* ConfigurationLRMTextField.swift */; };
 		BE4536B2207A2E86009B602A /* ConfigurationLRMTextFieldWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4536AE207A2E86009B602A /* ConfigurationLRMTextFieldWithError.swift */; };
@@ -80,6 +78,7 @@
 		BE5C28C2207A0DEF00327871 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C28C1207A0DEF00327871 /* LoginConfigurator.swift */; };
 		BE5C28C4207A128E00327871 /* LRMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C28C3207A128E00327871 /* LRMButton.swift */; };
 		BE5C28C7207A135600327871 /* ConfigurationLRMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C28C6207A135600327871 /* ConfigurationLRMButton.swift */; };
+		BE8A307A20A0996800F71C65 /* LRMTextFieldWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8A307920A0996800F71C65 /* LRMTextFieldWithError.swift */; };
 		BEBC6B57204493BB005C9F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC6B56204493BB005C9F86 /* AppDelegate.swift */; };
 		BEBC6B5E204493BB005C9F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEBC6B5D204493BB005C9F86 /* Assets.xcassets */; };
 		BEBC6B6C204493BB005C9F86 /* LaunchReactionMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC6B6B204493BB005C9F86 /* LaunchReactionMeterTests.swift */; };
@@ -164,7 +163,6 @@
 		BE16ABF9206D6DD000E99BD0 /* MovementProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementProtocol.swift; sourceTree = "<group>"; };
 		BE16ABFA206D6DD000E99BD0 /* RefreshProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshProtocol.swift; sourceTree = "<group>"; };
 		BE16ABFD206D6EEF00E99BD0 /* CoreEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreEnvironment.swift; sourceTree = "<group>"; };
-		BE16AC00206D6F2800E99BD0 /* TabbedPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbedPager.swift; sourceTree = "<group>"; };
 		BE16AC2A206D6F7300E99BD0 /* HeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
 		BE16AC2C206D6F7300E99BD0 /* MenuConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuConfigurator.swift; sourceTree = "<group>"; };
 		BE16AC2D206D6F7300E99BD0 /* MenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 		BE4536A0207A2CA4009B602A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		BE4536A2207A2CBE009B602A /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		BE4536A5207A2E68009B602A /* LRMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRMTextField.swift; sourceTree = "<group>"; };
-		BE4536A6207A2E68009B602A /* LRMTextFieldWithError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRMTextFieldWithError.swift; sourceTree = "<group>"; };
 		BE4536A8207A2E68009B602A /* LRMRegTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRMRegTextField.swift; sourceTree = "<group>"; };
 		BE4536AD207A2E86009B602A /* ConfigurationLRMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationLRMTextField.swift; sourceTree = "<group>"; };
 		BE4536AE207A2E86009B602A /* ConfigurationLRMTextFieldWithError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationLRMTextFieldWithError.swift; sourceTree = "<group>"; };
@@ -199,6 +196,7 @@
 		BE5C28C1207A0DEF00327871 /* LoginConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
 		BE5C28C3207A128E00327871 /* LRMButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRMButton.swift; sourceTree = "<group>"; };
 		BE5C28C6207A135600327871 /* ConfigurationLRMButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationLRMButton.swift; sourceTree = "<group>"; };
+		BE8A307920A0996800F71C65 /* LRMTextFieldWithError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRMTextFieldWithError.swift; sourceTree = "<group>"; };
 		BEBC6B53204493BB005C9F86 /* LaunchReactionMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchReactionMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBC6B56204493BB005C9F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEBC6B5D204493BB005C9F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -321,14 +319,6 @@
 				BE16ABFA206D6DD000E99BD0 /* RefreshProtocol.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		BE16ABFF206D6F2800E99BD0 /* Pager */ = {
-			isa = PBXGroup;
-			children = (
-				BE16AC00206D6F2800E99BD0 /* TabbedPager.swift */,
-			);
-			path = Pager;
 			sourceTree = "<group>";
 		};
 		BE16AC02206D6F7300E99BD0 /* Screens */ = {
@@ -455,8 +445,8 @@
 		BE4536A4207A2E68009B602A /* TextField */ = {
 			isa = PBXGroup;
 			children = (
+				BE8A307920A0996800F71C65 /* LRMTextFieldWithError.swift */,
 				BE4536A5207A2E68009B602A /* LRMTextField.swift */,
-				BE4536A6207A2E68009B602A /* LRMTextFieldWithError.swift */,
 				BE4536A7207A2E68009B602A /* Registration */,
 			);
 			path = TextField;
@@ -612,7 +602,6 @@
 				BE4536A4207A2E68009B602A /* TextField */,
 				BE16AC5C206D703A00E99BD0 /* Label */,
 				BE16AC57206D6FA100E99BD0 /* Button */,
-				BE16ABFF206D6F2800E99BD0 /* Pager */,
 				BECAFFB9205087AA00B20AAF /* TableViewCells */,
 				BECAFFB4205086D600B20AAF /* ConfigurationProtocol.swift */,
 			);
@@ -997,6 +986,7 @@
 				BE4536B8207A4304009B602A /* UserData.swift in Sources */,
 				BE5C28BB207A0C8700327871 /* UserChooserViewController.swift in Sources */,
 				985B22A520A233310064CD34 /* SingleLineWithTwoDataTableCell.swift in Sources */,
+				BE8A307A20A0996800F71C65 /* LRMTextFieldWithError.swift in Sources */,
 				BE16ABEF206D6D6500E99BD0 /* NSDateExtension.swift in Sources */,
 				BE16ABF6206D6D6500E99BD0 /* UIScrollViewExtension.swift in Sources */,
 				BE5C28C7207A135600327871 /* ConfigurationLRMButton.swift in Sources */,
@@ -1004,11 +994,9 @@
 				BE5C28C0207A0DB800327871 /* UserChooserPresenter.swift in Sources */,
 				BE4536A3207A2CBE009B602A /* RegistrationPresenter.swift in Sources */,
 				BE16ABE0206D6D3600E99BD0 /* MainViewController.swift in Sources */,
-				BE4536AA207A2E68009B602A /* LRMTextFieldWithError.swift in Sources */,
 				BE16ABDE206D6D3600E99BD0 /* LifeCycleDelegate.swift in Sources */,
 				BE16ABF0206D6D6500E99BD0 /* NSMutableAttributedStringExtension.swift in Sources */,
 				BE441682207E05360016DA17 /* LoginPresenter.swift in Sources */,
-				BE16AC01206D6F2800E99BD0 /* TabbedPager.swift in Sources */,
 				BE16ABF5206D6D6500E99BD0 /* UIScreen.swift in Sources */,
 				BE16ABDF206D6D3600E99BD0 /* MainMovementExtension.swift in Sources */,
 				BE4536C2207A624F009B602A /* SuccessfulRegistrationPresenter.swift in Sources */,

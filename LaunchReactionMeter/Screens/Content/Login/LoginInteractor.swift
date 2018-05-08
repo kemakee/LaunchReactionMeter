@@ -41,7 +41,7 @@ class LoginInteractor: BaseInteractor, LoginInteractorProtocol {
                     
                     
                 } else {
-                    print("notgud")
+                   //error handling
                 }
             })
         }
