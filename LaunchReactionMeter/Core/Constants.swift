@@ -24,9 +24,7 @@ class Constants {
     
     static let shadeLayerMaxAlpha: CGFloat = 0.5
     
-    static let FILE_LOG = "log.txt"
     
-    static let headerText = "AppCore"
     
     static let dateFormat = "yyyy-MM-dd"
     static let dateAndTimeFormat = "yyyy-MM-dd hh:ss"

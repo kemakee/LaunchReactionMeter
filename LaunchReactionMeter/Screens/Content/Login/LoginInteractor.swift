@@ -94,7 +94,7 @@ class LoginInteractor: BaseInteractor, LoginInteractorProtocol {
             hasError = true
             presenter.showEmptyError(error: .password)
         }
-        else if (loginData.password!.length) < 5
+        else if (loginData.password!.length) < 6
         {
             hasError = true
             presenter.showSmallPasswordError()
@@ -171,7 +171,7 @@ class LoginInteractor: BaseInteractor, LoginInteractorProtocol {
         
         if let password = regData.password
         {
-            if password != "" && password.length < 5
+            if password != "" && password.length < 6
             {
                 hasError = true
                 presenter.showSmallPasswordError()

@@ -1,8 +1,4 @@
-//
-//  SingleLineWithTwoDataTableCell.swift
-//  LaunchReactionMeter
-//
-//  Created by Adam Horvath on 2018. 05. 08..
+//  Created by Ákos Kemenes on 2018. 04. 16..
 //  Copyright © 2018. Ákos Kemenes. All rights reserved.
 //
 

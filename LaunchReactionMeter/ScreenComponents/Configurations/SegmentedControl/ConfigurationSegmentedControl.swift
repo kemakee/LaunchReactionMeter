@@ -1,11 +1,6 @@
+//  Created by Ákos Kemenes on 2018. 04. 16..
+//  Copyright © 2018. Ákos Kemenes. All rights reserved.
 //
-//  ConfigurationSegmentedControl.swift
-//  ComeGetIt
-//
-//  Created by Ákos Kemenes on 2017. 07. 03..
-//  Copyright © 2017. ComeGetIt. All rights reserved.
-//
-
 import UIKit
 
 class ConfigurationSegmentedControl: ConfigurationComponent {

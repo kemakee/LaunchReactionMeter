@@ -1,8 +1,5 @@
-//
-//  BaseConfigurator.swift
-//
-//  Created by CodeVision on 2017. 06. 20..
-//  Copyright © 2017. Codevision. All rights reserved.
+//  Created by Ákos Kemenes on 2018. 04. 16..
+//  Copyright © 2018. Ákos Kemenes. All rights reserved.
 //
 
 import Foundation

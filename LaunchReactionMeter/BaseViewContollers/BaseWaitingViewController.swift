@@ -1,9 +1,5 @@
-//
-//  BaseWaitingViewController.swift
-//  AppCore
-//
-//  Created by CodeVision on 14/05/17.
-//  Copyright (c) 2017. All rights reserved.
+//  Created by Ákos Kemenes on 2018. 04. 16..
+//  Copyright © 2018. Ákos Kemenes. All rights reserved.
 //
 
 import UIKit

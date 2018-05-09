@@ -1,11 +1,6 @@
+//  Created by Ákos Kemenes on 2018. 04. 16..
+//  Copyright © 2018. Ákos Kemenes. All rights reserved.
 //
-//  StringExtension.swift
-//  AppCore
-//
-//  Created by CodeVision on 09/10/15.
-//  Copyright © 2015. All rights reserved.
-//
-
 import UIKit
 import Foundation
 

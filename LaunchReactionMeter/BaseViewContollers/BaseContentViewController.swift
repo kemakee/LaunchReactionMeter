@@ -1,9 +1,5 @@
-//
-//  BaseContentViewController.swift
-//	AppCore
-//
-//  Created by CodeVision on 14/05/17.
-//  Copyright (c) 2017 All rights reserved.
+//  Created by Ákos Kemenes on 2018. 04. 16..
+//  Copyright © 2018. Ákos Kemenes. All rights reserved.
 //
 
 import UIKit
@@ -219,9 +215,7 @@ class BaseContentViewController: BaseViewController, MovementProtocol, UITextFie
         MainViewController.shared.load(toastWith: message)
     }
 
-    func showLoader() {
-        MainViewController.shared.loadFullScreenWaiting()
-    }
+
 
     func hideLoader() {
         MainViewController.shared.setWaitingVisibility(toHidden: true)

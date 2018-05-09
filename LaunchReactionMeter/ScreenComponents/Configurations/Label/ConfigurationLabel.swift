@@ -1,10 +1,6 @@
+//  Created by Ákos Kemenes on 2018. 04. 16..
+//  Copyright © 2018. Ákos Kemenes. All rights reserved.
 //
-//  ConfigurationLabel.swift
-//
-//  Created by CodeVision on 2017. 04. 21..
-//  Copyright © 2017. All rights reserved.
-//
-
 import UIKit
 import Foundation
 

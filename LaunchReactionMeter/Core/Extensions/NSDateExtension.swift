@@ -1,9 +1,6 @@
-// 
-//   NSDateExtension.swift
-// 
-//   Created by CodeVision on 15/06/16.
-//   Copyright © 2016 Codevision. All rights reserved.
-// 
+//  Created by Ákos Kemenes on 2018. 04. 16..
+//  Copyright © 2018. Ákos Kemenes. All rights reserved.
+//
 
 import Foundation
 

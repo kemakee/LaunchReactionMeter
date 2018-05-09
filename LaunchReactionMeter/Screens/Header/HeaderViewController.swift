@@ -1,9 +1,5 @@
-//
-//  HeaderViewController.swift
-//  CodeVision
-//
-//  Created by CodeVision on 14/05/17.
-//  Copyright (c) 2017 CodeVision. All rights reserved.
+//  Created by Ákos Kemenes on 2018. 04. 16..
+//  Copyright © 2018. Ákos Kemenes. All rights reserved.
 //
 
 import UIKit
@@ -37,14 +33,6 @@ class HeaderViewController: BaseHeaderViewController {
 
         if (hasViewStackElement()) {
             navigateBack()
-        } else {
-            if let menu = MainViewController.shared.menuLayer {
-                if menu.isOpened {
-                    menu.animateOut(completionHandler: nil)
-                } else {
-                    menu.animateIn(completionHandler: nil)
-                }
-            }
         }
     }
 

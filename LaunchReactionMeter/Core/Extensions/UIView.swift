@@ -1,11 +1,6 @@
+//  Created by Ákos Kemenes on 2018. 04. 16..
+//  Copyright © 2018. Ákos Kemenes. All rights reserved.
 //
-//  UIView.swift
-//  CodeVision
-//
-//  Created by CodeVision on 14/05/17.
-//  Copyright © 2017 . All rights reserved.
-//
-
 import Foundation
 import UIKit
 import CoreGraphics

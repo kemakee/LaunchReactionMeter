@@ -1,3 +1,6 @@
+//  Created by Ákos Kemenes on 2018. 04. 16..
+//  Copyright © 2018. Ákos Kemenes. All rights reserved.
+//
 import UIKit
 
 class MainViewController: UIViewController {
@@ -21,8 +24,6 @@ class MainViewController: UIViewController {
     // MARK: content viewcontrollers
     var contentContent: BaseContentViewController?
     var headerContent: BaseHeaderViewController?
-    var menuContent: BaseMenuViewController?
-    var modalContent: BaseModalViewController?
     var waitingContent: BaseWaitingViewController?
     var toastContent: BaseToastViewController?
 
@@ -30,7 +31,6 @@ class MainViewController: UIViewController {
     var contentLayer: UIView!
     var headerLayer: UIView!
     var shadeLayer: UIView!
-    var menuLayer: MenuLayer!
     var modalLayer: UIView!
     var waitingLayer: UIView!
     var toastLayer: UIView!
@@ -184,13 +184,8 @@ class MainViewController: UIViewController {
         }
 
         contentContent = savedContent
-        if menuLayer.isOpened {
-            menuLayer.animateOut(completionHandler: {
-                self.enableUserInteractions()
-            })
-        } else {
-            enableUserInteractions()
-        }
+        
+        self.enableUserInteractions()
     }
 
     func navigateBack(withAnimation: Bool = true) {
@@ -224,9 +219,7 @@ class MainViewController: UIViewController {
         contentContent = newContent
         updateContentLayerFrame()
         contentLayer.addSubview(newContent.view)
-        if menuLayer.isOpened {
-            menuLayer.animateOut(completionHandler: nil)
-        }
+        
         if animationEnabled {
             disableUserInteractions()
             newContent.view.x = UIScreen.screenWidth
@@ -280,50 +273,8 @@ class MainViewController: UIViewController {
         return savedContents.count > index && index > -1
     }
 
-    // MARK: shade
-    @objc func closeMenu() {
-        menuLayer.animateOut(completionHandler: nil)
-    }
 
-    func setShadeVisibility(toHidden isHidden: Bool) {
-        if isHidden != shadeLayer.isHidden {
-            shadeLayer.isHidden = isHidden
-            if isHidden {
-                shadeLayer.alpha = 0
-            }
-        }
-    }
-
-    // MARK: menu
-    func load(menu newMenu: BaseMenuViewController) {
-        menuLayer.removeSubviews()
-
-        menuContent = newMenu
-        menuLayer.addSubview(newMenu.view)
-        setMenuVisibility(toHidden: false)
-    }
-
-    func setMenuVisibility(toHidden isHidden: Bool) {
-        let visibilityBefore = menuLayer.isHidden
-        menuLayer.isHidden = isHidden
-
-        if visibilityBefore != menuLayer.isHidden && menuContent != nil {
-            menuVisibilityChanged()
-        }
-    }
-
-    internal func menuVisibilityChanged() {
-        updateMenuLayerFrame()
-    }
-
-    internal func updateMenuLayerFrame() {
-        let originFrame = menuContent!.view.frame
-        let newOrigin = CGPoint(x: -menuContent!.view.width, y: 0)
-        let newFrameSize = originFrame.size
-        menuLayer.frame = CGRect(origin: newOrigin, size: newFrameSize)
-        menuContent!.view.frame = originFrame
-    }
-
+    
     // MARK: waiting layer
     func load(waiting newWaiting: BaseWaitingViewController) {
         waitingLayer.removeSubviews()
@@ -337,22 +288,9 @@ class MainViewController: UIViewController {
         waitingLayer.isHidden = isHidden
     }
 
-    func loadFullScreenWaiting() {
-        load(waiting: FullScreenWaitingViewController())
-    }
+  
 
-    // MARK: modal
-    func load(modal newModal: BaseModalViewController) {
-        modalLayer.removeSubviews()
-
-        modalContent = newModal
-        modalLayer.addSubview(newModal.view)
-        setModalVisibility(toHidden: false)
-    }
-
-    func setModalVisibility(toHidden hidden: Bool) {
-        self.modalLayer.isHidden = hidden
-    }
+   
 
     // MARK: toast
     func load(toast newToast: BaseToastViewController) {
@@ -415,8 +353,6 @@ class MainViewController: UIViewController {
 
         contentLayer = UIView(frame: fullScreen)
         headerLayer = UIView(frame: CGRect(x: 0, y: statusBarHeight, width: screenWidth, height: UIScreen.scale(44)))
-        shadeLayer = ShadeLayer(frame: fullScreen)
-        menuLayer = MenuLayer(frame: CGRect(x: -screenWidth, y: statusBarHeight, width: screenWidth, height: screenHeight - statusBarHeight))
         modalLayer = UIView(frame: fullScreen)
         waitingLayer = UIView(frame: CGRect(x: 0, y: statusBarHeight, width: screenWidth, height: screenHeight - statusBarHeight))
         toastLayer = UIView(frame:CGRect(x: 0, y: screenHeight, width: screenWidth, height: screenHeight))
@@ -428,9 +364,6 @@ class MainViewController: UIViewController {
     internal func addLayers() {
         self.view.addSubview(contentLayer)
         self.view.addSubview(headerLayer)
-        self.view.addSubview(shadeLayer)
-        self.view.addSubview(menuLayer)
-        self.view.addSubview(modalLayer)
         self.view.addSubview(waitingLayer)
         self.view.addSubview(toastLayer)
     }
@@ -438,9 +371,6 @@ class MainViewController: UIViewController {
     internal func setDefaultVisibilities() {
         contentLayer.isHidden = false
         setHeaderVisibility(toHidden: false)
-        setShadeVisibility(toHidden: true)
-        setMenuVisibility(toHidden: true)
-        setModalVisibility(toHidden: true)
         setWaitingVisibility(toHidden: true)
         setToastVisibility(toHidden: true)
     }
