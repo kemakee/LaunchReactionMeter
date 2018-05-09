@@ -19,8 +19,6 @@
 #ifndef GRPC_CENSUS_H
 #define GRPC_CENSUS_H
 
-#include <grpc/support/port_platform.h>
-
 #include <grpc/grpc.h>
 
 #ifdef __cplusplus

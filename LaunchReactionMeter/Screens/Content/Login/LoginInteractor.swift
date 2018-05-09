@@ -18,6 +18,8 @@ import FirebaseAuth
     func navigateToLogin(_ userType : UserType)
     func doLogin(loginData : UserData, _ userType : UserType)
     func ValidateEmailAndPasswd(loginData: UserData) -> Bool
+    func navigateToForgotScreen()
+    func sendForgotPassword(email : String)
 }
 @objc enum textFieldType: Int{
     case email
@@ -26,7 +28,29 @@ import FirebaseAuth
 }
 
 class LoginInteractor: BaseInteractor, LoginInteractorProtocol {
+    func sendForgotPassword(email : String) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            let presenter = try! self.getLastPresenter(byProtocol: ForgotPasswordPresenterProtocol.self) as! ForgotPasswordPresenterProtocol
+            guard error == nil else
+            {
+                presenter.showEmailError()
+                return
+            }
+            
+
+            presenter.showSuccedPasswordChangeEmail()
+            presenter.navigateToLogin()
+        }
+    }
     
+    
+    func navigateToForgotScreen() {
+        let presenter = try! self.getLastPresenter(byProtocol: LoginPresenterProtocol.self) as! LoginPresenterProtocol
+        presenter.navigateToForgot()
+    }
+    
+    
+   
     
     func doRegister(regData: UserData) {
         let isError = ValidateData(regData: regData)
@@ -34,14 +58,15 @@ class LoginInteractor: BaseInteractor, LoginInteractorProtocol {
         if !isError
         {
             Auth.auth().createUser(withEmail: regData.email!, password: regData.password!, completion: { (user, error) in
+                let presenter: RegistrationPresenterProtocol = try! self.getLastPresenter(byProtocol: RegistrationPresenterProtocol.self) as! RegistrationPresenterProtocol
+
                 if error == nil {
                     print("You have successfully signed up")
-                    let presenter: RegistrationPresenterProtocol = try! self.getLastPresenter(byProtocol: RegistrationPresenterProtocol.self) as! RegistrationPresenterProtocol
                     presenter.doNavigateToSuccessScreen()
                     
                     
                 } else {
-                   //error handling
+                    presenter.showWrongEmailError()
                 }
             })
         }

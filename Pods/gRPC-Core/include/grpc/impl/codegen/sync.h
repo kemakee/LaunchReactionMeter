@@ -43,7 +43,6 @@ extern "C" {
 
 /* Platform-specific type declarations of gpr_mu and gpr_cv.   */
 #include <grpc/impl/codegen/port_platform.h>
-
 #include <grpc/impl/codegen/sync_generic.h>
 
 #if defined(GPR_POSIX_SYNC)

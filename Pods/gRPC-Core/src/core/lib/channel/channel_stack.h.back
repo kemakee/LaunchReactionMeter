@@ -33,8 +33,6 @@
    Call stacks are created by channel stacks and represent the per-call data
    for that stack. */
 
-#include <grpc/support/port_platform.h>
-
 #include <stddef.h>
 
 #include <grpc/grpc.h>

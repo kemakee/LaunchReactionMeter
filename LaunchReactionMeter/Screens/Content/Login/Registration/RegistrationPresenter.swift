@@ -22,6 +22,8 @@ import UIKit
      func showRegistrationSuccessScreen()
     
    func doNavigateToSuccessScreen()
+    
+    func showWrongEmailError()
 }
 
 class RegistrationPresenter: BasePresenter,RegistrationPresenterProtocol {
@@ -32,6 +34,10 @@ class RegistrationPresenter: BasePresenter,RegistrationPresenterProtocol {
         return viewController as! RegistrationViewController
     }
     
+    func showWrongEmailError() {
+        registrationVC.showSnackbar(with: "Something wrong happend. Maybe email is already taken.")
+
+    }
 
     
     func showEmptyError(error: textFieldType) {

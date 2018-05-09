@@ -16,8 +16,6 @@
  *
  */
 
-#include <grpc/support/port_platform.h>
-
 #include "src/core/lib/iomgr/port.h"
 
 #if defined(GRPC_POSIX_SOCKET) && !defined(GRPC_HAVE_IFADDRS)

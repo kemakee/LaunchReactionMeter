@@ -19,8 +19,6 @@
 #ifndef GRPC_CORE_LIB_GPR_TMPFILE_H
 #define GRPC_CORE_LIB_GPR_TMPFILE_H
 
-#include <grpc/support/port_platform.h>
-
 #include <stdio.h>
 
 /* Creates a temporary file from a prefix.

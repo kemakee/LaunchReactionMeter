@@ -14,6 +14,7 @@ class LoginViewController: BaseContentViewController, LRMRegTextFieldDelegate {
     var passwordField : LRMRegTextField!
     var emailField : LRMRegTextField!
     var loginButton : LRMButton!
+    var forgotButton : LRMButton!
     var ScreenComponent: [UIView] = []
     
     let padding = UIScreen.scale(8)
@@ -63,6 +64,12 @@ class LoginViewController: BaseContentViewController, LRMRegTextFieldDelegate {
         self.svContent.addSubview(loginButton)
         loginButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
         
+        let configforgotButton : ConfigurationLRMButton = ConfigurationLRMButton(y: 0, text: "Forgot password?", color: .white, size: .normal)
+        forgotButton = LRMButton(configuration: configforgotButton)
+        self.svContent.addSubview(forgotButton)
+        forgotButton.addTarget(self, action: #selector(forgotPressed), for: .touchUpInside)
+        
+        
         
         self.view.setNeedsUpdateConstraints()
         
@@ -93,6 +100,14 @@ class LoginViewController: BaseContentViewController, LRMRegTextFieldDelegate {
             make.height.equalTo(loginButton.height)
         }
         
+        forgotButton.snp.makeConstraints { (make) in
+            make.bottom.equalTo(UIScreen.screenHeight*0.88)
+            make.left.equalTo((UIScreen.screenWidth/2-forgotButton.width/2))
+            make.width.equalTo(forgotButton.width)
+            make.height.equalTo(forgotButton.height)
+        }
+        
+        
         
     }
     
@@ -100,6 +115,13 @@ class LoginViewController: BaseContentViewController, LRMRegTextFieldDelegate {
     {
         let loginData = UserData(password: passwordField.tfdWidthError.textField.text!, email: emailField.tfdWidthError.textField.text!)
         loginInteractor.doLogin(loginData: loginData, userType)
+        
+        
+    }
+    
+    @objc func forgotPressed()
+    {
+       loginInteractor.navigateToForgotScreen()
         
         
     }

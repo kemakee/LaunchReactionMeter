@@ -18,8 +18,6 @@
 
 /* Generic implementation of synchronization primitives. */
 
-#include <grpc/support/port_platform.h>
-
 #include <grpc/support/atm.h>
 #include <grpc/support/log.h>
 #include <grpc/support/sync.h>

@@ -61,6 +61,7 @@
 
 #include <openssl/buf.h>
 #include <openssl/err.h>
+#include <openssl/lhash.h>
 #include <openssl/mem.h>
 #include <openssl/thread.h>
 #include <openssl/x509.h>
@@ -83,8 +84,8 @@ typedef struct lookup_dir_st {
     STACK_OF(BY_DIR_ENTRY) *dirs;
 } BY_DIR;
 
-DEFINE_STACK_OF(BY_DIR_HASH)
-DEFINE_STACK_OF(BY_DIR_ENTRY)
+DECLARE_STACK_OF(BY_DIR_HASH)
+DECLARE_STACK_OF(BY_DIR_ENTRY)
 
 static int dir_ctrl(X509_LOOKUP *ctx, int cmd, const char *argp, long argl,
                     char **ret);
@@ -234,7 +235,8 @@ static int add_cert_dir(BY_DIR *ctx, const char *dir, int type)
                 by_dir_entry_free(ent);
                 return 0;
             }
-            BUF_strlcpy(ent->dir, ss, len + 1);
+            strncpy(ent->dir, ss, len);
+            ent->dir[len] = '\0';
             if (!sk_BY_DIR_ENTRY_push(ctx->dirs, ent)) {
                 by_dir_entry_free(ent);
                 return 0;

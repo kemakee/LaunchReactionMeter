@@ -20,8 +20,6 @@
 #define GRPC_IMPL_CODEGEN_SYNC_GENERIC_H
 /* Generic type defintions for gpr_sync. */
 
-#include <grpc/impl/codegen/port_platform.h>
-
 #include <grpc/impl/codegen/atm.h>
 
 /* gpr_event */

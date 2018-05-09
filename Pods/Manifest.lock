@@ -1,70 +1,71 @@
 PODS:
   - Bluetonium (2.1.0)
-  - BoringSSL (10.0.2):
-    - BoringSSL/Implementation (= 10.0.2)
-    - BoringSSL/Interface (= 10.0.2)
-  - BoringSSL/Implementation (10.0.2):
-    - BoringSSL/Interface (= 10.0.2)
-  - BoringSSL/Interface (10.0.2)
-  - CocoaAsyncSocket (7.6.3)
-  - Firebase/Auth (5.0.0):
-    - Firebase/CoreOnly
-    - FirebaseAuth (= 5.0.0)
-  - Firebase/Core (5.0.0):
-    - Firebase/CoreOnly
-    - FirebaseAnalytics (= 5.0.0)
-  - Firebase/CoreOnly (5.0.0):
-    - FirebaseCore (= 5.0.0)
-  - Firebase/Firestore (5.0.0):
-    - Firebase/CoreOnly
-    - FirebaseFirestore (= 0.12.0)
-  - FirebaseAnalytics (5.0.0):
-    - FirebaseCore (~> 5.0)
-    - FirebaseInstanceID (~> 3.0)
+  - BoringSSL (9.2):
+    - BoringSSL/Implementation (= 9.2)
+    - BoringSSL/Interface (= 9.2)
+  - BoringSSL/Implementation (9.2):
+    - BoringSSL/Interface (= 9.2)
+  - BoringSSL/Interface (9.2)
+  - CocoaAsyncSocket (7.6.2)
+  - Firebase/Auth (4.9.0):
+    - Firebase/Core
+    - FirebaseAuth (= 4.4.3)
+  - Firebase/Core (4.9.0):
+    - FirebaseAnalytics (= 4.0.9)
+    - FirebaseCore (= 4.0.15)
+  - Firebase/Firestore (4.9.0):
+    - Firebase/Core
+    - FirebaseFirestore (= 0.10.1)
+  - FirebaseAnalytics (4.0.9):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - nanopb (~> 0.3)
-  - FirebaseAuth (5.0.0):
-    - FirebaseCore (~> 5.0)
+  - FirebaseAuth (4.4.3):
+    - FirebaseAnalytics (~> 4.0)
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (5.0.0):
+  - FirebaseCore (4.0.15):
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
-  - FirebaseFirestore (0.12.0):
-    - FirebaseCore (~> 5.0)
-    - FirebaseFirestore/abseil-cpp (= 0.12.0)
+  - FirebaseFirestore (0.10.1):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseCore (~> 4.0)
     - gRPC-ProtoRPC (~> 1.0)
     - leveldb-library (~> 1.18)
     - Protobuf (~> 3.1)
-  - FirebaseFirestore/abseil-cpp (0.12.0):
-    - FirebaseCore (~> 5.0)
-    - gRPC-ProtoRPC (~> 1.0)
-    - leveldb-library (~> 1.18)
-    - Protobuf (~> 3.1)
-  - FirebaseInstanceID (3.0.0):
-    - FirebaseCore (~> 5.0)
-  - GoogleToolboxForMac/Defines (2.1.4)
-  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
-    - GoogleToolboxForMac/Defines (= 2.1.4)
-  - gRPC (1.11.0):
-    - gRPC-RxLibrary (= 1.11.0)
-    - gRPC/Main (= 1.11.0)
-  - gRPC-Core (1.11.0):
-    - gRPC-Core/Implementation (= 1.11.0)
-    - gRPC-Core/Interface (= 1.11.0)
-  - gRPC-Core/Implementation (1.11.0):
-    - BoringSSL (~> 10.0)
-    - gRPC-Core/Interface (= 1.11.0)
+  - FirebaseInstanceID (2.0.9):
+    - FirebaseCore (~> 4.0)
+  - GoogleToolboxForMac/DebugUtils (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/Defines (2.1.3)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.3)":
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3)":
+    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.1.3)"
+  - gRPC (1.9.1):
+    - gRPC-RxLibrary (= 1.9.1)
+    - gRPC/Main (= 1.9.1)
+  - gRPC-Core (1.9.1):
+    - gRPC-Core/Implementation (= 1.9.1)
+    - gRPC-Core/Interface (= 1.9.1)
+  - gRPC-Core/Implementation (1.9.1):
+    - BoringSSL (~> 9.0)
+    - gRPC-Core/Interface (= 1.9.1)
     - nanopb (~> 0.3)
-  - gRPC-Core/Interface (1.11.0)
-  - gRPC-ProtoRPC (1.11.0):
-    - gRPC (= 1.11.0)
-    - gRPC-RxLibrary (= 1.11.0)
+  - gRPC-Core/Interface (1.9.1)
+  - gRPC-ProtoRPC (1.9.1):
+    - gRPC (= 1.9.1)
+    - gRPC-RxLibrary (= 1.9.1)
     - Protobuf (~> 3.0)
-  - gRPC-RxLibrary (1.11.0)
-  - gRPC/Main (1.11.0):
-    - gRPC-Core (= 1.11.0)
-    - gRPC-RxLibrary (= 1.11.0)
-  - GTMSessionFetcher/Core (1.1.15)
-  - Kronos (2.0.0)
+  - gRPC-RxLibrary (1.9.1)
+  - gRPC/Main (1.9.1):
+    - gRPC-Core (= 1.9.1)
+    - gRPC-RxLibrary (= 1.9.1)
+  - GTMSessionFetcher/Core (1.1.13)
+  - Kronos (1.0.1)
   - leveldb-library (1.20)
   - MHSNTP (0.0.3):
     - CocoaAsyncSocket (~> 7)
@@ -114,21 +115,21 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Bluetonium: 45d465084e1a663b579e2c8d937aebf5551c2d67
-  BoringSSL: 60dd24df4af296bf41d78e5841dbb95d75f88c0d
-  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
-  Firebase: 4bd804448ab2596794698773d41520a0af101e65
-  FirebaseAnalytics: 19812b49fa5f283dd6b23edf8a14b5d477029ab8
-  FirebaseAuth: acbeef02fe7c3a26624e309849f3fe30c84115af
-  FirebaseCore: e46e4babb9de298fb2f736958edcc6da1dc60d73
-  FirebaseFirestore: c3fd43060679baeaeb0f9b78bc5258904d2e4946
-  FirebaseInstanceID: 83e0040351565df711a5db3d8ebe5ea21aca998a
-  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
-  gRPC: 70703dc9ba31c72341fc7f37745cc1c379edee96
-  gRPC-Core: 164639cd8ae18ca8b65477fafb2efbaecf4f181a
-  gRPC-ProtoRPC: bb5fddf3424aa4fad74d76736578a79fe40e244e
-  gRPC-RxLibrary: 26d53d1b1f306befd4ad4e15bd6de27839a82481
-  GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
-  Kronos: 2b45db9c13c4c8a301f304ccdd815dc0cbb9ffca
+  BoringSSL: f3d6b8ce199b9c450a8cfc14895d07a2627fc232
+  CocoaAsyncSocket: 3541e024f48c54b251638ef72d51dd42808de932
+  Firebase: 632216af3ed7f31e3be34776947fdc7546cfb572
+  FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
+  FirebaseAuth: aaaf68d5064a6c8fec435758f83a43b8db26ccaa
+  FirebaseCore: 3bd047463058fa6b5d312c97502c52e45401cdfb
+  FirebaseFirestore: a6db7a47c6a47d26069892d7db39f7792f2f7f9a
+  FirebaseInstanceID: d2058a35e9bebda1b6dd42486b84917bde552a9d
+  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  gRPC: 58828d611419d49da19ad02a60679ffa10a10a87
+  gRPC-Core: 66413bf1f2d038a6221bc7bfcbeeaa5a117cee29
+  gRPC-ProtoRPC: f29e8b7445e0d3c0311678ab121e6c164da4ca5e
+  gRPC-RxLibrary: 8e0067bfe8a054022c7a81470baace4f2f633b48
+  GTMSessionFetcher: 5bb1eae636127de695590f50e7d248483eb891e6
+  Kronos: 3bc3f4e60b03a6cd9767e9e06b2b1fd20377a652
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   MHSNTP: 73fc7c11f40f69ea54399fcb43ce8173167913a8
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3

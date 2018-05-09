@@ -16,8 +16,6 @@
  *
  */
 
-#include <grpc/support/port_platform.h>
-
 #include "src/core/lib/iomgr/lockfree_event.h"
 
 #include <grpc/support/log.h>

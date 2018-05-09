@@ -19,8 +19,6 @@
 #ifndef GRPC_CORE_LIB_IOMGR_COMBINER_H
 #define GRPC_CORE_LIB_IOMGR_COMBINER_H
 
-#include <grpc/support/port_platform.h>
-
 #include <stddef.h>
 
 #include <grpc/support/atm.h>

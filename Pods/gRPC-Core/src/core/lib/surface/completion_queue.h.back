@@ -21,8 +21,6 @@
 
 /* Internal API for completion queues */
 
-#include <grpc/support/port_platform.h>
-
 #include <grpc/grpc.h>
 #include "src/core/lib/debug/trace.h"
 #include "src/core/lib/iomgr/pollset.h"

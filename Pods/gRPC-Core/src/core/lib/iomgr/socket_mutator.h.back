@@ -19,8 +19,6 @@
 #ifndef GRPC_CORE_LIB_IOMGR_SOCKET_MUTATOR_H
 #define GRPC_CORE_LIB_IOMGR_SOCKET_MUTATOR_H
 
-#include <grpc/support/port_platform.h>
-
 #include <grpc/impl/codegen/grpc_types.h>
 #include <grpc/support/sync.h>
 

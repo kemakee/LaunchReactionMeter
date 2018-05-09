@@ -16,10 +16,8 @@
  *
  */
 
-#include <grpc/support/port_platform.h>
-
-#include "src/core/lib/surface/completion_queue.h"
 #include "src/core/lib/surface/completion_queue_factory.h"
+#include "src/core/lib/surface/completion_queue.h"
 
 #include <grpc/support/log.h>
 

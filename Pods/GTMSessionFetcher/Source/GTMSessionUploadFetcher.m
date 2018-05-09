@@ -1166,7 +1166,7 @@ NSString *const kGTMSessionFetcherUploadLocationObtainedNotification =
         }
       }
       @synchronized(self) {
-        self->_isCancelInFlight = NO;
+        _isCancelInFlight = NO;
       }
   }];
 }
@@ -1213,7 +1213,7 @@ NSString *const kGTMSessionFetcherUploadLocationObtainedNotification =
 
         // dont allow the updating of fileLength for uploads not using a data provider as they
         // should know the file length before the upload starts.
-        if (self->_uploadDataProvider != nil && uploadFileLength > 0) {
+        if (_uploadDataProvider != nil && uploadFileLength > 0) {
           [self setUploadFileLength:uploadFileLength];
           // Update the command and content-length headers if this is the last chunk to be sent.
           if (offset + chunkSize >= uploadFileLength) {
@@ -1636,7 +1636,7 @@ NSString *const kGTMSessionFetcherUploadLocationObtainedNotification =
       // cancel request, check here to ensure that the cancellation handler invocation which fires
       // will definitely be for the real request sent previously.
       @synchronized(self) {
-        if (self->_isCancelInFlight) {
+        if (_isCancelInFlight) {
           return;
         }
       }

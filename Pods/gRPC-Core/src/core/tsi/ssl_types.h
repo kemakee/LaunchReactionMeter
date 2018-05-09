@@ -27,8 +27,6 @@
  *                      function
  */
 
-#include <grpc/support/port_platform.h>
-
 #include <openssl/ssl.h>
 
 #ifdef OPENSSL_IS_BORINGSSL

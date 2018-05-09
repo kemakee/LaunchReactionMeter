@@ -54,7 +54,7 @@ class DatabaseManager: NSObject {
                 }
 
                 completion(results.sorted(by: { (first, second) -> Bool in
-                    first.date! < second.date!
+                    first.date! > second.date!
                 }))
             }
         }

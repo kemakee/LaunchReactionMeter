@@ -19,8 +19,6 @@
 #ifndef GRPC_CORE_LIB_GPR_MPSCQ_H
 #define GRPC_CORE_LIB_GPR_MPSCQ_H
 
-#include <grpc/support/port_platform.h>
-
 #include <grpc/support/atm.h>
 #include <grpc/support/sync.h>
 #include <stdbool.h>

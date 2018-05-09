@@ -19,8 +19,6 @@
 #ifndef GRPC_BYTE_BUFFER_H
 #define GRPC_BYTE_BUFFER_H
 
-#include <grpc/support/port_platform.h>
-
 #include <grpc/impl/codegen/byte_buffer.h>
 #include <grpc/slice_buffer.h>
 

@@ -95,7 +95,7 @@ struct grpc_slice {
 
 /** Represents an expandable array of slices, to be interpreted as a
    single item. */
-typedef struct grpc_slice_buffer {
+typedef struct {
   /** This is for internal use only. External users (i.e any code outside grpc
    * core) MUST NOT use this field */
   grpc_slice* base_slices;

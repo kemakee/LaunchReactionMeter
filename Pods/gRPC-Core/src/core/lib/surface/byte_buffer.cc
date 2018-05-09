@@ -16,13 +16,10 @@
  *
  */
 
-#include <grpc/support/port_platform.h>
-
 #include <grpc/byte_buffer.h>
 #include <grpc/support/alloc.h>
 #include <grpc/support/log.h>
 
-#include "src/core/lib/iomgr/exec_ctx.h"
 #include "src/core/lib/slice/slice_internal.h"
 
 grpc_byte_buffer* grpc_raw_byte_buffer_create(grpc_slice* slices,
@@ -36,7 +33,7 @@ grpc_byte_buffer* grpc_raw_compressed_byte_buffer_create(
     grpc_compression_algorithm compression) {
   size_t i;
   grpc_byte_buffer* bb =
-      static_cast<grpc_byte_buffer*>(gpr_malloc(sizeof(grpc_byte_buffer)));
+      (grpc_byte_buffer*)gpr_malloc(sizeof(grpc_byte_buffer));
   bb->type = GRPC_BB_RAW;
   bb->data.raw.compression = compression;
   grpc_slice_buffer_init(&bb->data.raw.slice_buffer);
@@ -50,7 +47,7 @@ grpc_byte_buffer* grpc_raw_compressed_byte_buffer_create(
 grpc_byte_buffer* grpc_raw_byte_buffer_from_reader(
     grpc_byte_buffer_reader* reader) {
   grpc_byte_buffer* bb =
-      static_cast<grpc_byte_buffer*>(gpr_malloc(sizeof(grpc_byte_buffer)));
+      (grpc_byte_buffer*)gpr_malloc(sizeof(grpc_byte_buffer));
   grpc_slice slice;
   bb->type = GRPC_BB_RAW;
   bb->data.raw.compression = GRPC_COMPRESS_NONE;

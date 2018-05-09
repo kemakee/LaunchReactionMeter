@@ -19,8 +19,6 @@
 #ifndef GRPC_CORE_LIB_IOMGR_IS_EPOLLEXCLUSIVE_AVAILABLE_H
 #define GRPC_CORE_LIB_IOMGR_IS_EPOLLEXCLUSIVE_AVAILABLE_H
 
-#include <grpc/support/port_platform.h>
-
 #include <stdbool.h>
 
 #ifdef __cplusplus

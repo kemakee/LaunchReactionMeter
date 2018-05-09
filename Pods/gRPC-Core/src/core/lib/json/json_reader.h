@@ -20,7 +20,6 @@
 #define GRPC_CORE_LIB_JSON_JSON_READER_H
 
 #include <grpc/support/port_platform.h>
-
 #include "src/core/lib/json/json_common.h"
 
 typedef enum {

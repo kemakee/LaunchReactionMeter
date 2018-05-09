@@ -25,20 +25,27 @@ class SnackbarViewController: BaseToastViewController {
     override func initLayout() {
         self.view.autoresizingMask = UIViewAutoresizing()
 
-        self.view.backgroundColor = UIColor.black
+        self.view.backgroundColor = Constants.COLOR_LRM_ORANGE
     }
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         let padding = UIScreen.scale(20)
-        let lblMessageConfig = ConfigurationLabel(size: CGSize(width: UIScreen.screenWidth - 2 * padding, height: 100), text: snackbarText)
+        let lblMessageConfig = ConfigurationLabel(size: CGSize(width: UIScreen.screenWidth - 2 * padding, height: UIScreen.scale(50)), text: snackbarText)
         lblMessageConfig.textColor = .white
 
         message = Label(configuration: lblMessageConfig)
         message.textAlignment = .center
-
+        message.frame.origin = CGPoint(x: 0, y :0 )
+        self.view.frame.origin = CGPoint(x: 0, y: UIScreen.screenHeight-message.height)
         self.view.height = message.y + message.height + UIScreen.scale(15)
 
         self.view.addSubview(message)
+
+        
+    
     }
+    
+
 }
+

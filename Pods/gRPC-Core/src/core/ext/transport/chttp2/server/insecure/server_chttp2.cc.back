@@ -16,8 +16,6 @@
  *
  */
 
-#include <grpc/support/port_platform.h>
-
 #include <grpc/grpc.h>
 
 #include <grpc/support/log.h>
@@ -41,5 +39,6 @@ int grpc_server_add_insecure_http2_port(grpc_server* server, const char* addr) {
 
     GRPC_ERROR_UNREF(err);
   }
+
   return port_num;
 }

@@ -16,8 +16,6 @@
  *
  */
 
-#include <grpc/support/port_platform.h>
-
 #include "src/core/ext/transport/chttp2/transport/huffsyms.h"
 
 /* Constants pulled from the HPACK spec, and converted to C using the vim

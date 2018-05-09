@@ -79,6 +79,8 @@
 		BE5C28C4207A128E00327871 /* LRMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C28C3207A128E00327871 /* LRMButton.swift */; };
 		BE5C28C7207A135600327871 /* ConfigurationLRMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C28C6207A135600327871 /* ConfigurationLRMButton.swift */; };
 		BE8A307A20A0996800F71C65 /* LRMTextFieldWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8A307920A0996800F71C65 /* LRMTextFieldWithError.swift */; };
+		BE9C47DA20A2608900800132 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C47D920A2608900800132 /* ForgotPasswordViewController.swift */; };
+		BE9C47DC20A260A000800132 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C47DB20A260A000800132 /* ForgotPasswordPresenter.swift */; };
 		BEBC6B57204493BB005C9F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC6B56204493BB005C9F86 /* AppDelegate.swift */; };
 		BEBC6B5E204493BB005C9F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEBC6B5D204493BB005C9F86 /* Assets.xcassets */; };
 		BEBC6B6C204493BB005C9F86 /* LaunchReactionMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC6B6B204493BB005C9F86 /* LaunchReactionMeterTests.swift */; };
@@ -197,6 +199,8 @@
 		BE5C28C3207A128E00327871 /* LRMButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRMButton.swift; sourceTree = "<group>"; };
 		BE5C28C6207A135600327871 /* ConfigurationLRMButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationLRMButton.swift; sourceTree = "<group>"; };
 		BE8A307920A0996800F71C65 /* LRMTextFieldWithError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRMTextFieldWithError.swift; sourceTree = "<group>"; };
+		BE9C47D920A2608900800132 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		BE9C47DB20A260A000800132 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
 		BEBC6B53204493BB005C9F86 /* LaunchReactionMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchReactionMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBC6B56204493BB005C9F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEBC6B5D204493BB005C9F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -494,6 +498,7 @@
 		BE5C28BC207A0CBF00327871 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				BE9C47D820A2606900800132 /* ForgotPassword */,
 				BE44167E207E04A20016DA17 /* LoginScreen */,
 				BE45369F207A299B009B602A /* Registration */,
 				BE45369E207A298B009B602A /* UserChooser */,
@@ -509,6 +514,15 @@
 				BE5C28C6207A135600327871 /* ConfigurationLRMButton.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		BE9C47D820A2606900800132 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				BE9C47D920A2608900800132 /* ForgotPasswordViewController.swift */,
+				BE9C47DB20A260A000800132 /* ForgotPasswordPresenter.swift */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		BEBC6B4A204493BB005C9F86 = {
@@ -953,8 +967,10 @@
 				985B22AB20A246430064CD34 /* TimerState.swift in Sources */,
 				BE4536B1207A2E86009B602A /* ConfigurationLRMTextField.swift in Sources */,
 				BE5C28BE207A0D2300327871 /* LoginInteractor.swift in Sources */,
+				BE9C47DA20A2608900800132 /* ForgotPasswordViewController.swift in Sources */,
 				BE16ABDB206D6D3600E99BD0 /* BaseConfigurator.swift in Sources */,
 				BE4536A1207A2CA4009B602A /* RegistrationViewController.swift in Sources */,
+				BE9C47DC20A260A000800132 /* ForgotPasswordPresenter.swift in Sources */,
 				BED6474F2085214600FF9DE6 /* LoggedInConfigurator.swift in Sources */,
 				BE16AC61206D704700E99BD0 /* ConfigurationLabel.swift in Sources */,
 				BEBC6B57204493BB005C9F86 /* AppDelegate.swift in Sources */,

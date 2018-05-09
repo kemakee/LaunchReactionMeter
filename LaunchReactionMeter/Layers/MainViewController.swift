@@ -389,7 +389,7 @@ class MainViewController: UIViewController {
         UIView.animate(withDuration: Constants.coreAnimationDuration, delay: 0, options: .curveEaseInOut, animations: {
             self.toastLayer.y = UIScreen.screenHeight - self.toastContent!.view.height
         }, completion: { (_) in
-            let dispatchTime: DispatchTime = DispatchTime.now() + Double(Int64(2.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+            let dispatchTime: DispatchTime = DispatchTime.now() + Double(Int64(3.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
             DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
                 self.setToastVisibility(toHidden: true)
             })

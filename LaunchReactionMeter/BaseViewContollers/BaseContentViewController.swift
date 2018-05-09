@@ -211,9 +211,7 @@ class BaseContentViewController: BaseViewController, MovementProtocol, UITextFie
     }
 
     func sendGAScreenTracking() {
-        guard !(self is TabbedPager) else {
-            return
-        }
+      
 
     }
 

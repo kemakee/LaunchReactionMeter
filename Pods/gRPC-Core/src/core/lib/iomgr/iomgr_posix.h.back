@@ -19,8 +19,6 @@
 #ifndef GRPC_CORE_LIB_IOMGR_IOMGR_POSIX_H
 #define GRPC_CORE_LIB_IOMGR_IOMGR_POSIX_H
 
-#include <grpc/support/port_platform.h>
-
 #include "src/core/lib/iomgr/iomgr_internal.h"
 
 #endif /* GRPC_CORE_LIB_IOMGR_IOMGR_POSIX_H */

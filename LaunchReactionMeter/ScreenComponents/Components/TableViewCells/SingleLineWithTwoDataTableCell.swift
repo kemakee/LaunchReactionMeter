@@ -40,7 +40,7 @@ class SingleLineWithTwoDataTableCell: UITableViewCell, ConfigurationProtocol {
         config = configuration as! ConfigurationSingleLineWithTwoLabelCell
 
         if dataLbl == nil {
-            dataLbl = UILabel(frame: CGRect(x:UIScreen.scale(8), y: 0, width: UIScreen.screenWidth/2, height: self.frame.height-UIScreen.scale(2)))
+            dataLbl = UILabel(frame: CGRect(x:UIScreen.scale(15), y: 0, width: UIScreen.screenWidth/2+UIScreen.scale(30), height: self.frame.height-UIScreen.scale(2)))
             dataLbl.backgroundColor = Constants.COLOR_LRM_BLACK
             dataLbl.textColor = Constants.COLOR_LRM_ORANGE
             self.contentView.addSubview(dataLbl)
@@ -48,7 +48,7 @@ class SingleLineWithTwoDataTableCell: UITableViewCell, ConfigurationProtocol {
         dataLbl.text = config.dataText
 
         if resultLbl == nil {
-            resultLbl = UILabel(frame: CGRect(x:UIScreen.screenWidth-UIScreen.scale(50), y: 0, width: UIScreen.scale(50), height: self.frame.height-UIScreen.scale(2)))
+            resultLbl = UILabel(frame: CGRect(x:UIScreen.screenWidth-UIScreen.scale(90), y: 0, width: UIScreen.scale(90), height: self.frame.height-UIScreen.scale(2)))
             resultLbl.backgroundColor = Constants.COLOR_LRM_BLACK
             resultLbl.textColor = Constants.COLOR_LRM_ORANGE
             self.contentView.addSubview(resultLbl)

@@ -25,8 +25,14 @@ import UIKit
     func enableButton()
     
     func disableButton()
+    
+    func navigateToForgot()
 }
 class LoginPresenter: BasePresenter, LoginPresenterProtocol {
+    func navigateToForgot() {
+        MainViewController.shared.load(content: ForgotPasswordViewController(), needHeader: true)
+    }
+    
   
     
     func navigateToLoggedIn(_ userType: UserType) {

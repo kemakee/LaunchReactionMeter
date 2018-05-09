@@ -16,8 +16,6 @@
  *
  */
 
-#include <grpc/support/port_platform.h>
-
 #include "src/core/lib/surface/event_string.h"
 
 #include <stdio.h>

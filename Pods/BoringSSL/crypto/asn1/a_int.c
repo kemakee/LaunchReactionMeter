@@ -57,7 +57,6 @@
 #include <openssl/asn1.h>
 
 #include <string.h>
-#include <limits.h>
 
 #include <openssl/err.h>
 #include <openssl/mem.h>
@@ -386,6 +385,7 @@ int ASN1_INTEGER_set(ASN1_INTEGER *a, long v)
 long ASN1_INTEGER_get(const ASN1_INTEGER *a)
 {
     int neg = 0, i;
+    long r = 0;
 
     if (a == NULL)
         return (0L);
@@ -395,31 +395,20 @@ long ASN1_INTEGER_get(const ASN1_INTEGER *a)
     else if (i != V_ASN1_INTEGER)
         return -1;
 
-    OPENSSL_COMPILE_ASSERT(sizeof(uint64_t) >= sizeof(long),
-                           long_larger_than_uint64_t);
-
-    if (a->length > (int)sizeof(uint64_t)) {
+    if (a->length > (int)sizeof(long)) {
         /* hmm... a bit ugly, return all ones */
         return -1;
     }
+    if (a->data == NULL)
+        return 0;
 
-    uint64_t r64 = 0;
-    if (a->data != NULL) {
-      for (i = 0; i < a->length; i++) {
-          r64 <<= 8;
-          r64 |= (unsigned char)a->data[i];
-      }
-
-      if (r64 > LONG_MAX) {
-          return -1;
-      }
+    for (i = 0; i < a->length; i++) {
+        r <<= 8;
+        r |= (unsigned char)a->data[i];
     }
-
-    long r = (long) r64;
     if (neg)
         r = -r;
-
-    return r;
+    return (r);
 }
 
 ASN1_INTEGER *BN_to_ASN1_INTEGER(const BIGNUM *bn, ASN1_INTEGER *ai)

@@ -16,8 +16,6 @@
  *
  */
 
-#include <grpc/support/port_platform.h>
-
 #include "src/core/lib/surface/call.h"
 
 #include <inttypes.h>

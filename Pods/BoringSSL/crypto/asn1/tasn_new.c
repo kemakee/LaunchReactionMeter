@@ -63,7 +63,6 @@
 #include <openssl/mem.h>
 #include <openssl/obj.h>
 
-#include "asn1_locl.h"
 #include "../internal.h"
 
 
@@ -202,7 +201,7 @@ static int asn1_item_ex_combine_new(ASN1_VALUE **pval, const ASN1_ITEM *it,
     return 1;
 
  memerr2:
-    asn1_item_combine_free(pval, it, combine);
+    ASN1_item_ex_free(pval, it);
  memerr:
     OPENSSL_PUT_ERROR(ASN1, ERR_R_MALLOC_FAILURE);
 #ifdef CRYPTO_MDEBUG
@@ -212,7 +211,7 @@ static int asn1_item_ex_combine_new(ASN1_VALUE **pval, const ASN1_ITEM *it,
     return 0;
 
  auxerr2:
-    asn1_item_combine_free(pval, it, combine);
+    ASN1_item_ex_free(pval, it);
  auxerr:
     OPENSSL_PUT_ERROR(ASN1, ASN1_R_AUX_ERROR);
 #ifdef CRYPTO_MDEBUG

@@ -19,8 +19,6 @@
 #ifndef GRPC_CORE_LIB_IOMGR_TIMER_HEAP_H
 #define GRPC_CORE_LIB_IOMGR_TIMER_HEAP_H
 
-#include <grpc/support/port_platform.h>
-
 #include "src/core/lib/iomgr/timer.h"
 
 typedef struct {

@@ -21,8 +21,6 @@
 #ifndef GRPC_CORE_LIB_DEBUG_STATS_DATA_H
 #define GRPC_CORE_LIB_DEBUG_STATS_DATA_H
 
-#include <grpc/support/port_platform.h>
-
 #include <inttypes.h>
 #include "src/core/lib/iomgr/exec_ctx.h"
 

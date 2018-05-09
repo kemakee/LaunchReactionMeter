@@ -16,8 +16,6 @@
  *
  */
 
-#include <grpc/support/port_platform.h>
-
 #include "src/core/lib/iomgr/port.h"
 
 #ifdef GRPC_WINSOCK_SOCKET
@@ -32,8 +30,8 @@
 #include <grpc/support/log.h>
 #include <grpc/support/log_windows.h>
 #include <grpc/support/string_util.h>
+#include <grpc/support/useful.h>
 
-#include "src/core/lib/gpr/useful.h"
 #include "src/core/lib/iomgr/iocp_windows.h"
 #include "src/core/lib/iomgr/sockaddr.h"
 #include "src/core/lib/iomgr/sockaddr_utils.h"
@@ -51,7 +49,7 @@
 #define GRPC_FIONBIO FIONBIO
 #endif
 
-extern grpc_core::TraceFlag grpc_tcp_trace;
+grpc_core::TraceFlag grpc_tcp_trace(false, "tcp");
 
 static grpc_error* set_non_block(SOCKET sock) {
   int status;

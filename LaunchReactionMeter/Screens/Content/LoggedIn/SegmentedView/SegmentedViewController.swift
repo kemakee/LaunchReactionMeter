@@ -88,7 +88,7 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
             tvListForLaunch.backgroundColor = Constants.COLOR_LRM_BLACK
             forLaunchView.addSubview(tvListForLaunch)
 
-            let configStopperbl = ConfigurationLabel(size: CGSize(width: UIScreen.screenWidth*0.6, height: UIScreen.scale(50)), text: "00:00")
+            let configStopperbl = ConfigurationLabel(size: CGSize(width: UIScreen.screenWidth*0.6, height: UIScreen.scale(50)), text: "00:00:00")
             configStopperbl.font = UIFont.systemFont(ofSize: UIFont.systemFontSize+30)
             stopperLbl = Label(configuration: configStopperbl)
             stopperLbl.textAlignment = .center
@@ -101,9 +101,8 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
             forLaunchView.addSubview(launchBtn)
             launchBtn.addTarget(self, action: #selector(goPressed), for: .touchUpInside)
         }
-        //MARK: TODO
-        resultDateFormatter.dateFormat = "H:m:ss"
-        tvListForResults = UITableView(frame: CGRect(x: 0, y: contentHeight, width: self.view.frame.size.width, height: self.view.frame.size.height - (MainViewController.shared.headerLayer?.height)!-contentHeight-UIScreen.screenHeight*0.30), style: .plain)
+        resultDateFormatter.dateFormat = "y.MM.dd HH:mm:ss"
+        tvListForResults = UITableView(frame: CGRect(x: 0, y: contentHeight, width: self.view.frame.size.width, height: self.view.frame.size.height - (MainViewController.shared.headerLayer?.height)!-contentHeight), style: .plain)
         tvListForResults.dataSource = self
         tvListForResults.delegate = self
         tvListForResults.separatorStyle = .none
@@ -151,7 +150,7 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
     override func updateViewConstraints() {
         
         LRMSecCon.snp.makeConstraints { (make) in
-             make.bottom.equalTo(UIScreen.screenHeight*0.885)
+             make.top.equalTo(UIScreen.screenHeight*0.87)
             make.left.equalTo((UIScreen.screenWidth/2-LRMSecCon.width/2))
             make.width.equalTo(LRMSecCon.width)
             make.height.equalTo(LRMSecCon.height)
@@ -294,20 +293,18 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
         {
             DispatchQueue.main.async {
                 
-                if self.userType == UserType.coach
+                if self.userType == UserType.coach && self.timerState != .stop
                 {
-                    let configLaunchBtn = ConfigurationLRMButton(y: self.launchBtn.y, text: "GO!", color: .white, size: .normal)
-                    self.launchBtn.reconfigure(configLaunchBtn)
+                        let configLaunchBtn = ConfigurationLRMButton(y: self.launchBtn.y, text: "GO!", color: .white, size: .normal)
+                        self.launchBtn.reconfigure(configLaunchBtn)
+   
                 }
-                if self.userType == UserType.athlete
-                {
-                    self.connectedLbl.backgroundColor = Constants.COLOR_LRM_RED_50
-                    self.connectedLbl.text = "Not Connected"
-                }
+             
                 
             }
         }
         self.tvListForLaunch.reloadData()
+  
         
     }
 
@@ -355,7 +352,7 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
             if userType == .athlete{
 
                 let userResult = userResults[indexPath.row]
-                configCell = ConfigurationSingleLineWithTwoLabelCell(dataText: resultDateFormatter.string(from: userResult.date!) , resultText: String(userResult.result))
+                configCell = ConfigurationSingleLineWithTwoLabelCell(dataText: resultDateFormatter.string(from: userResult.date!) , resultText: String(userResult.result)+" sec")
 
             }
             else {
@@ -383,7 +380,7 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
     
     @objc func goPressed()
     {
-        guard self.connectedPeers.count != 0 else {
+        guard self.connectedPeers.count != 0  || timerState == .stop || timerState == .reset else {
             return
         }
 
@@ -437,7 +434,7 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
     func gyroTriggered() {
 
         let difference = Date().timeIntervalSince(shotTime)
-        let result = Double(difference)
+        let result = Double(round(difference*1000)/1000)
         showResult(result)
         DatabaseManager.shared.addResult(result: result)
         try? communication.session.send(String(result).data(using: .utf8)!, toPeers: [connectedPeers.first!], with: .reliable)
@@ -494,7 +491,14 @@ class SegmentedViewController: BaseContentViewController, SegmentedControlDelega
     func resetTimer()
     {
         timerState = .go
-        launchBtn.setTitle("GO", for: .normal)
+        if connectedPeers.count == 0
+        {
+             let configLaunchBtn = ConfigurationLRMButton(y: self.launchBtn.y, text: "GO!", color: .white, size: .normal)
+            launchBtn.reconfigure(configLaunchBtn)
+        }
+        else{
+            launchBtn.setTitle("GO!", for: .normal)
+        }
         stopperLbl.text = "00:00:00"
         counter = 0
     }

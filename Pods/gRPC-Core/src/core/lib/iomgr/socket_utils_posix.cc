@@ -16,8 +16,6 @@
  *
  */
 
-#include <grpc/support/port_platform.h>
-
 #include "src/core/lib/iomgr/port.h"
 
 #ifdef GRPC_POSIX_SOCKETUTILS
@@ -35,7 +33,8 @@ int grpc_accept4(int sockfd, grpc_resolved_address* resolved_addr, int nonblock,
                  int cloexec) {
   int fd, flags;
   GPR_ASSERT(sizeof(socklen_t) <= sizeof(size_t));
-  fd = accept(sockfd, (grpc_sockaddr*)resolved_addr->addr,
+  GPR_ASSERT(resolved_addr->len <= (socklen_t)-1);
+  fd = accept(sockfd, (struct sockaddr*)resolved_addr->addr,
               (socklen_t*)&resolved_addr->len);
   if (fd >= 0) {
     if (nonblock) {

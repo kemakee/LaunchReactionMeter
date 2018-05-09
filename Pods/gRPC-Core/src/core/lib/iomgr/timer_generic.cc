@@ -16,11 +16,11 @@
  *
  */
 
-#include <grpc/support/port_platform.h>
-
 #include "src/core/lib/iomgr/port.h"
 
 #include <inttypes.h>
+
+#ifdef GRPC_TIMER_USE_GENERIC
 
 #include "src/core/lib/iomgr/timer.h"
 
@@ -29,11 +29,10 @@
 #include <grpc/support/log.h>
 #include <grpc/support/string_util.h>
 #include <grpc/support/sync.h>
-
+#include <grpc/support/tls.h>
+#include <grpc/support/useful.h>
 #include "src/core/lib/debug/trace.h"
 #include "src/core/lib/gpr/spinlock.h"
-#include "src/core/lib/gpr/tls.h"
-#include "src/core/lib/gpr/useful.h"
 #include "src/core/lib/iomgr/time_averaged_stats.h"
 #include "src/core/lib/iomgr/timer_heap.h"
 
@@ -236,14 +235,13 @@ static gpr_atm compute_min_deadline(timer_shard* shard) {
              : grpc_timer_heap_top(&shard->heap)->deadline;
 }
 
-static void timer_list_init() {
+void grpc_timer_list_init() {
   uint32_t i;
 
   g_num_shards = GPR_MIN(1, 2 * gpr_cpu_num_cores());
-  g_shards =
-      static_cast<timer_shard*>(gpr_zalloc(g_num_shards * sizeof(*g_shards)));
-  g_shard_queue = static_cast<timer_shard**>(
-      gpr_zalloc(g_num_shards * sizeof(*g_shard_queue)));
+  g_shards = (timer_shard*)gpr_zalloc(g_num_shards * sizeof(*g_shards));
+  g_shard_queue =
+      (timer_shard**)gpr_zalloc(g_num_shards * sizeof(*g_shard_queue));
 
   g_shared_mutables.initialized = true;
   g_shared_mutables.checker_mu = GPR_SPINLOCK_INITIALIZER;
@@ -268,7 +266,7 @@ static void timer_list_init() {
   INIT_TIMER_HASH_TABLE();
 }
 
-static void timer_list_shutdown() {
+void grpc_timer_list_shutdown() {
   size_t i;
   run_some_expired_timers(
       GPR_ATM_MAX, nullptr,
@@ -324,8 +322,8 @@ static void note_deadline_change(timer_shard* shard) {
 
 void grpc_timer_init_unset(grpc_timer* timer) { timer->pending = false; }
 
-static void timer_init(grpc_timer* timer, grpc_millis deadline,
-                       grpc_closure* closure) {
+void grpc_timer_init(grpc_timer* timer, grpc_millis deadline,
+                     grpc_closure* closure) {
   int is_first_timer = 0;
   timer_shard* shard = &g_shards[GPR_HASH_POINTER(timer, g_num_shards)];
   timer->closure = closure;
@@ -360,8 +358,8 @@ static void timer_init(grpc_timer* timer, grpc_millis deadline,
     return;
   }
 
-  grpc_time_averaged_stats_add_sample(
-      &shard->stats, static_cast<double>(deadline - now) / 1000.0);
+  grpc_time_averaged_stats_add_sample(&shard->stats,
+                                      (double)(deadline - now) / 1000.0);
 
   ADD_TO_HASH_TABLE(timer);
 
@@ -375,7 +373,7 @@ static void timer_init(grpc_timer* timer, grpc_millis deadline,
     gpr_log(GPR_DEBUG,
             "  .. add to shard %d with queue_deadline_cap=%" PRIdPTR
             " => is_first_timer=%s",
-            static_cast<int>(shard - g_shards), shard->queue_deadline_cap,
+            (int)(shard - g_shards), shard->queue_deadline_cap,
             is_first_timer ? "true" : "false");
   }
   gpr_mu_unlock(&shard->mu);
@@ -410,12 +408,12 @@ static void timer_init(grpc_timer* timer, grpc_millis deadline,
   }
 }
 
-static void timer_consume_kick(void) {
+void grpc_timer_consume_kick(void) {
   /* force re-evaluation of last seeen min */
   gpr_tls_set(&g_last_seen_min_timer, 0);
 }
 
-static void timer_cancel(grpc_timer* timer) {
+void grpc_timer_cancel(grpc_timer* timer) {
   if (!g_shared_mutables.initialized) {
     /* must have already been cancelled, also the shard mutex is invalid */
     return;
@@ -462,11 +460,11 @@ static int refill_heap(timer_shard* shard, gpr_atm now) {
   /* Compute the new cap and put all timers under it into the queue: */
   shard->queue_deadline_cap =
       saturating_add(GPR_MAX(now, shard->queue_deadline_cap),
-                     static_cast<gpr_atm>(deadline_delta * 1000.0));
+                     (gpr_atm)(deadline_delta * 1000.0));
 
   if (grpc_timer_check_trace.enabled()) {
     gpr_log(GPR_DEBUG, "  .. shard[%d]->queue_deadline_cap --> %" PRIdPTR,
-            static_cast<int>(shard - g_shards), shard->queue_deadline_cap);
+            (int)(shard - g_shards), shard->queue_deadline_cap);
   }
   for (timer = shard->list.next; timer != &shard->list; timer = next) {
     next = timer->next;
@@ -491,7 +489,7 @@ static grpc_timer* pop_one(timer_shard* shard, gpr_atm now) {
   for (;;) {
     if (grpc_timer_check_trace.enabled()) {
       gpr_log(GPR_DEBUG, "  .. shard[%d]: heap_empty=%s",
-              static_cast<int>(shard - g_shards),
+              (int)(shard - g_shards),
               grpc_timer_heap_is_empty(&shard->heap) ? "true" : "false");
     }
     if (grpc_timer_heap_is_empty(&shard->heap)) {
@@ -531,7 +529,7 @@ static size_t pop_timers(timer_shard* shard, gpr_atm now,
   gpr_mu_unlock(&shard->mu);
   if (grpc_timer_check_trace.enabled()) {
     gpr_log(GPR_DEBUG, "  .. shard[%d] popped %" PRIdPTR,
-            static_cast<int>(shard - g_shards), n);
+            (int)(shard - g_shards), n);
   }
   return n;
 }
@@ -554,7 +552,7 @@ static grpc_timer_check_result run_some_expired_timers(gpr_atm now,
 
     if (grpc_timer_check_trace.enabled()) {
       gpr_log(GPR_DEBUG, "  .. shard[%d]->min_deadline = %" PRIdPTR,
-              static_cast<int>(g_shard_queue[0] - g_shards),
+              (int)(g_shard_queue[0] - g_shards),
               g_shard_queue[0]->min_deadline);
     }
 
@@ -574,7 +572,7 @@ static grpc_timer_check_result run_some_expired_timers(gpr_atm now,
                 "  .. result --> %d"
                 ", shard[%d]->min_deadline %" PRIdPTR " --> %" PRIdPTR
                 ", now=%" PRIdPTR,
-                result, static_cast<int>(g_shard_queue[0] - g_shards),
+                result, (int)(g_shard_queue[0] - g_shards),
                 g_shard_queue[0]->min_deadline, new_min_deadline, now);
       }
 
@@ -602,7 +600,7 @@ static grpc_timer_check_result run_some_expired_timers(gpr_atm now,
   return result;
 }
 
-static grpc_timer_check_result timer_check(grpc_millis* next) {
+grpc_timer_check_result grpc_timer_check(grpc_millis* next) {
   // prelude
   grpc_millis now = grpc_core::ExecCtx::Get()->Now();
 
@@ -658,6 +656,4 @@ static grpc_timer_check_result timer_check(grpc_millis* next) {
   return r;
 }
 
-grpc_timer_vtable grpc_generic_timer_vtable = {
-    timer_init,      timer_cancel,        timer_check,
-    timer_list_init, timer_list_shutdown, timer_consume_kick};
+#endif /* GRPC_TIMER_USE_GENERIC */

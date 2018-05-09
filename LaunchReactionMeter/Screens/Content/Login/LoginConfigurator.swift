@@ -73,6 +73,21 @@ class LoginConfigurator: BaseConfigurator {
         
     }
     
+    class func configureForgotController(viewController : ForgotPasswordViewController) {
+        let loginInteractor: LoginInteractorProtocol = getInteractor()
+        
+        // configure  presenter
+        let presenter = ForgotPasswordPresenter()
+        presenter.viewController = viewController
+        
+        // configure  viewcontroller
+        viewController.interactor = loginInteractor
+        
+        // configure  interactor
+        loginInteractor.registerPresenter(presenter)
+        
+    }
+    
     
     static private func getInteractor() -> LoginInteractorProtocol {
         let interactor : LoginInteractorProtocol

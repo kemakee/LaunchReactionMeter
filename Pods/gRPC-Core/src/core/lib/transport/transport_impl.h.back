@@ -19,8 +19,6 @@
 #ifndef GRPC_CORE_LIB_TRANSPORT_TRANSPORT_IMPL_H
 #define GRPC_CORE_LIB_TRANSPORT_TRANSPORT_IMPL_H
 
-#include <grpc/support/port_platform.h>
-
 #include "src/core/lib/transport/transport.h"
 
 typedef struct grpc_transport_vtable {
